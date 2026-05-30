@@ -1,5 +1,5 @@
 import z from 'zod';
-import { zNdaForm } from '~/contracts/data/NdaForm';
+import { zNdaForm } from '../data';
 
 export const zNdaFormsResponse = z.object({
 	forms: z.array(zNdaForm),

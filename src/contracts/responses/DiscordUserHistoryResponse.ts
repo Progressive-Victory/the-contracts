@@ -1,5 +1,5 @@
 import z from 'zod';
-import { zDiscordUser, zUpdateHistory } from '~/contracts/data';
+import { zDiscordUser, zUpdateHistory } from '../data';
 
 export const zDiscordUserHistoryResponse = z.object({
 	data: z.array(zUpdateHistory(zDiscordUser)),

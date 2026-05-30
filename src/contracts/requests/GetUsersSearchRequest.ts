@@ -1,6 +1,6 @@
 import { zSearchRequest } from './SearchRequest';
 import z from 'zod';
-import { zBoolQuery, zIntArrayQuery } from '~/util';
+import { zBoolQuery, zIntArrayQuery } from '../../util';
 
 export const zGetUsersSearchRequest = zSearchRequest.extend({
 	roleIds: zIntArrayQuery,
