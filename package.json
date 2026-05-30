@@ -1,5 +1,5 @@
 {
-  "name": "@progressive-victory/the-contracts",
+  "name": "@pv-contracts",
   "version": "0.0.2",
   "description": "CRUD contracts for communicating with our API",
   "homepage": "https://github.com/Progressive-Victory/the-contracts#readme",
