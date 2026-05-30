@@ -1,14 +1,7 @@
 {
-  "name": "pv-crud-contracts",
-  "version": "1.0.0",
-  "description": "Progressive Victory's in house CRUD contracts for communicating with our API",
-  "private": true,
-  "packageManager": "pnpm@10.30.2",
-  "keywords": [
-    "CRUD",
-    "contracts",
-    "API"
-  ],
+  "name": "@progressive-victory/the-contracts",
+  "version": "0.0.1",
+  "description": "CRUD contracts for communicating with our API",
   "homepage": "https://github.com/Progressive-Victory/the-contracts#readme",
   "bugs": {
     "url": "https://github.com/Progressive-Victory/the-contracts/issues"
@@ -20,15 +13,9 @@
   "license": "ISC",
   "author": "sH3llH0und",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.60.0"
-  },
-  "dependencies": {
-    "zod": "^4.4.3"
   }
 }
