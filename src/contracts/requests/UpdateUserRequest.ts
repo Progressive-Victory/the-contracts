@@ -7,7 +7,7 @@ import {
 	zShirtSize,
 	zMembershipDeliverableStatus,
 	zMembershipFulfillmentStatus,
-} from '~/contracts/data';
+} from '../data';
 
 export const zUpdateUserRequest = zMutationRequest
 	.extend({
