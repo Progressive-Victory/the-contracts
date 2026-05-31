@@ -20,6 +20,7 @@ export * from './SearchRequest';
 export * from './SolidarityPostUserRequest';
 export * from './UpdateDiscordEventRequest';
 export * from './UpdateDiscordStateRoleRequest';
+export * from './UpdateDiscordUserImageRequest'
 export * from './UpdateDiscordWarnRequest';
 export * from './UpdateEndorsementRequest';
 export * from './UpdatePermissionRequest';
