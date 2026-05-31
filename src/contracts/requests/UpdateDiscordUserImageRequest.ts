@@ -7,4 +7,4 @@ export const zUpdateDiscordUserImageRequest = zMetaData
 	})
 	.strict();
 
-export type UpdateDiscordUserImage = z.infer<typeof zUpdateDiscordUserImageRequest>;
+export type UpdateDiscordUserImageRequest = z.infer<typeof zUpdateDiscordUserImageRequest>;
