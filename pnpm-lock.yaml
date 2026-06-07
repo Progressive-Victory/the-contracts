@@ -16,8 +16,8 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
       '@progressive-victory/eslint-plugin-index-file':
-        specifier: ^1.1.4
-        version: 1.1.4(jiti@2.7.0)(typescript@6.0.3)
+        specifier: ^1.1.5
+        version: 1.1.5(@typescript-eslint/eslint-plugin@8.60.1(@typescript-eslint/parser@8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/parser@8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/utils@8.60.0(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))
       '@types/node':
         specifier: ^25.9.1
         version: 25.9.1
@@ -131,8 +131,13 @@ packages:
   '@oxc-project/types@0.133.0':
     resolution: {integrity: sha512-KzkdCd6Uxqnf6l3HOw1xfatAlUURA0g14cvBYFyJ5SaNOQbOUvBr9PKArcPcrNIeRsBdgcUzOGrhKveVpvOIGA==}
 
-  '@progressive-victory/eslint-plugin-index-file@1.1.4':
-    resolution: {integrity: sha512-hcO30pSMbGdU2dMJfmpsyaApiinZub/wCFbEELG5KJWgCTiwffX3kqFIkdRcwaDJ48RsRh1tV8sTovHseHRx/g==}
+  '@progressive-victory/eslint-plugin-index-file@1.1.5':
+    resolution: {integrity: sha512-WOB+suym35+ZdC3Lop+5fDuoLf0cv2xTgR9wbOuxiTXTRbJWSDV3s7hTCMJD7A23axKg7fX7bNdIGyvSTYUk3Q==}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^8.60.1
+      '@typescript-eslint/parser': ^8.60.1
+      '@typescript-eslint/utils': ^8.60.1
+      eslint: ^10.4.1
 
   '@rolldown/binding-android-arm64@1.0.3':
     resolution: {integrity: sha512-454rs7jHngixp/NMxd5srYD57OnzSlZ/eFTETjORQHLwJG1lRtmNOJcBerZlfu4GjKqeq8aCCIQrMdHyhI51Hw==}
@@ -1022,16 +1027,12 @@ snapshots:
 
   '@oxc-project/types@0.133.0': {}
 
-  '@progressive-victory/eslint-plugin-index-file@1.1.4(jiti@2.7.0)(typescript@6.0.3)':
+  '@progressive-victory/eslint-plugin-index-file@1.1.5(@typescript-eslint/eslint-plugin@8.60.1(@typescript-eslint/parser@8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/parser@8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/utils@8.60.0(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))':
     dependencies:
       '@typescript-eslint/eslint-plugin': 8.60.1(@typescript-eslint/parser@8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
       '@typescript-eslint/parser': 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
-      '@typescript-eslint/utils': 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
+      '@typescript-eslint/utils': 8.60.0(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
       eslint: 10.4.1(jiti@2.7.0)
-    transitivePeerDependencies:
-      - jiti
-      - supports-color
-      - typescript
 
   '@rolldown/binding-android-arm64@1.0.3':
     optional: true
