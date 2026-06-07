@@ -1,0 +1,1 @@
+{"version":3,"file":"DiscordUserHistoryResponse.js","sourceRoot":"","sources":["../../../src/contracts/responses/DiscordUserHistoryResponse.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AACpB,OAAO,EAAE,YAAY,EAAE,cAAc,EAAE,MAAM,SAAS,CAAC;AAEvD,MAAM,CAAC,MAAM,2BAA2B,GAAG,CAAC,CAAC,MAAM,CAAC;IACnD,IAAI,EAAE,CAAC,CAAC,KAAK,CAAC,cAAc,CAAC,YAAY,CAAC,CAAC;CAC3C,CAAC,CAAC"}

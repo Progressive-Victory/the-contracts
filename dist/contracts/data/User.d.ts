@@ -1,0 +1,389 @@
+import z from 'zod';
+export declare enum UserStatus {
+    Deleted = 0,
+    Active = 1
+}
+export declare enum MembershipDeliverableStatus {
+    NotEligible = 0,
+    NotStarted = 1,
+    Printed = 2,
+    InTransit = 3,
+    Recieved = 4,
+    Returned = 5
+}
+export declare enum MembershipFulfillmentStatus {
+    NotEligible = 0,
+    NotFulfilled = 1,
+    Fulfilled = 2
+}
+export declare enum ShirtSize {
+    ExtraSmall = "XS",
+    Small = "S",
+    Medium = "M",
+    Large = "L",
+    ExtraLarge = "XL",
+    DoubleExtraLarge = "2XL"
+}
+export declare const zShirtSize: z.ZodEnum<typeof ShirtSize>;
+export declare const zMembershipFulfillmentStatus: z.ZodEnum<typeof MembershipFulfillmentStatus>;
+export declare const zMembershipDeliverableStatus: z.ZodEnum<typeof MembershipDeliverableStatus>;
+export declare const zUserStatus: z.ZodEnum<typeof UserStatus>;
+export declare const zUser: z.ZodObject<{
+    id: z.ZodInt;
+    email: z.ZodNullable<z.ZodString>;
+    phone: z.ZodNullable<z.ZodString>;
+    preferredName: z.ZodNullable<z.ZodString>;
+    firstName: z.ZodNullable<z.ZodString>;
+    lastName: z.ZodNullable<z.ZodString>;
+    birthdate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    location: z.ZodNullable<z.ZodObject<{
+        zip: z.ZodInt;
+        city: z.ZodString;
+        county: z.ZodString;
+        state: z.ZodString;
+    }, z.core.$strip>>;
+    address: z.ZodObject<{
+        addressLine1: z.ZodNullable<z.ZodString>;
+        addressLine2: z.ZodNullable<z.ZodString>;
+        city: z.ZodNullable<z.ZodString>;
+        county: z.ZodNullable<z.ZodString>;
+        state: z.ZodNullable<z.ZodString>;
+        zip: z.ZodNullable<z.ZodString>;
+    }, z.core.$strip>;
+    acceptedAlerts: z.ZodBoolean;
+    verified: z.ZodBoolean;
+    onboardingStage: z.ZodEnum<typeof import("./OnboardingStage").OnboardingStage>;
+    lastSmsCode: z.ZodNullable<z.ZodNumber>;
+    lastSmsCodeSendTimeUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    status: z.ZodEnum<typeof UserStatus>;
+    createdAtUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    joinedAtUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    completedIntakeUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    membershipCardStatus: z.ZodDefault<z.ZodEnum<typeof MembershipDeliverableStatus>>;
+    membershipMerchStatus: z.ZodDefault<z.ZodEnum<typeof MembershipDeliverableStatus>>;
+    shirtSize: z.ZodNullable<z.ZodEnum<typeof ShirtSize>>;
+    duesPayingMember: z.ZodBoolean;
+    membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof MembershipFulfillmentStatus>>;
+    nameConfirmed: z.ZodBoolean;
+    addressConfirmed: z.ZodBoolean;
+    aliases: z.ZodOptional<z.ZodArray<z.ZodString>>;
+    roles: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        id: z.ZodInt;
+        name: z.ZodString;
+        permissions: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            id: z.ZodInt;
+            name: z.ZodString;
+        }, z.core.$strip>>>;
+    }, z.core.$strip>>>;
+    discordUsers: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        id: z.ZodString;
+        username: z.ZodString;
+        image: z.ZodString;
+        userId: z.ZodNullable<z.ZodNumber>;
+        email: z.ZodNullable<z.ZodString>;
+    }, z.core.$strip>>>;
+    donors: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        firstname: z.ZodString;
+        lastname: z.ZodString;
+        addr1: z.ZodNullable<z.ZodString>;
+        city: z.ZodNullable<z.ZodString>;
+        state: z.ZodNullable<z.ZodString>;
+        zip: z.ZodNullable<z.ZodString>;
+        country: z.ZodNullable<z.ZodString>;
+        isEligibleForExpressLane: z.ZodBoolean;
+        employerData: z.ZodNullable<z.ZodObject<{
+            employer: z.ZodNullable<z.ZodString>;
+            occupation: z.ZodNullable<z.ZodString>;
+            employerAddr1: z.ZodNullable<z.ZodString>;
+            employerCity: z.ZodNullable<z.ZodString>;
+            employerState: z.ZodNullable<z.ZodString>;
+            employerZip: z.ZodNullable<z.ZodString>;
+            employerCountry: z.ZodNullable<z.ZodString>;
+        }, z.core.$strip>>;
+        email: z.ZodString;
+        phone: z.ZodNullable<z.ZodString>;
+        userId: z.ZodOptional<z.ZodNumber>;
+        contributions: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            createdAt: z.ZodCoercedDate<unknown>;
+            orderNumber: z.ZodString;
+            contributionForm: z.ZodString;
+            refcodes: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodOptional<z.ZodNullable<z.ZodString>>>>>;
+            abTestName: z.ZodNullable<z.ZodString>;
+            abTestVariation: z.ZodNullable<z.ZodString>;
+            isRecurring: z.ZodBoolean;
+            recurringPeriod: z.ZodString;
+            recurringDuration: z.ZodNullable<z.ZodNumber>;
+            weeklyRecurringSunset: z.ZodNullable<z.ZodString>;
+            isPaypal: z.ZodBoolean;
+            isMobile: z.ZodBoolean;
+            isExpress: z.ZodBoolean;
+            withExpressLane: z.ZodBoolean;
+            expressSignup: z.ZodBoolean;
+            uniqueIdentifier: z.ZodString;
+            status: z.ZodString;
+            thanksUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+            retryUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+            textMessageOption: z.ZodString;
+            giftDeclined: z.ZodNullable<z.ZodBoolean>;
+            giftIdentifier: z.ZodNullable<z.ZodString>;
+            shippingName: z.ZodNullable<z.ZodString>;
+            shippingAddr1: z.ZodNullable<z.ZodString>;
+            shippingCity: z.ZodNullable<z.ZodString>;
+            shippingState: z.ZodNullable<z.ZodString>;
+            shippingZip: z.ZodNullable<z.ZodString>;
+            shippingCountry: z.ZodNullable<z.ZodString>;
+            smartBoostAmount: z.ZodNullable<z.ZodCoercedNumber<unknown>>;
+            customFields: z.ZodArray<z.ZodObject<{
+                id: z.ZodOptional<z.ZodNumber>;
+                label: z.ZodString;
+                answer: z.ZodString;
+            }, z.core.$strip>>;
+            merchandise: z.ZodArray<z.ZodObject<{
+                name: z.ZodString;
+                itemId: z.ZodString;
+                details: z.ZodObject<{
+                    color: z.ZodString;
+                    size: z.ZodString;
+                }, z.core.$strip>;
+            }, z.core.$strip>>;
+            bumpYourRecurring: z.ZodNullable<z.ZodObject<{
+                bumpRecurringLink: z.ZodString;
+                recurringUpsellSeen: z.ZodBoolean;
+                recurringUpsellAccepted: z.ZodBoolean;
+            }, z.core.$strip>>;
+            lineitems: z.ZodOptional<z.ZodArray<z.ZodObject<{
+                sequence: z.ZodNumber;
+                amount: z.ZodNumber;
+                recurringAmount: z.ZodNullable<z.ZodNumber>;
+                paidAt: z.ZodCoercedDate<unknown>;
+                lineitemId: z.ZodNumber;
+                amountLessAbFees: z.ZodNumber;
+            }, z.core.$strict>>>;
+        }, z.core.$strict>>>;
+    }, z.core.$strict>>>;
+    history: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        historyId: z.ZodInt;
+        historyType: z.ZodEnum<typeof import("./UpdateHistory").UpdateHistoryType>;
+        historyDataSource: z.ZodNullable<z.ZodString>;
+        historyWhoUpdatedId: z.ZodNullable<z.ZodInt>;
+        historyWhenUpdatedUtc: z.ZodCoercedDate<unknown>;
+        id: z.ZodInt;
+        email: z.ZodNullable<z.ZodString>;
+        phone: z.ZodNullable<z.ZodString>;
+        preferredName: z.ZodNullable<z.ZodString>;
+        firstName: z.ZodNullable<z.ZodString>;
+        lastName: z.ZodNullable<z.ZodString>;
+        birthdate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+        location: z.ZodNullable<z.ZodObject<{
+            zip: z.ZodInt;
+            city: z.ZodString;
+            county: z.ZodString;
+            state: z.ZodString;
+        }, z.core.$strip>>;
+        address: z.ZodObject<{
+            addressLine1: z.ZodNullable<z.ZodString>;
+            addressLine2: z.ZodNullable<z.ZodString>;
+            city: z.ZodNullable<z.ZodString>;
+            county: z.ZodNullable<z.ZodString>;
+            state: z.ZodNullable<z.ZodString>;
+            zip: z.ZodNullable<z.ZodString>;
+        }, z.core.$strip>;
+        acceptedAlerts: z.ZodBoolean;
+        verified: z.ZodBoolean;
+        onboardingStage: z.ZodEnum<typeof import("./OnboardingStage").OnboardingStage>;
+        lastSmsCode: z.ZodNullable<z.ZodNumber>;
+        lastSmsCodeSendTimeUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+        status: z.ZodEnum<typeof UserStatus>;
+        createdAtUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+        joinedAtUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+        completedIntakeUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+        membershipCardStatus: z.ZodDefault<z.ZodEnum<typeof MembershipDeliverableStatus>>;
+        membershipMerchStatus: z.ZodDefault<z.ZodEnum<typeof MembershipDeliverableStatus>>;
+        shirtSize: z.ZodNullable<z.ZodEnum<typeof ShirtSize>>;
+        duesPayingMember: z.ZodBoolean;
+        membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof MembershipFulfillmentStatus>>;
+        nameConfirmed: z.ZodBoolean;
+        addressConfirmed: z.ZodBoolean;
+        aliases: z.ZodOptional<z.ZodArray<z.ZodString>>;
+        roles: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            id: z.ZodInt;
+            name: z.ZodString;
+            permissions: z.ZodOptional<z.ZodArray<z.ZodObject<{
+                id: z.ZodInt;
+                name: z.ZodString;
+            }, z.core.$strip>>>;
+        }, z.core.$strip>>>;
+        discordUsers: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            id: z.ZodString;
+            username: z.ZodString;
+            image: z.ZodString;
+            userId: z.ZodNullable<z.ZodNumber>;
+            email: z.ZodNullable<z.ZodString>;
+        }, z.core.$strip>>>;
+        donors: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            firstname: z.ZodString;
+            lastname: z.ZodString;
+            addr1: z.ZodNullable<z.ZodString>;
+            city: z.ZodNullable<z.ZodString>;
+            state: z.ZodNullable<z.ZodString>;
+            zip: z.ZodNullable<z.ZodString>;
+            country: z.ZodNullable<z.ZodString>;
+            isEligibleForExpressLane: z.ZodBoolean;
+            employerData: z.ZodNullable<z.ZodObject<{
+                employer: z.ZodNullable<z.ZodString>;
+                occupation: z.ZodNullable<z.ZodString>;
+                employerAddr1: z.ZodNullable<z.ZodString>;
+                employerCity: z.ZodNullable<z.ZodString>;
+                employerState: z.ZodNullable<z.ZodString>;
+                employerZip: z.ZodNullable<z.ZodString>;
+                employerCountry: z.ZodNullable<z.ZodString>;
+            }, z.core.$strip>>;
+            email: z.ZodString;
+            phone: z.ZodNullable<z.ZodString>;
+            userId: z.ZodOptional<z.ZodNumber>;
+            contributions: z.ZodOptional<z.ZodArray<z.ZodObject<{
+                createdAt: z.ZodCoercedDate<unknown>;
+                orderNumber: z.ZodString;
+                contributionForm: z.ZodString;
+                refcodes: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodOptional<z.ZodNullable<z.ZodString>>>>>;
+                abTestName: z.ZodNullable<z.ZodString>;
+                abTestVariation: z.ZodNullable<z.ZodString>;
+                isRecurring: z.ZodBoolean;
+                recurringPeriod: z.ZodString;
+                recurringDuration: z.ZodNullable<z.ZodNumber>;
+                weeklyRecurringSunset: z.ZodNullable<z.ZodString>;
+                isPaypal: z.ZodBoolean;
+                isMobile: z.ZodBoolean;
+                isExpress: z.ZodBoolean;
+                withExpressLane: z.ZodBoolean;
+                expressSignup: z.ZodBoolean;
+                uniqueIdentifier: z.ZodString;
+                status: z.ZodString;
+                thanksUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+                retryUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+                textMessageOption: z.ZodString;
+                giftDeclined: z.ZodNullable<z.ZodBoolean>;
+                giftIdentifier: z.ZodNullable<z.ZodString>;
+                shippingName: z.ZodNullable<z.ZodString>;
+                shippingAddr1: z.ZodNullable<z.ZodString>;
+                shippingCity: z.ZodNullable<z.ZodString>;
+                shippingState: z.ZodNullable<z.ZodString>;
+                shippingZip: z.ZodNullable<z.ZodString>;
+                shippingCountry: z.ZodNullable<z.ZodString>;
+                smartBoostAmount: z.ZodNullable<z.ZodCoercedNumber<unknown>>;
+                customFields: z.ZodArray<z.ZodObject<{
+                    id: z.ZodOptional<z.ZodNumber>;
+                    label: z.ZodString;
+                    answer: z.ZodString;
+                }, z.core.$strip>>;
+                merchandise: z.ZodArray<z.ZodObject<{
+                    name: z.ZodString;
+                    itemId: z.ZodString;
+                    details: z.ZodObject<{
+                        color: z.ZodString;
+                        size: z.ZodString;
+                    }, z.core.$strip>;
+                }, z.core.$strip>>;
+                bumpYourRecurring: z.ZodNullable<z.ZodObject<{
+                    bumpRecurringLink: z.ZodString;
+                    recurringUpsellSeen: z.ZodBoolean;
+                    recurringUpsellAccepted: z.ZodBoolean;
+                }, z.core.$strip>>;
+                lineitems: z.ZodOptional<z.ZodArray<z.ZodObject<{
+                    sequence: z.ZodNumber;
+                    amount: z.ZodNumber;
+                    recurringAmount: z.ZodNullable<z.ZodNumber>;
+                    paidAt: z.ZodCoercedDate<unknown>;
+                    lineitemId: z.ZodNumber;
+                    amountLessAbFees: z.ZodNumber;
+                }, z.core.$strict>>>;
+            }, z.core.$strict>>>;
+        }, z.core.$strict>>>;
+    }, z.core.$strip>>>;
+    donorHistory: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        historyId: z.ZodInt;
+        historyType: z.ZodEnum<typeof import("./UpdateHistory").UpdateHistoryType>;
+        historyDataSource: z.ZodNullable<z.ZodString>;
+        historyWhoUpdatedId: z.ZodNullable<z.ZodInt>;
+        historyWhenUpdatedUtc: z.ZodCoercedDate<unknown>;
+        firstname: z.ZodString;
+        lastname: z.ZodString;
+        addr1: z.ZodNullable<z.ZodString>;
+        city: z.ZodNullable<z.ZodString>;
+        state: z.ZodNullable<z.ZodString>;
+        zip: z.ZodNullable<z.ZodString>;
+        country: z.ZodNullable<z.ZodString>;
+        isEligibleForExpressLane: z.ZodBoolean;
+        employerData: z.ZodNullable<z.ZodObject<{
+            employer: z.ZodNullable<z.ZodString>;
+            occupation: z.ZodNullable<z.ZodString>;
+            employerAddr1: z.ZodNullable<z.ZodString>;
+            employerCity: z.ZodNullable<z.ZodString>;
+            employerState: z.ZodNullable<z.ZodString>;
+            employerZip: z.ZodNullable<z.ZodString>;
+            employerCountry: z.ZodNullable<z.ZodString>;
+        }, z.core.$strip>>;
+        email: z.ZodString;
+        phone: z.ZodNullable<z.ZodString>;
+        userId: z.ZodOptional<z.ZodNumber>;
+        contributions: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            createdAt: z.ZodCoercedDate<unknown>;
+            orderNumber: z.ZodString;
+            contributionForm: z.ZodString;
+            refcodes: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodOptional<z.ZodNullable<z.ZodString>>>>>;
+            abTestName: z.ZodNullable<z.ZodString>;
+            abTestVariation: z.ZodNullable<z.ZodString>;
+            isRecurring: z.ZodBoolean;
+            recurringPeriod: z.ZodString;
+            recurringDuration: z.ZodNullable<z.ZodNumber>;
+            weeklyRecurringSunset: z.ZodNullable<z.ZodString>;
+            isPaypal: z.ZodBoolean;
+            isMobile: z.ZodBoolean;
+            isExpress: z.ZodBoolean;
+            withExpressLane: z.ZodBoolean;
+            expressSignup: z.ZodBoolean;
+            uniqueIdentifier: z.ZodString;
+            status: z.ZodString;
+            thanksUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+            retryUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+            textMessageOption: z.ZodString;
+            giftDeclined: z.ZodNullable<z.ZodBoolean>;
+            giftIdentifier: z.ZodNullable<z.ZodString>;
+            shippingName: z.ZodNullable<z.ZodString>;
+            shippingAddr1: z.ZodNullable<z.ZodString>;
+            shippingCity: z.ZodNullable<z.ZodString>;
+            shippingState: z.ZodNullable<z.ZodString>;
+            shippingZip: z.ZodNullable<z.ZodString>;
+            shippingCountry: z.ZodNullable<z.ZodString>;
+            smartBoostAmount: z.ZodNullable<z.ZodCoercedNumber<unknown>>;
+            customFields: z.ZodArray<z.ZodObject<{
+                id: z.ZodOptional<z.ZodNumber>;
+                label: z.ZodString;
+                answer: z.ZodString;
+            }, z.core.$strip>>;
+            merchandise: z.ZodArray<z.ZodObject<{
+                name: z.ZodString;
+                itemId: z.ZodString;
+                details: z.ZodObject<{
+                    color: z.ZodString;
+                    size: z.ZodString;
+                }, z.core.$strip>;
+            }, z.core.$strip>>;
+            bumpYourRecurring: z.ZodNullable<z.ZodObject<{
+                bumpRecurringLink: z.ZodString;
+                recurringUpsellSeen: z.ZodBoolean;
+                recurringUpsellAccepted: z.ZodBoolean;
+            }, z.core.$strip>>;
+            lineitems: z.ZodOptional<z.ZodArray<z.ZodObject<{
+                sequence: z.ZodNumber;
+                amount: z.ZodNumber;
+                recurringAmount: z.ZodNullable<z.ZodNumber>;
+                paidAt: z.ZodCoercedDate<unknown>;
+                lineitemId: z.ZodNumber;
+                amountLessAbFees: z.ZodNumber;
+            }, z.core.$strict>>>;
+        }, z.core.$strict>>>;
+    }, z.core.$strip>>>;
+}, z.core.$strip>;
+export type User = z.infer<typeof zUser>;
+//# sourceMappingURL=User.d.ts.map

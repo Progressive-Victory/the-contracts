@@ -17,11 +17,22 @@
   "main": "index.js",
   "private": true,
   "exports": {
-    "./contracts/data": "./src/contracts/data/index.ts",
-    "./contracts/requests": "./src/contracts/requests/index.ts",
-    "./contracts/responses": "./src/contracts/responses/index.ts",
-    "./util": "./src/util/index.ts",
-    "./package.json": "./package.json"
+    "./data": {
+      "types": "./dist/contracts/data/index.d.ts",
+      "import": "./dist/contracts/data/index.js"
+    },
+    "./requests": {
+      "types": "./dist/contracts/data/index.d.ts",
+      "import": "./dist/contracts/data/index.js"
+    },
+    "./responses": {
+      "types": "./dist/contracts/data/index.d.ts",
+      "import": "./dist/contracts/data/index.js"
+    },
+    "./util": {
+      "types": "./dist/util/index.d.ts",
+      "import": "./dist/util/index.js"
+    }
   },
   "scripts": {
     "prettier": "prettier --write --ignore-path .prettierignore .",
