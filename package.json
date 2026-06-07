@@ -17,8 +17,14 @@
   "main": "index.js",
   "private": true,
   "exports": {
-    "./contracts": "./src/contracts/index.ts",
-    "./util": "./src/util/index.ts",
+    ".": {
+      "contracts": {
+        "data": "./src/contracts/data/index.ts",
+        "requests": "./src/contracts/requests/index.ts",
+        "responses": "./src/contracts/responses/index.ts"
+      },
+      "util": "./src/util/index.ts"
+    },
     "./package.json": "./package.json"
   },
   "scripts": {
