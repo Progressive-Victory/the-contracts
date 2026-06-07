@@ -16,6 +16,7 @@ export * from './DonationTotals';
 export * from './Donor';
 export * from './Endorsement';
 export * from './Location';
+export * from './MetaData'
 export * from './NdaForm';
 export * from './OnboardingStage';
 export * from './Permission';

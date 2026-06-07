@@ -11,6 +11,7 @@
 		"moduleResolution": "bundler",
 		"module": "esnext",
 		"target": "esnext",
+    	"types": ["node"],
 
 		// Other Outputs
 		"sourceMap": true,
@@ -34,8 +35,7 @@
 		"isolatedModules": true,
 		"noUncheckedSideEffectImports": true,
 		"moduleDetection": "force",
-		"skipLibCheck": true,
-    "types": ["node"]
+		"skipLibCheck": true
 	},
 	"exclude": ["node_modules", "dist"]
 }

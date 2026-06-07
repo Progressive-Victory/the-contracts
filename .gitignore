@@ -116,3 +116,5 @@ docs/
 # Temp Folder
 assets/temp/*
 !assets/temp/.gitkeep
+
+node_modules

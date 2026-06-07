@@ -12,10 +12,12 @@ export * from './CreatePositionRequest';
 export * from './CreateRoleRequest';
 export * from './CreateUserRequest';
 export * from './DeleteDiscordWarnRequest';
+export * from './GetDiscordEventAttendanceRequest'
 export * from './GetDiscordUsersByUsersRequest';
 export * from './GetDiscordWarnsRequest';
-export * from './GetUsersSearchRequest';
 export * from './GetRolesSearchRequest';
+export * from './GetUsersSearchRequest';
+export * from './MutationRequest';
 export * from './SearchRequest';
 export * from './SolidarityPostUserRequest';
 export * from './UpdateDiscordEventRequest';
