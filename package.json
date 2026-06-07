@@ -17,8 +17,8 @@
   "main": "index.js",
   "private": true,
   "exports": {
-    "./contracts": "./src/contracts",
-    "./util": "./src/util",
+    "./contracts": "./src/contracts/index.ts",
+    "./util": "./src/util/index.ts",
     "./package.json": "./package.json"
   },
   "scripts": {
