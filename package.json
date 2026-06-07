@@ -1,6 +1,6 @@
 {
   "name": "@progressive-victory/the-contracts",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "CRUD contracts for communicating with our API",
   "homepage": "https://github.com/Progressive-Victory/the-contracts#readme",
   "bugs": {
