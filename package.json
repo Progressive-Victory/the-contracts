@@ -18,10 +18,10 @@
   "private": true,
   "exports": {
     ".": {
-      "contracts": {
-        "data": "./src/contracts/data/index.ts",
-        "requests": "./src/contracts/requests/index.ts",
-        "responses": "./src/contracts/responses/index.ts"
+      "/contracts": {
+        "/data": "./src/contracts/data/index.ts",
+        "/requests": "./src/contracts/requests/index.ts",
+        "/responses": "./src/contracts/responses/index.ts"
       },
       "util": "./src/util/index.ts"
     },
