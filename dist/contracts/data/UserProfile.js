@@ -1,4 +1,4 @@
-import { zDiscordUser } from './DiscordUser';
+import { zDiscordUser } from './DiscordUser.js';
 import z from 'zod';
 export const zUserProfile = z.object({
     id: z.number(),

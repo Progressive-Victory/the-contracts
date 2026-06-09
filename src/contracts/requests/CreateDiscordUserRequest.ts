@@ -1,4 +1,4 @@
-import { zMutationRequest } from './MutationRequest';
+import { zMutationRequest } from './MutationRequest.js';
 import z from 'zod';
 
 export const zCreateDiscordUserRequest = zMutationRequest.extend({

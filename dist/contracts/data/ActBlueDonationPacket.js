@@ -1,4 +1,4 @@
-import { zActBlueContributionCustomField } from './ActBlueContributionCustomField';
+import { zActBlueContributionCustomField } from './ActBlueContributionCustomField.js';
 import z from 'zod';
 export const zActBlueDonationPacket = z.object({
     sequence: z.number(),

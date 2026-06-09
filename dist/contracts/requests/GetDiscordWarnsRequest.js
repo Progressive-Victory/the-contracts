@@ -1,4 +1,4 @@
-import { zSearchRequest } from './SearchRequest';
+import { zSearchRequest } from './SearchRequest.js';
 import z from 'zod';
 export const zGetDiscordWarnsRequest = z
     .object({

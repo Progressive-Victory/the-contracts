@@ -52,7 +52,7 @@ export declare const zUser: z.ZodObject<{
     }, z.core.$strip>;
     acceptedAlerts: z.ZodBoolean;
     verified: z.ZodBoolean;
-    onboardingStage: z.ZodEnum<typeof import("./OnboardingStage").OnboardingStage>;
+    onboardingStage: z.ZodEnum<typeof import("./OnboardingStage.js").OnboardingStage>;
     lastSmsCode: z.ZodNullable<z.ZodNumber>;
     lastSmsCodeSendTimeUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     status: z.ZodEnum<typeof UserStatus>;
@@ -163,7 +163,7 @@ export declare const zUser: z.ZodObject<{
     }, z.core.$strict>>>;
     history: z.ZodOptional<z.ZodArray<z.ZodObject<{
         historyId: z.ZodInt;
-        historyType: z.ZodEnum<typeof import("./UpdateHistory").UpdateHistoryType>;
+        historyType: z.ZodEnum<typeof import("./UpdateHistory.js").UpdateHistoryType>;
         historyDataSource: z.ZodNullable<z.ZodString>;
         historyWhoUpdatedId: z.ZodNullable<z.ZodInt>;
         historyWhenUpdatedUtc: z.ZodCoercedDate<unknown>;
@@ -190,7 +190,7 @@ export declare const zUser: z.ZodObject<{
         }, z.core.$strip>;
         acceptedAlerts: z.ZodBoolean;
         verified: z.ZodBoolean;
-        onboardingStage: z.ZodEnum<typeof import("./OnboardingStage").OnboardingStage>;
+        onboardingStage: z.ZodEnum<typeof import("./OnboardingStage.js").OnboardingStage>;
         lastSmsCode: z.ZodNullable<z.ZodNumber>;
         lastSmsCodeSendTimeUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
         status: z.ZodEnum<typeof UserStatus>;
@@ -302,7 +302,7 @@ export declare const zUser: z.ZodObject<{
     }, z.core.$strip>>>;
     donorHistory: z.ZodOptional<z.ZodArray<z.ZodObject<{
         historyId: z.ZodInt;
-        historyType: z.ZodEnum<typeof import("./UpdateHistory").UpdateHistoryType>;
+        historyType: z.ZodEnum<typeof import("./UpdateHistory.js").UpdateHistoryType>;
         historyDataSource: z.ZodNullable<z.ZodString>;
         historyWhoUpdatedId: z.ZodNullable<z.ZodInt>;
         historyWhenUpdatedUtc: z.ZodCoercedDate<unknown>;

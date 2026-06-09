@@ -1,5 +1,5 @@
-import { zDonation } from './Donation';
-import { zShippingStatus } from './ShippingStatus';
+import { zDonation } from './Donation.js';
+import { zShippingStatus } from './ShippingStatus.js';
 import z from 'zod';
 
 export const zDonor = z.object({

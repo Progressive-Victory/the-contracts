@@ -1,5 +1,5 @@
-import { zDiscordEventAttendee } from './DiscordEventAttendee';
-import { zDiscordEventStatus } from './DiscordEventStatus';
+import { zDiscordEventAttendee } from './DiscordEventAttendee.js';
+import { zDiscordEventStatus } from './DiscordEventStatus.js';
 import z from 'zod';
 
 export const zDiscordEvent = z.object({

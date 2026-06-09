@@ -8,7 +8,7 @@ export declare const zGetDiscordWarnsRequest: z.ZodObject<{
     searchField: z.ZodOptional<z.ZodString>;
     sortField: z.ZodOptional<z.ZodString>;
     query: z.ZodOptional<z.ZodString>;
-    sort: z.ZodDefault<z.ZodOptional<z.ZodEnum<typeof import("./SearchRequest").SortDirection>>>;
+    sort: z.ZodDefault<z.ZodOptional<z.ZodEnum<typeof import("./SearchRequest.js").SortDirection>>>;
 }, z.core.$strip>;
 export type GetDiscordWarnsRequest = z.infer<typeof zGetDiscordWarnsRequest>;
 //# sourceMappingURL=GetDiscordWarnsRequest.d.ts.map

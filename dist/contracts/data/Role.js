@@ -1,4 +1,4 @@
-import { zPermission } from './Permission';
+import { zPermission } from './Permission.js';
 import z from 'zod';
 export const zRole = z.object({
     id: z.int(),

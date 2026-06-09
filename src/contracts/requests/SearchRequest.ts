@@ -1,5 +1,5 @@
 import z from 'zod';
-import { zEnumQuery, zIntQuery, zStringQuery } from '../../util';
+import { zEnumQuery, zIntQuery, zStringQuery } from '../../util/index.js';
 
 export enum SortDirection {
 	ASC = 'asc',

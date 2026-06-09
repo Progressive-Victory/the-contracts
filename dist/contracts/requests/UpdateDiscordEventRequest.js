@@ -1,4 +1,4 @@
-import { zDiscordEventStatus } from '../data';
+import { zDiscordEventStatus } from '../data/index.js';
 import z from 'zod';
 export const zUpdateDiscordEventRequest = z.object({
     channelId: z.string().nonempty().optional(),

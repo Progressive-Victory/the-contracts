@@ -1,5 +1,5 @@
-import { zMutationRequest } from './MutationRequest';
-import { zUpdateUserAddressRequest } from './UpdateUserAddressRequest';
+import { zMutationRequest } from './MutationRequest.js';
+import { zUpdateUserAddressRequest } from './UpdateUserAddressRequest.js';
 import z from 'zod';
 import {
 	zOnboardingStage,
@@ -7,7 +7,7 @@ import {
 	zShirtSize,
 	zMembershipDeliverableStatus,
 	zMembershipFulfillmentStatus,
-} from '../data';
+} from '../data/index.js';
 
 export const zUpdateUserRequest = zMutationRequest
 	.extend({

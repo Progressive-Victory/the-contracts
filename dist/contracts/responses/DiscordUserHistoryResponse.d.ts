@@ -2,7 +2,7 @@ import z from 'zod';
 export declare const zDiscordUserHistoryResponse: z.ZodObject<{
     data: z.ZodArray<z.ZodObject<{
         historyId: z.ZodInt;
-        historyType: z.ZodEnum<typeof import("../data").UpdateHistoryType>;
+        historyType: z.ZodEnum<typeof import("../data/UpdateHistory.js").UpdateHistoryType>;
         historyDataSource: z.ZodNullable<z.ZodString>;
         historyWhoUpdatedId: z.ZodNullable<z.ZodInt>;
         historyWhenUpdatedUtc: z.ZodCoercedDate<unknown>;

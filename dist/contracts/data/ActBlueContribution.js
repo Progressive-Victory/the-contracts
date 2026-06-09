@@ -1,5 +1,5 @@
-import { zActBlueContributionCustomField } from './ActBlueContributionCustomField';
-import { zActBlueLineitem } from './ActBlueLineitem';
+import { zActBlueContributionCustomField } from './ActBlueContributionCustomField.js';
+import { zActBlueLineitem } from './ActBlueLineitem.js';
 import z from 'zod';
 export const zActBlueContribution = z.strictObject({
     createdAt: z.coerce.date(),

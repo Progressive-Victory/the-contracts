@@ -1,4 +1,4 @@
-import { zActBlueContribution } from './ActBlueContribution';
+import { zActBlueContribution } from './ActBlueContribution.js';
 import z from 'zod';
 export const zActBlueDonor = z
     .object({

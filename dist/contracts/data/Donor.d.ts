@@ -6,7 +6,7 @@ export declare const zDonor: z.ZodObject<{
     discordUsername: z.ZodString;
     shippingName: z.ZodString;
     shippingAddress: z.ZodString;
-    shippingStatus: z.ZodEnum<typeof import("./ShippingStatus").ShippingStatus>;
+    shippingStatus: z.ZodEnum<typeof import("./ShippingStatus.js").ShippingStatus>;
     donations: z.ZodNullable<z.ZodArray<z.ZodObject<{
         date: z.ZodCoercedDate<unknown>;
         orderNumber: z.ZodString;

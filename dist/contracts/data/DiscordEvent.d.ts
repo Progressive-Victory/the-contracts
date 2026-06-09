@@ -5,7 +5,7 @@ export declare const zDiscordEvent: z.ZodObject<{
     channelId: z.ZodString;
     name: z.ZodString;
     description: z.ZodNullable<z.ZodString>;
-    status: z.ZodNullable<z.ZodEnum<typeof import("./DiscordEventStatus").DiscordEventStatus>>;
+    status: z.ZodNullable<z.ZodEnum<typeof import("./DiscordEventStatus.js").DiscordEventStatus>>;
     recurrent: z.ZodBoolean;
     userCount: z.ZodNullable<z.ZodNumber>;
     thumbnailUrl: z.ZodString;

@@ -1,6 +1,6 @@
 export * from './ActBlueContribution.js';
 export * from './ActBlueContributionCustomField.js';
-export * from './ActBlueDonationPacket'
+export * from './ActBlueDonationPacket.js';
 export * from './ActBlueDonor.js';
 export * from './ActBlueForm.js';
 export * from './ActBlueLineitem.js';
@@ -16,7 +16,7 @@ export * from './DonationTotals.js';
 export * from './Donor.js';
 export * from './Endorsement.js';
 export * from './Location.js';
-export * from './MetaData'
+export * from './MetaData.js';
 export * from './NdaForm.js';
 export * from './OnboardingStage.js';
 export * from './Permission.js';

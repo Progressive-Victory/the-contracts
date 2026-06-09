@@ -1,5 +1,4 @@
-import { zUserProfile } from '../data';
-import { zPosition } from '../data/Position';
+import { zUserProfile, zPosition } from '../data/index.js';
 import z from 'zod';
 
 export const zPositionHierarchyResponse = z.object({
