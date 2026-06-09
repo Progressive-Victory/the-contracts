@@ -18,9 +18,9 @@
   "private": true,
   "exports": {
     "./data": "./dist/contracts/data/index.js",
-    "./requests": "./src/contracts/requests/index.js",
-    "./responses": "./src/contracts/responses/index.js",
-    "./util": "./src/util/index.js"
+    "./requests": "./dist/contracts/requests/index.js",
+    "./responses": "./dist/contracts/responses/index.js",
+    "./util": "./dist/util/index.js"
   },
   "typesVersions": {
     "*": {
