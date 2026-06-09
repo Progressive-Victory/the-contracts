@@ -23,9 +23,7 @@ export const zActBlueRequest = z.strictObject({
 		// on whether we manage the donation form or not and choose
 		// to let them. It is unclear from the documentation if this
 		// means this should be optional or not.
-
-		// Our system isn't structured to handle a null email. If one is submitted, we should drop the request.
-		email: z.string(),
+		email: z.string().nullable(),
 		phone: z.string().nullable(),
 	}),
 
