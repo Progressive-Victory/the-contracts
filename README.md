@@ -13,6 +13,7 @@ Used primarily by:
 
 ## Style
 `pnpm run lint-ci`
+
 `pnpm run prettier`
 
 ## Tests
