@@ -1,0 +1,15 @@
+name: test
+on: 
+  workflow_dispatch:
+    inputs:
+      cbt:
+        description: 'Cock Or Balls?'
+        required: true
+        default: 'Cock'
+
+jobs:
+  print-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo "cbt: ${{ github.event.inputs.cbt }}"
