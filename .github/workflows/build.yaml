@@ -23,6 +23,7 @@ jobs:
           cp README.md dist/README.md
 
       - name: Penis
+        shell: bash
         run: echo ${GITHUB_HEAD_REF}
 
       - name: Publish to Git
