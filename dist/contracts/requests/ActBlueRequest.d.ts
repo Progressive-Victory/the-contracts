@@ -19,7 +19,7 @@ export declare const zActBlueRequest: z.ZodObject<{
             employerCountry: z.ZodNullable<z.ZodString>;
         }, z.core.$strip>;
         email: z.ZodNullable<z.ZodString>;
-        phone: z.ZodNullable<z.ZodString>;
+        phone: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>;
     contribution: z.ZodObject<{
         createdAt: z.ZodCoercedDate<unknown>;
