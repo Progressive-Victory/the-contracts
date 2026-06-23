@@ -23,10 +23,10 @@ jobs:
           cp README.md dist/README.md
 
       - name: Penis
-        run: echo ${{ env.GITHUB_HEAD_REF }}
+        run: echo ${GITHUB_HEAD_REF}
 
       - name: Publish to Git
         uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: ${{ env.GITHUB_HEAD_REF }}
+          BRANCH_NAME: ${GITHUB_HEAD_REF}
