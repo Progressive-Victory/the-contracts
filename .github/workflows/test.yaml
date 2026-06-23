@@ -1,15 +1,7 @@
 name: test
-on: 
-  pull_request:
-    branches:
-      - dev
-    inputs:
-      cbt:
-        description: 'Cock Or Balls?'
-        required: true
-        default: 'Cock'
+on: pull_request
 jobs:
   print-inputs:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "cbt: ${{ github.event.inputs.cbt }}"
+      - run: echo "cum"
