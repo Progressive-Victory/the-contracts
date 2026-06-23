@@ -1,66 +1,68 @@
 {
-    "name": "@progressive-victory/the-contracts",
-    "version": "1.7.0",
-    "description": "CRUD contracts for communicating with our API",
-    "homepage": "https://github.com/Progressive-Victory/the-contracts#readme",
-    "bugs": {
-        "url": "https://github.comz/Progressive-Victory/the-contracts/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Progressive-Victory/the-contracts.git"
-    },
-    "license": "ISC",
-    "author": "sH3llH0und",
-    "type": "module",
-    "packageManager": "pnpm@10.30.2",
-    "main": "index.js",
-    "private": true,
-    "exports": {
-        "./data": "./contracts/data/index.js",
-        "./requests": "./contracts/requests/index.js",
-        "./responses": "./contracts/responses/index.js",
-        "./util": "./util/index.js"
-    },
-    "typesVersions": {
-        "*": {
-            "./data": [
-                "./contracts/data/index.d.ts"
-            ],
-            "./requests": [
-                "./contracts/requests/index.d.ts"
-            ],
-            "./responses": [
-                "./contracts/responses/index.d.ts"
-            ],
-            "./util": [
-                "./util/index.d.ts"
-            ]
-        }
-    },
-    "scripts": {
-        "prettier": "prettier --write --ignore-path .prettierignore .",
-        "prettier-ci": "prettier --check --ignore-path .prettierignore .",
-        "lint-ci": "tsc && eslint --max-warnings=0",
-        "lint-fix": "eslint --fix"
-    },
-    "dependencies": {
-        "zod": "^4.4.3"
-    },
-    "devDependencies": {
-        "@eslint/js": "^10.0.1",
-        "@progressive-victory/eslint-plugin-index-file": "^1.1.5",
-        "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-        "@types/node": "^25.9.1",
-        "@typescript-eslint/rule-tester": "^8.60.0",
-        "@typescript-eslint/utils": "^8.60.0",
-        "eslint": "^10.4.1",
-        "eslint-plugin-import": "^2.32.0",
-        "globals": "^17.6.0",
-        "jiti": "^2.7.0",
-        "prettier": "^3.8.3",
-        "typescript": "^6.0.3",
-        "typescript-eslint": "^8.60.0",
-        "vitest": "^4.1.8"
+  "name": "@progressive-victory/the-contracts",
+  "version": "1.7.0",
+  "description": "CRUD contracts for communicating with our API",
+  "homepage": "https://github.com/Progressive-Victory/the-contracts#readme",
+  "bugs": {
+    "url": "https://github.comz/Progressive-Victory/the-contracts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Progressive-Victory/the-contracts.git"
+  },
+  "license": "ISC",
+  "author": "sH3llH0und",
+  "type": "module",
+  "packageManager": "pnpm@10.30.2",
+  "main": "index.js",
+  "private": true,
+  "exports": {
+    "./data": "./contracts/data/index.js",
+    "./requests": "./contracts/requests/index.js",
+    "./responses": "./contracts/responses/index.js",
+    "./util": "./util/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "./data": [
+        "./contracts/data/index.d.ts"
+      ],
+      "./requests": [
+        "./contracts/requests/index.d.ts"
+      ],
+      "./responses": [
+        "./contracts/responses/index.d.ts"
+      ],
+      "./util": [
+        "./util/index.d.ts"
+      ]
     }
+  },
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "prettier": "prettier --write --ignore-path .prettierignore .",
+    "prettier-ci": "prettier --check --ignore-path .prettierignore .",
+    "lint-ci": "tsc && eslint --max-warnings=0",
+    "lint-fix": "eslint --fix"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@progressive-victory/eslint-plugin-index-file": "^1.1.5",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@types/node": "^25.9.1",
+    "@typescript-eslint/rule-tester": "^8.60.0",
+    "@typescript-eslint/utils": "^8.60.0",
+    "esbuild": "^0.28.1",
+    "eslint": "^10.4.1",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^17.6.0",
+    "jiti": "^2.7.0",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.0",
+    "vitest": "^4.1.8"
+  }
 }
