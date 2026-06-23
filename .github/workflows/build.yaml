@@ -24,7 +24,7 @@ jobs:
 
       - name: Penis
         shell: bash
-        run: "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
 
       - name: Publish to Git
         uses: mikeal/publish-to-github-action@master
