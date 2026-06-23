@@ -1,12 +1,11 @@
 name: test
-on: 
+on: [push]
   workflow_dispatch:
     inputs:
       cbt:
         description: 'Cock Or Balls?'
         required: true
         default: 'Cock'
-
 jobs:
   print-inputs:
     runs-on: ubuntu-latest
