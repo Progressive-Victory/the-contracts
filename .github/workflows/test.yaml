@@ -1,5 +1,6 @@
 name: test
-on: [push]
+on: 
+  push:
     inputs:
       cbt:
         description: 'Cock Or Balls?'
@@ -9,5 +10,4 @@ jobs:
   print-inputs:
     runs-on: ubuntu-latest
     steps:
-      - name: Print
-        run: echo "cbt: ${{ github.event.inputs.cbt }}"
+      - run: echo "cbt: ${{ github.event.inputs.cbt }}"
