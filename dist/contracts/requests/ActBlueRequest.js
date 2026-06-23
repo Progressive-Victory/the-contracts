@@ -22,8 +22,11 @@ export const zActBlueRequest = z.strictObject({
         // on whether we manage the donation form or not and choose
         // to let them. It is unclear from the documentation if this
         // means this should be optional or not.
+        // when a field is omitted in actblue it is omitted from the datastructure entirely
+        // this means that it returns undefined when queried and thus must be optional
+        // despite our general design protocols
         email: z.string().nullable(),
-        phone: z.string().nullable(),
+        phone: z.string().optional(),
     }),
     contribution: z.object({
         createdAt: z.coerce.date(),

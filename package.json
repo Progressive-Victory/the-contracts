@@ -1,6 +1,6 @@
 {
   "name": "@progressive-victory/the-contracts",
-  "version": "1.5.0",
+  "version": "1.7.0",
   "description": "CRUD contracts for communicating with our API",
   "homepage": "https://github.com/Progressive-Victory/the-contracts#readme",
   "bugs": {
@@ -17,24 +17,24 @@
   "main": "index.js",
   "private": true,
   "exports": {
-    "./data": "./dist/contracts/data/index.js",
-    "./requests": "./dist/contracts/requests/index.js",
-    "./responses": "./dist/contracts/responses/index.js",
-    "./util": "./dist/util/index.js"
+    "./data": "./contracts/data/index.js",
+    "./requests": "./contracts/requests/index.js",
+    "./responses": "./contracts/responses/index.js",
+    "./util": "./util/index.js"
   },
   "typesVersions": {
     "*": {
       "./data": [
-        "./dist/contracts/data/index.d.ts"
+        "./contracts/data/index.d.ts"
       ],
       "./requests": [
-        "./dist/contracts/requests/index.d.ts"
+        "./contracts/requests/index.d.ts"
       ],
       "./responses": [
-        "./dist/contracts/responses/index.d.ts"
+        "./contracts/responses/index.d.ts"
       ],
       "./util": [
-        "./dist/util/index.d.ts"
+        "./util/index.d.ts"
       ]
     }
   },
