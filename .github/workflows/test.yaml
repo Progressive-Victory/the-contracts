@@ -1,6 +1,8 @@
 name: test
 on: 
-  push:
+  pull_request:
+    branches:
+      - dev
     inputs:
       cbt:
         description: 'Cock Or Balls?'
