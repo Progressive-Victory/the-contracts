@@ -16,3 +16,13 @@ jobs:
 
       - name: Build Project
         run: pnpm tsc
+
+      - name: Copy Files
+        run: |
+          cp package.json dist/package.json
+          cp README.md dist/README.md
+
+      - name: Publish to Git
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
