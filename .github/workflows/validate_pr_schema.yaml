@@ -13,11 +13,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Retrieve and Validate Update Type
+        shell: bash
         env:
           BODY: ${{ github.event.pull_request.body }}
         run: |
           echo "$BODY"
           read val < <(echo "$BODY" | grep -E '^change: (major|minor|patch)$')
-          echo "$val"
+          echo "val: $val"
           if [ -z "$val" ]; then exit 1; fi
 
