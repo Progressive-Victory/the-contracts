@@ -18,5 +18,6 @@ jobs:
         run: |
           echo "$BODY"
           read val < <(echo "$BODY" | grep -E '^change: (major|minor|patch)$')
+          echo "$val"
           if [ -z "$val" ]; then exit 1; fi
 
