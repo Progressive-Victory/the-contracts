@@ -17,5 +17,5 @@ jobs:
           BODY: ${{ github.event.pull_request.body }}
         run: |
           read val < <(echo "$BODY" | grep -E '^change: (major|minor|patch)$')
-          if [ -z "$val"]; then exit 1; fi
+          if [ -z "$val" ]; then exit 1; fi
 
