@@ -2,4 +2,4 @@
 
 ## Change Type
 
-change: (major|minor|patch)
+- change: (major|minor|patch)
