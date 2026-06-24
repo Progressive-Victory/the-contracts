@@ -18,7 +18,7 @@ jobs:
           BODY: ${{ github.event.pull_request.body }}
         run: |
           echo "$BODY"
-          echo "val=$(echo '$BODY' | grep -E '^change: (major|minor|patch)$')" >> $GITHUB_ENV
-          echo "val: $val"
+          echo "val=$(echo "$BODY" | grep -E '^change: (major|minor|patch)$')" >> $GITHUB_ENV
+          echo "val: ${{ env.val }}"
           if [ -z "$val" ]; then exit 1; fi
 
