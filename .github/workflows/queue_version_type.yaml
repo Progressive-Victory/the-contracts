@@ -8,5 +8,5 @@ jobs:
         env:
           BODY: ${{ github.event.pull_request.body }}
         run: |
-          read val < <(echo "$BODY" | grep -E '^change: major|minor|patch$')
+          read val < <(echo "$BODY" | grep -E '^change: (major|minor|patch)$')
           echo "${val:8:13}"
