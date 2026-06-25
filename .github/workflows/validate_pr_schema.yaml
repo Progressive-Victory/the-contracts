@@ -16,5 +16,7 @@ jobs:
         shell: bash {0}
         env:
           BODY: ${{ github.event.pull_request.body }}
-        run: ./.github/scripts/validate_pr_schema.sh "$BODY"
+        run: |
+          set +e
+          ./.github/scripts/validate_pr_schema.sh "$BODY"
 
