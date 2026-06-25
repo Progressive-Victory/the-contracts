@@ -16,5 +16,6 @@ jobs:
         shell: bash
         env:
           BODY: ${{ github.event.pull_request.body }}
-        run: echo "$BODY" | grep -q '^change: \(major\|minor\|patch\)$' || (echo "::error::Could Not Find Update SemVer Type" && exit 1)
+        run: |
+         echo "$BODY" | grep -q '^change: \(major\|minor\|patch\)$' || (echo "::error::Could Not Find Update SemVer Type" && exit 1)
 
