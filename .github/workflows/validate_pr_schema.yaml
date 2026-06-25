@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Retrieve and Validate Update Type
-        shell: bash
+        shell: bash {0}
         env:
           BODY: ${{ github.event.pull_request.body }}
         run: ./.github/scripts/validate_pr_schema.sh "$BODY"
