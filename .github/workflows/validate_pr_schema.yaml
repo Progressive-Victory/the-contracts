@@ -13,10 +13,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Retrieve and Validate Update Type
-        shell: bash {0}
+        shell: bash
         env:
           BODY: ${{ github.event.pull_request.body }}
-        run: |
-          set +e
-          ./.github/scripts/validate_pr_schema.sh "$BODY"
+        run: echo "$BODY" | grep -q '^change: \(major\|minor\|patch\)$' || (echo "::error::Could Not Find Update SemVer Type" && exit 1)
 
