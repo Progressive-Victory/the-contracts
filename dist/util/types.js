@@ -15,10 +15,9 @@ export const zStringParam = z.string().nonempty();
 export const zEnumQuery = (entries) => z.enum(entries).optional();
 export const zIntArrayQuery = z
     .string()
-    .optional()
     .transform((list, ctx) => {
-    const parsed = list?.split(',').map((item) => +item);
-    if (parsed?.some((num) => isNaN(num))) {
+    const parsed = list.split(',').map((item) => +item);
+    if (parsed.some((num) => isNaN(num))) {
         ctx.addIssue({
             code: 'custom',
             message: `Int arrays must be provided as num1,num2,num3 etc., but got: ${list}`,
@@ -27,5 +26,6 @@ export const zIntArrayQuery = z
         return z.NEVER;
     }
     return parsed;
-});
+})
+    .optional();
 //# sourceMappingURL=types.js.map
