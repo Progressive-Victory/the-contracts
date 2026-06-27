@@ -18,26 +18,29 @@ export declare const zActBlueRequest: z.ZodObject<{
             employerZip: z.ZodNullable<z.ZodString>;
             employerCountry: z.ZodNullable<z.ZodString>;
         }, z.core.$strip>;
-        email: z.ZodNullable<z.ZodString>;
+        email: z.ZodString;
         phone: z.ZodOptional<z.ZodString>;
     }, z.core.$strip>;
     contribution: z.ZodObject<{
         createdAt: z.ZodCoercedDate<unknown>;
         orderNumber: z.ZodString;
         contributionForm: z.ZodNullable<z.ZodString>;
+        refcode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        refcode2: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         refcodes: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodOptional<z.ZodNullable<z.ZodString>>>>>;
-        abTestName: z.ZodNullable<z.ZodString>;
-        abTestVariation: z.ZodNullable<z.ZodString>;
-        isRecurring: z.ZodBoolean;
+        creditCardExpiration: z.ZodNullable<z.ZodString>;
         recurringPeriod: z.ZodString;
         recurringDuration: z.ZodNullable<z.ZodCoercedString<unknown>>;
+        abTestName: z.ZodNullable<z.ZodString>;
+        isRecurring: z.ZodOptional<z.ZodBoolean>;
         weeklyRecurringSunset: z.ZodNullable<z.ZodString>;
         isPaypal: z.ZodBoolean;
         isMobile: z.ZodBoolean;
+        abTestVariation: z.ZodNullable<z.ZodString>;
         isExpress: z.ZodBoolean;
         withExpressLane: z.ZodBoolean;
         expressSignup: z.ZodBoolean;
-        uniqueIdentifier: z.ZodString;
+        uniqueIdentifier: z.ZodOptional<z.ZodString>;
         status: z.ZodString;
         thanksUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         retryUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -52,16 +55,13 @@ export declare const zActBlueRequest: z.ZodObject<{
         shippingCountry: z.ZodNullable<z.ZodString>;
         smartBoostAmount: z.ZodNullable<z.ZodString>;
         customFields: z.ZodArray<z.ZodObject<{
-            label: z.ZodString;
-            answer: z.ZodString;
+            label: z.ZodNullable<z.ZodString>;
+            answer: z.ZodNullable<z.ZodString>;
         }, z.core.$strip>>;
         merchandise: z.ZodArray<z.ZodObject<{
             name: z.ZodString;
-            itemId: z.ZodString;
-            details: z.ZodObject<{
-                color: z.ZodString;
-                size: z.ZodString;
-            }, z.core.$strip>;
+            details: z.ZodNullable<z.ZodObject<{}, z.core.$loose>>;
+            itemId: z.ZodNumber;
         }, z.core.$strip>>;
         bumpYourRecurring: z.ZodNullable<z.ZodObject<{
             bumpRecurringLink: z.ZodString;
@@ -77,6 +77,7 @@ export declare const zActBlueRequest: z.ZodObject<{
         amount: z.ZodCoercedString<unknown>;
         recurringAmount: z.ZodNullable<z.ZodCoercedString<unknown>>;
         paidAt: z.ZodCoercedDate<unknown>;
+        paymentId: z.ZodOptional<z.ZodString>;
         lineitemId: z.ZodNumber;
         amountLessAbFees: z.ZodCoercedString<unknown>;
     }, z.core.$strip>>;

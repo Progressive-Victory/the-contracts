@@ -6,7 +6,7 @@ export declare const zGetUsersSearchRequest: z.ZodObject<{
     sortField: z.ZodOptional<z.ZodString>;
     query: z.ZodOptional<z.ZodString>;
     sort: z.ZodDefault<z.ZodOptional<z.ZodEnum<typeof import("./SearchRequest.js").SortDirection>>>;
-    roleIds: z.ZodPipe<z.ZodOptional<z.ZodString>, z.ZodTransform<number[] | undefined, string | undefined>>;
+    roleIds: z.ZodPipe<z.ZodOptional<z.ZodString>, z.ZodTransform<never, string | undefined>>;
     withDiscordUsers: z.ZodPipe<z.ZodPipe<z.ZodOptional<z.ZodEnum<{
         true: "true";
         false: "false";
