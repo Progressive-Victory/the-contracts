@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		// File Layout
 		"outDir": "./dist",
+		"rootDir": "./src",
 
 		// Output Options
 		"moduleResolution": "bundler",
@@ -34,6 +35,5 @@
 		"moduleDetection": "force",
 		"skipLibCheck": true
 	},
-	"include": ["./package.json", "./README.md", "./src/*"],
 	"exclude": ["node_modules", "dist"]
 }

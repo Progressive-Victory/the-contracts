@@ -1,0 +1,10 @@
+name: queue_version_type
+on: pull_request
+jobs:
+  print-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Update Type
+        env:
+          BODY: ${{ github.event.pull_request.body }}
+        run: echo $BODY
