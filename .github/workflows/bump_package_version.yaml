@@ -16,4 +16,4 @@ jobs:
         shell: bash {0}
         env:
           BODY: ${{ github.event.pull_request.body }}
-        run:
+        run: ./.github/scripts/extract_update_type.sh "$BODY"
