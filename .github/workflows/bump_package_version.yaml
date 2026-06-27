@@ -1,20 +1,19 @@
-name: Validate PR Schema
+name: Bump Package Version
 on:
   pull_request:
-    types: [opened,edited,reopened]
+    types: [push]
     branches: [dev]
 
 jobs:
-  validate_pr_schema:
+  bump_package_version:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Retrieve and Validate Update Type
-        shell: bash
+      - name: Retrieve Update Type
+        shell: bash {0}
         env:
           BODY: ${{ github.event.pull_request.body }}
-        run: ./.github/scripts/validate_pr_schema.sh "$BODY"
-
+        run:
