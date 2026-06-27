@@ -1,7 +1,7 @@
 name: Bump Package Version
 on:
   pull_request:
-    types: [push]
+    types: [edited]
 
 jobs:
   bump_package_version:
