@@ -6,7 +6,7 @@ export declare const zGetRolesSearchRequest: z.ZodObject<{
     sortField: z.ZodOptional<z.ZodString>;
     query: z.ZodOptional<z.ZodString>;
     sort: z.ZodDefault<z.ZodOptional<z.ZodEnum<typeof import("./SearchRequest.js").SortDirection>>>;
-    permissionIds: z.ZodPipe<z.ZodOptional<z.ZodString>, z.ZodTransform<never, string | undefined>>;
+    permissionIds: z.ZodPipe<z.ZodOptional<z.ZodString>, z.ZodTransform<number[] | undefined, string | undefined>>;
 }, z.core.$strip>;
 export type GetRolesSearchRequest = z.infer<typeof zGetRolesSearchRequest>;
 //# sourceMappingURL=GetRolesSearchRequest.d.ts.map
