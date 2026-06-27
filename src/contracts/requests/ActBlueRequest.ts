@@ -1,5 +1,14 @@
 import z from 'zod';
 
+/**
+ * The webhook request from ActBlue, sent whenever a user donates through them.
+ *
+ * "Specification": https://secure.actblue.com/docs/custom_integrations
+ *
+ * Since it comes from ActBlue, not all of our conventions can be followed.
+ * Specifically, some fields are optional, either due to deprecation or certain
+ * rules detailed in the spec.
+ */
 export const zActBlueRequest = z.strictObject({
 	donor: z.object({
 		firstname: z.string(),
