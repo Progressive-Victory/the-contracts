@@ -39,7 +39,7 @@
     }
   },
   "scripts": {
-    "build": "node esbuild.config.js",
+    "build": "pnpm tsc && cp package.json dist/package.json && cp README.md dist/README.md",
     "prettier": "prettier --write --ignore-path .prettierignore .",
     "prettier-ci": "prettier --check --ignore-path .prettierignore .",
     "lint-ci": "tsc && eslint --max-warnings=0",
