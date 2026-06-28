@@ -20,9 +20,9 @@ export const zActBlueDonor = z.object({
         employerCountry: z.string().nullable(),
     })
         .nullable(),
-    email: z.string().nullable(),
+    email: z.string(),
     phone: z.string().nullable(),
-    userId: z.number().nullable(),
+    userId: z.number().optional(),
     contributions: z.array(zActBlueContribution).optional(),
 });
 //# sourceMappingURL=ActBlueDonor.js.map

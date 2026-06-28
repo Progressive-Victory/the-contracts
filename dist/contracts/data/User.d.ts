@@ -100,9 +100,9 @@ export declare const zUser: z.ZodObject<{
             employerZip: z.ZodNullable<z.ZodString>;
             employerCountry: z.ZodNullable<z.ZodString>;
         }, z.core.$strip>>;
-        email: z.ZodNullable<z.ZodString>;
+        email: z.ZodString;
         phone: z.ZodNullable<z.ZodString>;
-        userId: z.ZodNullable<z.ZodNumber>;
+        userId: z.ZodOptional<z.ZodNumber>;
         contributions: z.ZodOptional<z.ZodArray<z.ZodObject<{
             createdAt: z.ZodCoercedDate<unknown>;
             orderNumber: z.ZodString;
@@ -238,9 +238,9 @@ export declare const zUser: z.ZodObject<{
                 employerZip: z.ZodNullable<z.ZodString>;
                 employerCountry: z.ZodNullable<z.ZodString>;
             }, z.core.$strip>>;
-            email: z.ZodNullable<z.ZodString>;
+            email: z.ZodString;
             phone: z.ZodNullable<z.ZodString>;
-            userId: z.ZodNullable<z.ZodNumber>;
+            userId: z.ZodOptional<z.ZodNumber>;
             contributions: z.ZodOptional<z.ZodArray<z.ZodObject<{
                 createdAt: z.ZodCoercedDate<unknown>;
                 orderNumber: z.ZodString;
@@ -323,9 +323,9 @@ export declare const zUser: z.ZodObject<{
             employerZip: z.ZodNullable<z.ZodString>;
             employerCountry: z.ZodNullable<z.ZodString>;
         }, z.core.$strip>>;
-        email: z.ZodNullable<z.ZodString>;
+        email: z.ZodString;
         phone: z.ZodNullable<z.ZodString>;
-        userId: z.ZodNullable<z.ZodNumber>;
+        userId: z.ZodOptional<z.ZodNumber>;
         contributions: z.ZodOptional<z.ZodArray<z.ZodObject<{
             createdAt: z.ZodCoercedDate<unknown>;
             orderNumber: z.ZodString;
