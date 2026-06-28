@@ -16,3 +16,10 @@ jobs:
         env:
           BODY: ${{ github.event.pull_request.body }}
         run: ./.github/scripts/extract_update_type.sh "$BODY"
+        id: extract_update_type
+
+      - name: Bump Version
+        shell: bash
+        env:
+          UPDATE_TYPE: ${{ steps.extract_update_type.outputs.update_type }}
+        run: echo "$UPDATE_TYPE"

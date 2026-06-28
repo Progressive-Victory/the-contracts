@@ -9,4 +9,4 @@ if [ -z "$updateLine" ]; then
     exit 1
 fi
 
-echo "${updateLine:8:13}"
+echo "update_type=${updateLine:8:13}" >> $GITHUB_OUTPUT
