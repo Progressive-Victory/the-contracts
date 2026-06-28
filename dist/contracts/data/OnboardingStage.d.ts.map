@@ -1,1 +1,0 @@
-{"version":3,"file":"OnboardingStage.d.ts","sourceRoot":"","sources":["../../../src/contracts/data/OnboardingStage.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAGpB,oBAAY,eAAe;IAE1B,WAAW,gBAAgB;IAG3B,eAAe,oBAAoB;IAGnC,QAAQ,aAAa;IAGrB,QAAQ,aAAa;IAGrB,WAAW,gBAAgB;IAG3B,MAAM,WAAW;IAGjB,MAAM,WAAW;CACjB;AAED,eAAO,MAAM,gBAAgB,mCAA0B,CAAC"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"GetDiscordEventAttendanceRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/GetDiscordEventAttendanceRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,iCAAiC;;iBAE5C,CAAC;AAEH,MAAM,MAAM,gCAAgC,GAAG,CAAC,CAAC,KAAK,CACrD,OAAO,iCAAiC,CACxC,CAAC"}

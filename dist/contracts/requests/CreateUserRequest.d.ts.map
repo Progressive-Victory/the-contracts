@@ -1,1 +1,0 @@
-{"version":3,"file":"CreateUserRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/CreateUserRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,kBAAkB;;kBAIrB,CAAC;AAEX,MAAM,MAAM,iBAAiB,GAAG,CAAC,CAAC,KAAK,CAAC,OAAO,kBAAkB,CAAC,CAAC"}
