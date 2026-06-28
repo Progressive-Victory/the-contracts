@@ -1,0 +1,1 @@
+{"version":3,"file":"DeleteDiscordWarnRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/DeleteDiscordWarnRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,yBAAyB;;iBAEpC,CAAC;AAEH,MAAM,MAAM,wBAAwB,GAAG,CAAC,CAAC,KAAK,CAC7C,OAAO,yBAAyB,CAChC,CAAC"}

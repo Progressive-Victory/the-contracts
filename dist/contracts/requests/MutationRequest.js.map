@@ -1,0 +1,1 @@
+{"version":3,"file":"MutationRequest.js","sourceRoot":"","sources":["../../../src/contracts/requests/MutationRequest.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,qBAAqB,CAAC;AAChD,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,MAAM,CAAC,MAAM,gBAAgB,GAAG,CAAC,CAAC,MAAM,CAAC;IACxC,QAAQ,EAAE,SAAS,CAAC,QAAQ,EAAE;CAC9B,CAAC,CAAC"}

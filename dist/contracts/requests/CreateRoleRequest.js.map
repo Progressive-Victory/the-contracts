@@ -1,0 +1,1 @@
+{"version":3,"file":"CreateRoleRequest.js","sourceRoot":"","sources":["../../../src/contracts/requests/CreateRoleRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,MAAM,CAAC,MAAM,kBAAkB,GAAG,CAAC,CAAC,MAAM,CAAC;IAC1C,IAAI,EAAE,CAAC,CAAC,MAAM,EAAE,CAAC,QAAQ,EAAE;IAC3B,aAAa,EAAE,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,EAAE,CAAC;CAC/B,CAAC,CAAC"}

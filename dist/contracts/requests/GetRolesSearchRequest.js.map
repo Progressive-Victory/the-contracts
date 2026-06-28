@@ -1,0 +1,1 @@
+{"version":3,"file":"GetRolesSearchRequest.js","sourceRoot":"","sources":["../../../src/contracts/requests/GetRolesSearchRequest.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,oBAAoB,CAAC;AAEpD,OAAO,EAAE,cAAc,EAAE,MAAM,qBAAqB,CAAC;AAErD,MAAM,CAAC,MAAM,sBAAsB,GAAG,cAAc,CAAC,MAAM,CAAC;IAC3D,aAAa,EAAE,cAAc;CAC7B,CAAC,CAAC"}

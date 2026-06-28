@@ -1,0 +1,60 @@
+import z from 'zod';
+export declare const zActBlueContribution: z.ZodObject<{
+    createdAt: z.ZodCoercedDate<unknown>;
+    orderNumber: z.ZodString;
+    contributionForm: z.ZodString;
+    refcodes: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodOptional<z.ZodNullable<z.ZodString>>>>>;
+    abTestName: z.ZodNullable<z.ZodString>;
+    abTestVariation: z.ZodNullable<z.ZodString>;
+    isRecurring: z.ZodBoolean;
+    recurringPeriod: z.ZodString;
+    recurringDuration: z.ZodNullable<z.ZodNumber>;
+    weeklyRecurringSunset: z.ZodNullable<z.ZodString>;
+    isPaypal: z.ZodBoolean;
+    isMobile: z.ZodBoolean;
+    isExpress: z.ZodBoolean;
+    withExpressLane: z.ZodBoolean;
+    expressSignup: z.ZodBoolean;
+    uniqueIdentifier: z.ZodString;
+    status: z.ZodString;
+    thanksUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    retryUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    textMessageOption: z.ZodString;
+    giftDeclined: z.ZodNullable<z.ZodBoolean>;
+    giftIdentifier: z.ZodNullable<z.ZodString>;
+    shippingName: z.ZodNullable<z.ZodString>;
+    shippingAddr1: z.ZodNullable<z.ZodString>;
+    shippingCity: z.ZodNullable<z.ZodString>;
+    shippingState: z.ZodNullable<z.ZodString>;
+    shippingZip: z.ZodNullable<z.ZodString>;
+    shippingCountry: z.ZodNullable<z.ZodString>;
+    smartBoostAmount: z.ZodNullable<z.ZodCoercedNumber<unknown>>;
+    customFields: z.ZodArray<z.ZodObject<{
+        id: z.ZodOptional<z.ZodNumber>;
+        label: z.ZodString;
+        answer: z.ZodString;
+    }, z.core.$strip>>;
+    merchandise: z.ZodArray<z.ZodObject<{
+        name: z.ZodString;
+        itemId: z.ZodString;
+        details: z.ZodObject<{
+            color: z.ZodString;
+            size: z.ZodString;
+        }, z.core.$strip>;
+    }, z.core.$strip>>;
+    bumpYourRecurring: z.ZodNullable<z.ZodObject<{
+        bumpRecurringLink: z.ZodString;
+        recurringUpsellSeen: z.ZodBoolean;
+        recurringUpsellAccepted: z.ZodBoolean;
+    }, z.core.$strip>>;
+    lineitems: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        sequence: z.ZodNumber;
+        amount: z.ZodNumber;
+        recurringAmount: z.ZodNullable<z.ZodNumber>;
+        paidAt: z.ZodCoercedDate<unknown>;
+        lineitemId: z.ZodNumber;
+        amountLessAbFees: z.ZodNumber;
+    }, z.core.$strict>>>;
+}, z.core.$strict>;
+export type ActBlueContribution = z.infer<typeof zActBlueContribution>;
+//# sourceMappingURL=ActBlueContribution.d.ts.map
