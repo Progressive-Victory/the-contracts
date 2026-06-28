@@ -1,0 +1,1 @@
+{"version":3,"file":"CreateDiscordEventAttendeeRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/CreateDiscordEventAttendeeRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,kCAAkC;;;;iBAI7C,CAAC;AAEH,MAAM,MAAM,iCAAiC,GAAG,CAAC,CAAC,KAAK,CACtD,OAAO,kCAAkC,CACzC,CAAC"}

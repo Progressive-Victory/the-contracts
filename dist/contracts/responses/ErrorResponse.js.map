@@ -1,0 +1,1 @@
+{"version":3,"file":"ErrorResponse.js","sourceRoot":"","sources":["../../../src/contracts/responses/ErrorResponse.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,MAAM,CAAC,MAAM,cAAc,GAAG,CAAC,CAAC,MAAM,CAAC;IACtC,KAAK,EAAE,CAAC,CAAC,MAAM,EAAE,CAAC,QAAQ,EAAE;IAC5B,OAAO,EAAE,CAAC,CAAC,MAAM,EAAE,CAAC,QAAQ,EAAE;CAC9B,CAAC,CAAC"}

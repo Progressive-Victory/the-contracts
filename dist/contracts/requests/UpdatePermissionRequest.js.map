@@ -1,0 +1,1 @@
+{"version":3,"file":"UpdatePermissionRequest.js","sourceRoot":"","sources":["../../../src/contracts/requests/UpdatePermissionRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,MAAM,CAAC,MAAM,wBAAwB,GAAG,CAAC,CAAC,MAAM,CAAC;IAChD,IAAI,EAAE,CAAC,CAAC,MAAM,EAAE,CAAC,QAAQ,EAAE,CAAC,QAAQ,EAAE;CACtC,CAAC,CAAC"}
