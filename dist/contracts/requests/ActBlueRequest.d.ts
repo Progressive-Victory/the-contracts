@@ -27,21 +27,18 @@ export declare const zActBlueRequest: z.ZodObject<{
             employerZip: z.ZodNullable<z.ZodString>;
             employerCountry: z.ZodNullable<z.ZodString>;
         }, z.core.$strip>;
-        email: z.ZodString;
-        phone: z.ZodOptional<z.ZodString>;
+        email: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+        phone: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     }, z.core.$strip>;
     contribution: z.ZodObject<{
         createdAt: z.ZodCoercedDate<unknown>;
         orderNumber: z.ZodString;
         contributionForm: z.ZodNullable<z.ZodString>;
-        refcode: z.ZodOptional<z.ZodNullable<z.ZodString>>;
-        refcode2: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         refcodes: z.ZodOptional<z.ZodNullable<z.ZodRecord<z.ZodString, z.ZodOptional<z.ZodNullable<z.ZodString>>>>>;
         creditCardExpiration: z.ZodNullable<z.ZodString>;
         recurringPeriod: z.ZodString;
         recurringDuration: z.ZodNullable<z.ZodCoercedString<unknown>>;
         abTestName: z.ZodNullable<z.ZodString>;
-        isRecurring: z.ZodOptional<z.ZodBoolean>;
         weeklyRecurringSunset: z.ZodNullable<z.ZodString>;
         isPaypal: z.ZodBoolean;
         isMobile: z.ZodBoolean;
@@ -49,7 +46,6 @@ export declare const zActBlueRequest: z.ZodObject<{
         isExpress: z.ZodBoolean;
         withExpressLane: z.ZodBoolean;
         expressSignup: z.ZodBoolean;
-        uniqueIdentifier: z.ZodOptional<z.ZodString>;
         status: z.ZodString;
         thanksUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         retryUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
@@ -86,7 +82,6 @@ export declare const zActBlueRequest: z.ZodObject<{
         amount: z.ZodCoercedString<unknown>;
         recurringAmount: z.ZodNullable<z.ZodCoercedString<unknown>>;
         paidAt: z.ZodCoercedDate<unknown>;
-        paymentId: z.ZodOptional<z.ZodString>;
         lineitemId: z.ZodNumber;
         amountLessAbFees: z.ZodCoercedString<unknown>;
     }, z.core.$strip>>;
