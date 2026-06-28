@@ -36,18 +36,13 @@ export const zActBlueRequest = z.strictObject({
         // datastructure entirely this means that it returns undefined when
         // queried and thus must be optional despite our general design
         // protocols.
-        //
-        // However, since we key on email, we have to throw a 400 when email is
-        // omitted regardless.
-        email: z.string(),
-        phone: z.string().optional(),
+        email: z.string().nullable().optional(),
+        phone: z.string().nullable().optional(),
     }),
     contribution: z.object({
         createdAt: z.coerce.date(),
         orderNumber: z.string(),
         contributionForm: z.string().nullable(),
-        refcode: z.string().nullable().optional(), // DEPRECATED (use refcodes)
-        refcode2: z.string().nullable().optional(), // DEPRECATED (use refcodes)
         // TODO: Verify whether refcode values can be null (or if they or the
         // record itself can be omitted)
         refcodes: z.record(z.string(), z.string().nullish()).nullish(),
@@ -59,7 +54,6 @@ export const zActBlueRequest = z.strictObject({
         // TODO: Use zod transform to parse directly
         recurringDuration: z.coerce.string().nullable(),
         abTestName: z.string().nullable(),
-        isRecurring: z.boolean().optional(), // DEPRECATED (use recurringPeriod)
         // TODO: Parse this into a date
         weeklyRecurringSunset: z.string().nullable(),
         isPaypal: z.boolean(),
@@ -68,7 +62,6 @@ export const zActBlueRequest = z.strictObject({
         isExpress: z.boolean(),
         withExpressLane: z.boolean(),
         expressSignup: z.boolean(),
-        uniqueIdentifier: z.string().optional(), // DEPRECATED (use lineitemId)
         // TODO: Restrict to 'approved', 'declined', or 'pending'
         status: z.string(),
         // TODO: Restrict conditionality. `thanksUrl` is present only when
@@ -116,7 +109,6 @@ export const zActBlueRequest = z.strictObject({
         amount: z.coerce.string(),
         recurringAmount: z.coerce.string().nullable(),
         paidAt: z.coerce.date(),
-        paymentId: z.string().optional(), // DEPRECATED (use lineitemId)
         // Unique identifier for each individual donation
         lineitemId: z.number(),
         // TODO: Parse this as a float directly
