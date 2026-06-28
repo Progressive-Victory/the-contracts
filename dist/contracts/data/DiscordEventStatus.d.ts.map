@@ -1,1 +1,0 @@
-{"version":3,"file":"DiscordEventStatus.d.ts","sourceRoot":"","sources":["../../../src/contracts/data/DiscordEventStatus.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,oBAAY,kBAAkB;IAC7B,SAAS,IAAI;IACb,MAAM,IAAI;IACV,SAAS,IAAI;IACb,SAAS,IAAI;CACb;AAED,eAAO,MAAM,mBAAmB,sCAA6B,CAAC"}

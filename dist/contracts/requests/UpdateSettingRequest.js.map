@@ -1,1 +1,0 @@
-{"version":3,"file":"UpdateSettingRequest.js","sourceRoot":"","sources":["../../../src/contracts/requests/UpdateSettingRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,MAAM,CAAC,MAAM,qBAAqB,GAAG,CAAC,CAAC,MAAM,CAAC;IAC7C,KAAK,EAAE,CAAC,CAAC,MAAM,EAAE,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,QAAQ,EAAE;CACrC,CAAC,CAAC"}

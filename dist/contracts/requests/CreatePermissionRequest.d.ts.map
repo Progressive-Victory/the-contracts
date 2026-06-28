@@ -1,1 +1,0 @@
-{"version":3,"file":"CreatePermissionRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/CreatePermissionRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,wBAAwB;;iBAEnC,CAAC;AAEH,MAAM,MAAM,uBAAuB,GAAG,CAAC,CAAC,KAAK,CAAC,OAAO,wBAAwB,CAAC,CAAC"}
