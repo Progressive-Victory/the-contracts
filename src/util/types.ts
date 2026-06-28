@@ -22,10 +22,16 @@ export const zEnumQuery = <const T extends util.EnumLike>(entries: T) =>
 
 export const zIntArrayQuery = z
 	.string()
-	.optional()
 	.transform((list, ctx) => {
-		const parsed = list?.split(',').map((item) => +item);
-		if (parsed?.some((num) => isNaN(num)))
-			ctx.addIssue('must be provided as num1,num2,num3 etc.');
+		const parsed = list.split(',').map((item) => +item);
+		if (parsed.some((num) => isNaN(num))) {
+			ctx.addIssue({
+				code: 'custom',
+				message: `Int arrays must be provided as num1,num2,num3 etc., but got: ${list}`,
+				fatal: true,
+			});
+			return z.NEVER;
+		}
 		return parsed;
-	});
+	})
+	.optional();
