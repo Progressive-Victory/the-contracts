@@ -1,6 +1,6 @@
 {
   "name": "@progressive-victory/the-contracts",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "CRUD contracts for communicating with our API",
   "homepage": "https://github.com/Progressive-Victory/the-contracts#readme",
   "bugs": {
@@ -39,7 +39,7 @@
     }
   },
   "scripts": {
-    "build": "node esbuild.config.js",
+    "build": "pnpm tsc && cp package.json dist/package.json && cp README.md dist/README.md",
     "prettier": "prettier --write --ignore-path .prettierignore .",
     "prettier-ci": "prettier --check --ignore-path .prettierignore .",
     "lint-ci": "tsc && eslint --max-warnings=0",
