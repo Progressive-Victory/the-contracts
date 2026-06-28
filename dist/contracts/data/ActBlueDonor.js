@@ -1,7 +1,6 @@
 import { zActBlueContribution } from './ActBlueContribution.js';
 import z from 'zod';
-export const zActBlueDonor = z
-    .object({
+export const zActBlueDonor = z.object({
     firstname: z.string(),
     lastname: z.string(),
     addr1: z.string().nullable(),
@@ -21,10 +20,9 @@ export const zActBlueDonor = z
         employerCountry: z.string().nullable(),
     })
         .nullable(),
-    email: z.string(),
+    email: z.string().nullable(),
     phone: z.string().nullable(),
-    userId: z.number().optional(),
+    userId: z.number().nullable(),
     contributions: z.array(zActBlueContribution).optional(),
-})
-    .strict();
+});
 //# sourceMappingURL=ActBlueDonor.js.map
