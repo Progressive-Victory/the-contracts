@@ -1,1 +1,0 @@
-{"version":3,"file":"CreateNdaFormRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/CreateNdaFormRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,qBAAqB;;;;;;;;;;;;;iBAahC,CAAC;AAEH,MAAM,MAAM,oBAAoB,GAAG,CAAC,CAAC,KAAK,CAAC,OAAO,qBAAqB,CAAC,CAAC"}

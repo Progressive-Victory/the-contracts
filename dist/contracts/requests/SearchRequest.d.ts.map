@@ -1,1 +1,0 @@
-{"version":3,"file":"SearchRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/SearchRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAGpB,oBAAY,aAAa;IACxB,GAAG,QAAQ;IACX,IAAI,SAAS;CACb;AAED,eAAO,MAAM,cAAc;;;;;;;iBAOzB,CAAC;AAEH,MAAM,MAAM,aAAa,GAAG,CAAC,CAAC,KAAK,CAAC,OAAO,cAAc,CAAC,CAAC"}

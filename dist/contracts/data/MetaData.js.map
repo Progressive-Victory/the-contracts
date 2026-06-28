@@ -1,1 +1,0 @@
-{"version":3,"file":"MetaData.js","sourceRoot":"","sources":["../../../src/contracts/data/MetaData.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,MAAM,CAAC,MAAM,SAAS,GAAG,CAAC,CAAC,MAAM,CAAC;IACjC,gBAAgB,EAAE,CAAC,CAAC,MAAM,EAAE,CAAC,QAAQ,EAAE;IACvC,UAAU,EAAE,CAAC,CAAC,MAAM,EAAE,CAAC,QAAQ,EAAE;CACjC,CAAC,CAAC"}

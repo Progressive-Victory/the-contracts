@@ -1,1 +1,0 @@
-{"version":3,"file":"CreatePositionRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/CreatePositionRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,sBAAsB;;;iBAGjC,CAAC;AAEH,MAAM,MAAM,qBAAqB,GAAG,CAAC,CAAC,KAAK,CAAC,OAAO,sBAAsB,CAAC,CAAC"}

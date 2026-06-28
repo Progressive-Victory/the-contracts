@@ -1,1 +1,0 @@
-{"version":3,"file":"TokenClaims.js","sourceRoot":"","sources":["../../../src/contracts/data/TokenClaims.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,MAAM,CAAC,MAAM,YAAY,GAAG,CAAC,CAAC,MAAM,CAAC;IACpC,MAAM,EAAE,CAAC,CAAC,GAAG,EAAE;IACf,aAAa,EAAE,CAAC,CAAC,MAAM,EAAE;IACzB,WAAW,EAAE,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,GAAG,EAAE,CAAC;CAC7B,CAAC,CAAC"}
