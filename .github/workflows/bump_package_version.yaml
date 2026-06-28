@@ -22,7 +22,7 @@ jobs:
         shell: bash
         env:
           UPDATE_TYPE: ${{ steps.extract_update_type.outputs.update_type }}
-        run: npm version "$UPDATE_TYPE"
+        run: pnpm version "$UPDATE_TYPE"
       
       - name: Extract branch name
         shell: bash
