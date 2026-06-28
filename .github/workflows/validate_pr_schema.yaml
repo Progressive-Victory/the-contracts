@@ -1,0 +1,20 @@
+name: Validate PR Schema
+on:
+  pull_request:
+    types: [opened,edited,reopened]
+    branches: [dev]
+
+jobs:
+  validate_pr_schema:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Retrieve and Validate Update Type
+        shell: bash
+        env:
+          BODY: ${{ github.event.pull_request.body }}
+        run: ./.github/scripts/validate_pr_schema.sh "$BODY"
+

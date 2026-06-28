@@ -1,1 +1,0 @@
-{"version":3,"file":"UpdateEndorsementRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/UpdateEndorsementRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAIpB,eAAO,MAAM,yBAAyB;;;;;;;;;;;;;;;;;iBAiBpC,CAAC;AAEH,MAAM,MAAM,wBAAwB,GAAG,CAAC,CAAC,KAAK,CAC7C,OAAO,yBAAyB,CAChC,CAAC"}

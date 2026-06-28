@@ -1,1 +1,0 @@
-{"version":3,"file":"CreateDiscordWarnRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/CreateDiscordWarnRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,yBAAyB;;;;;iBAKpC,CAAC;AAEH,MAAM,MAAM,wBAAwB,GAAG,CAAC,CAAC,KAAK,CAC7C,OAAO,yBAAyB,CAChC,CAAC"}

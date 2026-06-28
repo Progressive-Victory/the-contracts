@@ -1,1 +1,0 @@
-{"version":3,"file":"UpdateUserAddressRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/UpdateUserAddressRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,yBAAyB;;;;;;;kBAS5B,CAAC;AAEX,MAAM,MAAM,wBAAwB,GAAG,CAAC,CAAC,KAAK,CAC7C,OAAO,yBAAyB,CAChC,CAAC"}

@@ -1,0 +1,36 @@
+name: Bump Package Version
+on:
+  pull_request:
+    types: [edited]
+
+jobs:
+  bump_package_version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Retrieve Update Type
+        shell: bash {0}
+        env:
+          BODY: ${{ github.event.pull_request.body }}
+        run: ./.github/scripts/extract_update_type.sh "$BODY"
+        id: extract_update_type
+
+      - name: Bump Version
+        shell: bash
+        env:
+          UPDATE_TYPE: ${{ steps.extract_update_type.outputs.update_type }}
+        run: pnpm version "$UPDATE_TYPE"
+      
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
+
+      - name: Publish to Git
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}

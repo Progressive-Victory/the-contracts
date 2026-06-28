@@ -1,1 +1,0 @@
-{"version":3,"file":"DonationTotals.d.ts","sourceRoot":"","sources":["../../../src/contracts/data/DonationTotals.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,oBAAY,SAAS;IACpB,SAAS,cAAc;IACvB,QAAQ,aAAa;IACrB,GAAG,QAAQ;CACX;AAED,eAAO,MAAM,UAAU,6BAAoB,CAAC;AAE5C,eAAO,MAAM,cAAc;;;iBAGzB,CAAC;AAEH,MAAM,MAAM,aAAa,GAAG,CAAC,CAAC,KAAK,CAAC,OAAO,cAAc,CAAC,CAAC"}
