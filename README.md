@@ -29,7 +29,7 @@ If backwards incompatible changes are required, consult with a Senior Developer 
 Backwards incompatible changes to contracts:
 - removing fields
 - renaming fields
-- adding fields that are required to be non null
+- adding required fields
 
 ## Workflow
 - the-contracts
