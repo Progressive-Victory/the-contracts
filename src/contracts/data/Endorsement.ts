@@ -1,9 +1,9 @@
 import z from 'zod';
 
-export type InitiativeType_t = '' | 'State' | 'National';
-export type EndorsementType_t = 'PV Pledge' | 'Endorsement' | 'Recommendation';
-export type AvatarBackgroundColor_t = 'blue' | 'yellow';
-export type ElectionStatus_t =
+export type InitiativeType = '' | 'State' | 'National';
+export type EndorsementType = 'PV Pledge' | 'Endorsement' | 'Recommendation';
+export type AvatarBackgroundColor = 'blue' | 'yellow';
+export type ElectionStatus =
 	| ''
 	| 'Upcoming Primary'
 	| 'Won Primary'
@@ -16,20 +16,20 @@ export const zEndorsement = z.object({
 	id: z.int(),
 	name: z.string(),
 	state: z.string(),
-	candidateLink: z.string(),
-	linkLabel: z.string(),
+	candidate_link: z.string(),
+	link_label: z.string(),
 	description: z.string(),
-	isStateInitiative: z.coerce.boolean(),
-	isNationalInitiative: z.coerce.boolean(),
-	isPvMember: z.coerce.boolean(),
-	tookPvPledge: z.coerce.boolean(),
-	imgUrl: z.string(),
-	primaryElection: z.coerce.date(),
-	generalElection: z.coerce.date(),
-	initiativeType: z.string(),
-	endorsementType: z.string(),
-	avatarBackgroundColor: z.string(),
-	electionStatus: z.string(),
+	is_state_initiative: z.coerce.boolean(),
+	is_national_initiative: z.coerce.boolean(),
+	is_pv_member: z.coerce.boolean(),
+	took_pv_pledge: z.coerce.boolean(),
+	img_url: z.string(),
+	primary_election: z.coerce.date(),
+	general_election: z.coerce.date(),
+	initiative_level: z.string(),
+	endorsement_level: z.string(),
+	avatar_bg_color: z.string(),
+	election_status: z.string(),
 });
 
 export type Endorsement = z.infer<typeof zEndorsement>;
