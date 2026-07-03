@@ -1,21 +1,47 @@
 import z from 'zod';
+// Implicit enums will convert into numbers when creating database entries, which we do not want
+export var InitiativeType;
+(function (InitiativeType) {
+    InitiativeType["State"] = "State";
+    InitiativeType["National"] = "National";
+})(InitiativeType || (InitiativeType = {}));
+export var EndorsementType;
+(function (EndorsementType) {
+    EndorsementType["PVPledge"] = "PV Pledge";
+    EndorsementType["Endorsement"] = "Endorsement";
+    EndorsementType["Recommendation"] = "Recommendation";
+})(EndorsementType || (EndorsementType = {}));
+export var AvatarBgColor;
+(function (AvatarBgColor) {
+    AvatarBgColor["Blue"] = "Blue";
+    AvatarBgColor["Yellow"] = "Yellow";
+})(AvatarBgColor || (AvatarBgColor = {}));
+export var ElectionStatus;
+(function (ElectionStatus) {
+    ElectionStatus["UpcomingPrimary"] = "Upcoming Primary";
+    ElectionStatus["WonPrimary"] = "Won Primary";
+    ElectionStatus["Elected"] = "Elected";
+    ElectionStatus["LostPrimary"] = "Lost Primary";
+    ElectionStatus["LostGeneral"] = "Lost General";
+    ElectionStatus["DroppedOut"] = "Dropped Out";
+})(ElectionStatus || (ElectionStatus = {}));
 export const zEndorsement = z.object({
     id: z.int(),
     name: z.string(),
     state: z.string(),
     candidate_link: z.string(),
-    link_label: z.string(),
+    linkLabel: z.string(),
     description: z.string(),
-    is_state_initiative: z.coerce.boolean(),
-    is_national_initiative: z.coerce.boolean(),
-    is_pv_member: z.coerce.boolean(),
-    took_pv_pledge: z.coerce.boolean(),
-    img_url: z.string(),
-    primary_election: z.coerce.date(),
-    general_election: z.coerce.date(),
-    initiative_level: z.string(),
-    endorsement_level: z.string(),
-    avatar_bg_color: z.string(),
-    election_status: z.string(),
+    isStateInitiative: z.coerce.boolean(),
+    isNationalInitiative: z.coerce.boolean(),
+    isPvMember: z.coerce.boolean(),
+    tookPvPledge: z.coerce.boolean(),
+    imgUrl: z.string(),
+    primaryElection: z.coerce.date(),
+    generalElection: z.coerce.date(),
+    initiativeStrength: z.enum(InitiativeType),
+    endorsementLevel: z.enum(EndorsementType),
+    avatarBgColor: z.enum(AvatarBgColor),
+    electionStatus: z.enum(ElectionStatus).nullable(),
 });
 //# sourceMappingURL=Endorsement.js.map

@@ -1,35 +1,46 @@
 import z from 'zod';
 
-export type InitiativeType = '' | 'State' | 'National';
-export type EndorsementType = 'PV Pledge' | 'Endorsement' | 'Recommendation';
-export type AvatarBackgroundColor = 'blue' | 'yellow';
-export type ElectionStatus =
-	| ''
-	| 'Upcoming Primary'
-	| 'Won Primary'
-	| 'Elected'
-	| 'Lost Primary'
-	| 'Lost General'
-	| 'Dropped Out';
+// Implicit enums will convert into numbers when creating database entries, which we do not want
+export enum InitiativeType {
+	State = 'State',
+	National = 'National',
+}
+export enum EndorsementType {
+	PVPledge = 'PV Pledge',
+	Endorsement = 'Endorsement',
+	Recommendation = 'Recommendation',
+}
+export enum AvatarBgColor {
+	Blue = 'Blue',
+	Yellow = 'Yellow',
+}
+export enum ElectionStatus {
+	UpcomingPrimary = 'Upcoming Primary',
+	WonPrimary = 'Won Primary',
+	Elected = 'Elected',
+	LostPrimary = 'Lost Primary',
+	LostGeneral = 'Lost General',
+	DroppedOut = 'Dropped Out',
+}
 
 export const zEndorsement = z.object({
 	id: z.int(),
 	name: z.string(),
 	state: z.string(),
 	candidate_link: z.string(),
-	link_label: z.string(),
+	linkLabel: z.string(),
 	description: z.string(),
-	is_state_initiative: z.coerce.boolean(),
-	is_national_initiative: z.coerce.boolean(),
-	is_pv_member: z.coerce.boolean(),
-	took_pv_pledge: z.coerce.boolean(),
-	img_url: z.string(),
-	primary_election: z.coerce.date(),
-	general_election: z.coerce.date(),
-	initiative_level: z.string(),
-	endorsement_level: z.string(),
-	avatar_bg_color: z.string(),
-	election_status: z.string(),
+	isStateInitiative: z.coerce.boolean(),
+	isNationalInitiative: z.coerce.boolean(),
+	isPvMember: z.coerce.boolean(),
+	tookPvPledge: z.coerce.boolean(),
+	imgUrl: z.string(),
+	primaryElection: z.coerce.date(),
+	generalElection: z.coerce.date(),
+	initiativeStrength: z.enum(InitiativeType),
+	endorsementLevel: z.enum(EndorsementType),
+	avatarBgColor: z.enum(AvatarBgColor),
+	electionStatus: z.enum(ElectionStatus).nullable(),
 });
 
 export type Endorsement = z.infer<typeof zEndorsement>;
