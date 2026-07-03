@@ -13,12 +13,12 @@ export const zUpdateEndorsementRequest = z.object({
 	isNationalInitiative: z.boolean().optional(),
 	isPvMember: z.boolean().optional(),
 	tookPvPledge: z.boolean().optional(),
-	primaryElection: z.coerce.date().optional(),
-	generalElection: z.coerce.date().optional(),
-	initiativeStrength: z.string().max(32).optional(),
+	primaryElection: z.coerce.date().nullable().optional(),
+	generalElection: z.coerce.date().nullable().optional(),
+	initiativeLevel: z.string().max(32).optional(),
 	endorsementLevel: z.string().max(32).optional(),
 	avatarBgColor: z.string().max(32).optional(),
-	electionStatus: z.string().max(32).optional(),
+	electionStatus: z.string().max(32).nullable().optional(),
 });
 
 export type UpdateEndorsementRequest = z.infer<

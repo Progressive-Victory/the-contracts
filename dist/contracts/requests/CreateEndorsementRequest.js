@@ -13,7 +13,7 @@ export const zCreateEndorsementRequest = z.object({
     tookPvPledge: z.boolean().default(false),
     primaryElection: z.coerce.date().nullable().default(null),
     generalElection: z.coerce.date().nullable().default(null),
-    initiativeStrength: z.enum(InitiativeType).nullable().default(null),
+    initiativeLevel: z.enum(InitiativeType).nullable().default(null),
     endorsementLevel: z
         .enum(EndorsementType)
         .default(EndorsementType.Endorsement),

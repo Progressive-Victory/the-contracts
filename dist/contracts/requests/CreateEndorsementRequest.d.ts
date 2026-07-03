@@ -13,7 +13,7 @@ export declare const zCreateEndorsementRequest: z.ZodObject<{
     tookPvPledge: z.ZodDefault<z.ZodBoolean>;
     primaryElection: z.ZodDefault<z.ZodNullable<z.ZodCoercedDate<unknown>>>;
     generalElection: z.ZodDefault<z.ZodNullable<z.ZodCoercedDate<unknown>>>;
-    initiativeStrength: z.ZodDefault<z.ZodNullable<z.ZodEnum<typeof InitiativeType>>>;
+    initiativeLevel: z.ZodDefault<z.ZodNullable<z.ZodEnum<typeof InitiativeType>>>;
     endorsementLevel: z.ZodDefault<z.ZodEnum<typeof EndorsementType>>;
     avatarBgColor: z.ZodDefault<z.ZodEnum<typeof AvatarBgColor>>;
     electionStatus: z.ZodDefault<z.ZodNullable<z.ZodEnum<typeof ElectionStatus>>>;

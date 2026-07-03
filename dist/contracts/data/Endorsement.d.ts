@@ -24,7 +24,7 @@ export declare const zEndorsement: z.ZodObject<{
     id: z.ZodInt;
     name: z.ZodString;
     state: z.ZodString;
-    candidate_link: z.ZodString;
+    candidateLink: z.ZodString;
     linkLabel: z.ZodString;
     description: z.ZodString;
     isStateInitiative: z.ZodCoercedBoolean<unknown>;
@@ -32,9 +32,9 @@ export declare const zEndorsement: z.ZodObject<{
     isPvMember: z.ZodCoercedBoolean<unknown>;
     tookPvPledge: z.ZodCoercedBoolean<unknown>;
     imgUrl: z.ZodString;
-    primaryElection: z.ZodCoercedDate<unknown>;
-    generalElection: z.ZodCoercedDate<unknown>;
-    initiativeStrength: z.ZodEnum<typeof InitiativeType>;
+    primaryElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    generalElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    initiativeLevel: z.ZodEnum<typeof InitiativeType>;
     endorsementLevel: z.ZodEnum<typeof EndorsementType>;
     avatarBgColor: z.ZodEnum<typeof AvatarBgColor>;
     electionStatus: z.ZodNullable<z.ZodEnum<typeof ElectionStatus>>;
