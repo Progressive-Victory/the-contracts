@@ -12,11 +12,11 @@ export const zUpdateEndorsementRequest = z.object({
     isNationalInitiative: z.boolean().optional(),
     isPvMember: z.boolean().optional(),
     tookPvPledge: z.boolean().optional(),
-    primaryElection: z.coerce.date().nullable().optional(),
-    generalElection: z.coerce.date().nullable().optional(),
+    primaryElection: z.coerce.date().optional().nullable(),
+    generalElection: z.coerce.date().optional().nullable(),
     initiativeLevel: z.string().max(32).optional(),
     endorsementLevel: z.string().max(32).optional(),
     avatarBgColor: z.string().max(32).optional(),
-    electionStatus: z.string().max(32).nullable().optional(),
+    electionStatus: z.string().max(32).optional().nullable(),
 });
 //# sourceMappingURL=UpdateEndorsementRequest.js.map
