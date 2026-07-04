@@ -15,7 +15,7 @@ export const zUpdateEndorsementRequest = z.object({
 	tookPvPledge: z.boolean().optional(),
 	primaryElection: z.coerce.date().optional().nullable(),
 	generalElection: z.coerce.date().optional().nullable(),
-	initiativeLevel: z.string().max(32).optional(),
+	initiativeLevel: z.string().max(32).optional().nullable(),
 	endorsementLevel: z.string().max(32).optional(),
 	avatarBgColor: z.string().max(32).optional(),
 	electionStatus: z.string().max(32).optional().nullable(),

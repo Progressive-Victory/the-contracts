@@ -15,6 +15,7 @@ export enum AvatarBgColor {
 	Yellow = 'Yellow',
 }
 export enum ElectionStatus {
+	NoElection = 'No Election',
 	UpcomingPrimary = 'Upcoming Primary',
 	WonPrimary = 'Won Primary',
 	Elected = 'Elected',
@@ -37,7 +38,7 @@ export const zEndorsement = z.object({
 	imgUrl: z.string(),
 	primaryElection: z.coerce.date().nullable(),
 	generalElection: z.coerce.date().nullable(),
-	initiativeLevel: z.enum(InitiativeType),
+	initiativeLevel: z.enum(InitiativeType).nullable(),
 	endorsementLevel: z.enum(EndorsementType),
 	avatarBgColor: z.enum(AvatarBgColor),
 	electionStatus: z.enum(ElectionStatus).nullable(),

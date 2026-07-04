@@ -18,6 +18,7 @@ export var AvatarBgColor;
 })(AvatarBgColor || (AvatarBgColor = {}));
 export var ElectionStatus;
 (function (ElectionStatus) {
+    ElectionStatus["NoElection"] = "No Election";
     ElectionStatus["UpcomingPrimary"] = "Upcoming Primary";
     ElectionStatus["WonPrimary"] = "Won Primary";
     ElectionStatus["Elected"] = "Elected";
@@ -39,7 +40,7 @@ export const zEndorsement = z.object({
     imgUrl: z.string(),
     primaryElection: z.coerce.date().nullable(),
     generalElection: z.coerce.date().nullable(),
-    initiativeLevel: z.enum(InitiativeType),
+    initiativeLevel: z.enum(InitiativeType).nullable(),
     endorsementLevel: z.enum(EndorsementType),
     avatarBgColor: z.enum(AvatarBgColor),
     electionStatus: z.enum(ElectionStatus).nullable(),

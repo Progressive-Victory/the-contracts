@@ -12,7 +12,7 @@ export declare const zUpdateEndorsementRequest: z.ZodObject<{
     tookPvPledge: z.ZodOptional<z.ZodBoolean>;
     primaryElection: z.ZodNullable<z.ZodOptional<z.ZodCoercedDate<unknown>>>;
     generalElection: z.ZodNullable<z.ZodOptional<z.ZodCoercedDate<unknown>>>;
-    initiativeLevel: z.ZodOptional<z.ZodString>;
+    initiativeLevel: z.ZodNullable<z.ZodOptional<z.ZodString>>;
     endorsementLevel: z.ZodOptional<z.ZodString>;
     avatarBgColor: z.ZodOptional<z.ZodString>;
     electionStatus: z.ZodNullable<z.ZodOptional<z.ZodString>>;

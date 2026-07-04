@@ -13,6 +13,7 @@ export declare enum AvatarBgColor {
     Yellow = "Yellow"
 }
 export declare enum ElectionStatus {
+    NoElection = "No Election",
     UpcomingPrimary = "Upcoming Primary",
     WonPrimary = "Won Primary",
     Elected = "Elected",
@@ -34,7 +35,7 @@ export declare const zEndorsement: z.ZodObject<{
     imgUrl: z.ZodString;
     primaryElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     generalElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
-    initiativeLevel: z.ZodEnum<typeof InitiativeType>;
+    initiativeLevel: z.ZodNullable<z.ZodEnum<typeof InitiativeType>>;
     endorsementLevel: z.ZodEnum<typeof EndorsementType>;
     avatarBgColor: z.ZodEnum<typeof AvatarBgColor>;
     electionStatus: z.ZodNullable<z.ZodEnum<typeof ElectionStatus>>;
