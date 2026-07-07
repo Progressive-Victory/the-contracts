@@ -2,14 +2,13 @@ import z from 'zod';
 export const zIntParam = z.string().transform((str) => +str);
 export const zBoolQuery = z
     .enum(['true', 'false'])
-    .optional()
     .transform((x) => x === 'true')
-    .pipe(z.boolean());
+    .optional();
 export const zIntQuery = z
     .string()
-    .optional()
-    .transform((x) => (x === undefined ? undefined : Number(x)))
-    .pipe(z.number().optional());
+    .transform(Number)
+    .pipe(z.number())
+    .optional();
 export const zStringQuery = z.string().optional();
 export const zStringParam = z.string().nonempty();
 export const zEnumQuery = (entries) => z.enum(entries).optional();
