@@ -1,25 +1,25 @@
 import z from 'zod';
 export declare enum InitiativeType {
-    State = "State",
-    National = "National"
+    State = 0,
+    National = 1
 }
 export declare enum EndorsementType {
-    PVPledge = "PV Pledge",
-    Endorsement = "Endorsement",
-    Recommendation = "Recommendation"
+    PVPledge = 0,
+    Endorsement = 1,
+    Recommendation = 2
 }
-export declare enum AvatarBgColor {
-    Blue = "Blue",
-    Yellow = "Yellow"
+export declare enum BackgroundColor {
+    Blue = 0,
+    Yellow = 1
 }
 export declare enum ElectionStatus {
-    NoElection = "No Election",
-    UpcomingPrimary = "Upcoming Primary",
-    WonPrimary = "Won Primary",
-    Elected = "Elected",
-    LostPrimary = "Lost Primary",
-    LostGeneral = "Lost General",
-    DroppedOut = "Dropped Out"
+    NoElection = 0,
+    UpcomingPrimary = 1,
+    WonPrimary = 2,
+    Elected = 3,
+    LostPrimary = 4,
+    LostGeneral = 5,
+    DroppedOut = 6
 }
 export declare const zEndorsement: z.ZodObject<{
     id: z.ZodInt;
@@ -35,10 +35,10 @@ export declare const zEndorsement: z.ZodObject<{
     imgUrl: z.ZodString;
     primaryElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     generalElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
-    initiativeLevel: z.ZodNullable<z.ZodEnum<typeof InitiativeType>>;
+    initiativeLevel: z.ZodEnum<typeof InitiativeType>;
     endorsementLevel: z.ZodEnum<typeof EndorsementType>;
-    avatarBgColor: z.ZodEnum<typeof AvatarBgColor>;
-    electionStatus: z.ZodNullable<z.ZodEnum<typeof ElectionStatus>>;
+    avatarBgColor: z.ZodEnum<typeof BackgroundColor>;
+    electionStatus: z.ZodEnum<typeof ElectionStatus>;
 }, z.core.$strip>;
 export type Endorsement = z.infer<typeof zEndorsement>;
 //# sourceMappingURL=Endorsement.d.ts.map

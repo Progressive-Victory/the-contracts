@@ -1,3 +1,4 @@
+import { BackgroundColor, ElectionStatus, EndorsementType, InitiativeType } from '../data/index.js';
 import z from 'zod';
 export declare const zUpdateEndorsementRequest: z.ZodObject<{
     name: z.ZodOptional<z.ZodString>;
@@ -12,10 +13,10 @@ export declare const zUpdateEndorsementRequest: z.ZodObject<{
     tookPvPledge: z.ZodOptional<z.ZodBoolean>;
     primaryElection: z.ZodNullable<z.ZodOptional<z.ZodCoercedDate<unknown>>>;
     generalElection: z.ZodNullable<z.ZodOptional<z.ZodCoercedDate<unknown>>>;
-    initiativeLevel: z.ZodNullable<z.ZodOptional<z.ZodString>>;
-    endorsementLevel: z.ZodOptional<z.ZodString>;
-    avatarBgColor: z.ZodOptional<z.ZodString>;
-    electionStatus: z.ZodNullable<z.ZodOptional<z.ZodString>>;
+    initiativeLevel: z.ZodOptional<z.ZodEnum<typeof InitiativeType>>;
+    endorsementLevel: z.ZodOptional<z.ZodEnum<typeof EndorsementType>>;
+    avatarBgColor: z.ZodOptional<z.ZodEnum<typeof BackgroundColor>>;
+    electionStatus: z.ZodOptional<z.ZodEnum<typeof ElectionStatus>>;
 }, z.core.$strip>;
 export type UpdateEndorsementRequest = z.infer<typeof zUpdateEndorsementRequest>;
 //# sourceMappingURL=UpdateEndorsementRequest.d.ts.map

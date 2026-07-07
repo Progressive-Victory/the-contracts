@@ -1,5 +1,5 @@
 import {
-	AvatarBgColor,
+	BackgroundColor,
 	ElectionStatus,
 	EndorsementType,
 	InitiativeType,
@@ -8,23 +8,21 @@ import z from 'zod';
 
 export const zCreateEndorsementRequest = z.object({
 	name: z.string().nonempty().max(100),
-	state: z.string().nonempty().max(13),
+	state: z.string().nonempty().max(36),
+	candidateLink: z.string().max(200),
+	linkLabel: z.string().max(50),
 	description: z.string().nonempty().max(300),
-	candidateLink: z.string().max(200).default(''),
-	linkLabel: z.string().max(50).default(''),
-	imgUrl: z.string().max(200).default(''),
-	isStateInitiative: z.boolean().default(false),
-	isNationalInitiative: z.boolean().default(false),
-	isPvMember: z.boolean().default(false),
-	tookPvPledge: z.boolean().default(false),
-	primaryElection: z.coerce.date().nullable().default(null),
-	generalElection: z.coerce.date().nullable().default(null),
-	initiativeLevel: z.enum(InitiativeType).nullable().default(null),
-	endorsementLevel: z
-		.enum(EndorsementType)
-		.default(EndorsementType.Endorsement),
-	avatarBgColor: z.enum(AvatarBgColor).default(AvatarBgColor.Blue),
-	electionStatus: z.enum(ElectionStatus).nullable().default(null),
+	isStateInitiative: z.boolean(),
+	isNationalInitiative: z.boolean(),
+	isPvMember: z.boolean(),
+	tookPvPledge: z.boolean(),
+	imgUrl: z.string().max(200),
+	primaryElection: z.coerce.date().nullable(),
+	generalElection: z.coerce.date().nullable(),
+	initiativeLevel: z.enum(InitiativeType),
+	endorsementLevel: z.enum(EndorsementType),
+	avatarBgColor: z.enum(BackgroundColor),
+	electionStatus: z.enum(ElectionStatus),
 });
 
 export type CreateEndorsementRequest = z.infer<

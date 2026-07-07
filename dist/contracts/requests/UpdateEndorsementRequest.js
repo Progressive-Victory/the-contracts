@@ -1,6 +1,7 @@
+import { BackgroundColor, ElectionStatus, EndorsementType, InitiativeType, } from '../data/index.js';
 import z from 'zod';
 // This is not meaningfully different than CreateEndorsementRequest which isn't meaningfully different than Endorsement
-// So edit all three, as I doubt there's a way to eliminate redundancy
+// So edit all three
 export const zUpdateEndorsementRequest = z.object({
     name: z.string().nonempty().max(100).optional(),
     state: z.string().nonempty().max(36).optional(),
@@ -14,9 +15,9 @@ export const zUpdateEndorsementRequest = z.object({
     tookPvPledge: z.boolean().optional(),
     primaryElection: z.coerce.date().optional().nullable(),
     generalElection: z.coerce.date().optional().nullable(),
-    initiativeLevel: z.string().max(32).optional().nullable(),
-    endorsementLevel: z.string().max(32).optional(),
-    avatarBgColor: z.string().max(32).optional(),
-    electionStatus: z.string().max(32).optional().nullable(),
+    initiativeLevel: z.enum(InitiativeType).optional(),
+    endorsementLevel: z.enum(EndorsementType).optional(),
+    avatarBgColor: z.enum(BackgroundColor).optional(),
+    electionStatus: z.enum(ElectionStatus).optional(),
 });
 //# sourceMappingURL=UpdateEndorsementRequest.js.map

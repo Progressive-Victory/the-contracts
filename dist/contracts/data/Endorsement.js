@@ -1,30 +1,29 @@
 import z from 'zod';
-// Implicit enums will convert into numbers when creating database entries, which we do not want
 export var InitiativeType;
 (function (InitiativeType) {
-    InitiativeType["State"] = "State";
-    InitiativeType["National"] = "National";
+    InitiativeType[InitiativeType["State"] = 0] = "State";
+    InitiativeType[InitiativeType["National"] = 1] = "National";
 })(InitiativeType || (InitiativeType = {}));
 export var EndorsementType;
 (function (EndorsementType) {
-    EndorsementType["PVPledge"] = "PV Pledge";
-    EndorsementType["Endorsement"] = "Endorsement";
-    EndorsementType["Recommendation"] = "Recommendation";
+    EndorsementType[EndorsementType["PVPledge"] = 0] = "PVPledge";
+    EndorsementType[EndorsementType["Endorsement"] = 1] = "Endorsement";
+    EndorsementType[EndorsementType["Recommendation"] = 2] = "Recommendation";
 })(EndorsementType || (EndorsementType = {}));
-export var AvatarBgColor;
-(function (AvatarBgColor) {
-    AvatarBgColor["Blue"] = "Blue";
-    AvatarBgColor["Yellow"] = "Yellow";
-})(AvatarBgColor || (AvatarBgColor = {}));
+export var BackgroundColor;
+(function (BackgroundColor) {
+    BackgroundColor[BackgroundColor["Blue"] = 0] = "Blue";
+    BackgroundColor[BackgroundColor["Yellow"] = 1] = "Yellow";
+})(BackgroundColor || (BackgroundColor = {}));
 export var ElectionStatus;
 (function (ElectionStatus) {
-    ElectionStatus["NoElection"] = "No Election";
-    ElectionStatus["UpcomingPrimary"] = "Upcoming Primary";
-    ElectionStatus["WonPrimary"] = "Won Primary";
-    ElectionStatus["Elected"] = "Elected";
-    ElectionStatus["LostPrimary"] = "Lost Primary";
-    ElectionStatus["LostGeneral"] = "Lost General";
-    ElectionStatus["DroppedOut"] = "Dropped Out";
+    ElectionStatus[ElectionStatus["NoElection"] = 0] = "NoElection";
+    ElectionStatus[ElectionStatus["UpcomingPrimary"] = 1] = "UpcomingPrimary";
+    ElectionStatus[ElectionStatus["WonPrimary"] = 2] = "WonPrimary";
+    ElectionStatus[ElectionStatus["Elected"] = 3] = "Elected";
+    ElectionStatus[ElectionStatus["LostPrimary"] = 4] = "LostPrimary";
+    ElectionStatus[ElectionStatus["LostGeneral"] = 5] = "LostGeneral";
+    ElectionStatus[ElectionStatus["DroppedOut"] = 6] = "DroppedOut";
 })(ElectionStatus || (ElectionStatus = {}));
 export const zEndorsement = z.object({
     id: z.int(),
@@ -40,9 +39,9 @@ export const zEndorsement = z.object({
     imgUrl: z.string(),
     primaryElection: z.coerce.date().nullable(),
     generalElection: z.coerce.date().nullable(),
-    initiativeLevel: z.enum(InitiativeType).nullable(),
+    initiativeLevel: z.enum(InitiativeType),
     endorsementLevel: z.enum(EndorsementType),
-    avatarBgColor: z.enum(AvatarBgColor),
-    electionStatus: z.enum(ElectionStatus).nullable(),
+    avatarBgColor: z.enum(BackgroundColor),
+    electionStatus: z.enum(ElectionStatus),
 });
 //# sourceMappingURL=Endorsement.js.map

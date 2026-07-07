@@ -1,27 +1,26 @@
 import z from 'zod';
 
-// Implicit enums will convert into numbers when creating database entries, which we do not want
 export enum InitiativeType {
-	State = 'State',
-	National = 'National',
+	State,
+	National,
 }
 export enum EndorsementType {
-	PVPledge = 'PV Pledge',
-	Endorsement = 'Endorsement',
-	Recommendation = 'Recommendation',
+	PVPledge,
+	Endorsement,
+	Recommendation,
 }
-export enum AvatarBgColor {
-	Blue = 'Blue',
-	Yellow = 'Yellow',
+export enum BackgroundColor {
+	Blue,
+	Yellow,
 }
 export enum ElectionStatus {
-	NoElection = 'No Election',
-	UpcomingPrimary = 'Upcoming Primary',
-	WonPrimary = 'Won Primary',
-	Elected = 'Elected',
-	LostPrimary = 'Lost Primary',
-	LostGeneral = 'Lost General',
-	DroppedOut = 'Dropped Out',
+	NoElection,
+	UpcomingPrimary,
+	WonPrimary,
+	Elected,
+	LostPrimary,
+	LostGeneral,
+	DroppedOut,
 }
 
 export const zEndorsement = z.object({
@@ -38,10 +37,10 @@ export const zEndorsement = z.object({
 	imgUrl: z.string(),
 	primaryElection: z.coerce.date().nullable(),
 	generalElection: z.coerce.date().nullable(),
-	initiativeLevel: z.enum(InitiativeType).nullable(),
+	initiativeLevel: z.enum(InitiativeType),
 	endorsementLevel: z.enum(EndorsementType),
-	avatarBgColor: z.enum(AvatarBgColor),
-	electionStatus: z.enum(ElectionStatus).nullable(),
+	avatarBgColor: z.enum(BackgroundColor),
+	electionStatus: z.enum(ElectionStatus),
 });
 
 export type Endorsement = z.infer<typeof zEndorsement>;
