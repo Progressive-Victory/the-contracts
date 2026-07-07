@@ -10,7 +10,6 @@ export * from './CreateNdaFormRequest.js';
 export * from './CreatePermissionRequest.js';
 export * from './CreatePositionRequest.js';
 export * from './CreateRoleRequest.js';
-export * from './CreateUserRequest.js';
 export * from './DeleteDiscordWarnRequest.js';
 export * from './GetDiscordEventAttendanceRequest.js';
 export * from './GetDiscordUsersByUsersRequest.js';
