@@ -7,6 +7,7 @@ export * from './ActBlueLineitem.js';
 export * from './DiscordEvent.js';
 export * from './DiscordEventAttendee.js';
 export * from './DiscordEventStatus.js';
+export * from './DiscordSkillTeam.js';
 export * from './DiscordStateRole.js';
 export * from './DiscordUser.js';
 export * from './DiscordWarn.js';
