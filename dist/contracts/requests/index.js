@@ -20,6 +20,7 @@ export * from './MutationRequest.js';
 export * from './SearchRequest.js';
 export * from './SolidarityPostUserRequest.js';
 export * from './UpdateDiscordEventRequest.js';
+export * from './UpdateDiscordSkillTeamRoleRequest.js';
 export * from './UpdateDiscordStateRoleRequest.js';
 export * from './UpdateDiscordUserImageRequest.js';
 export * from './UpdateDiscordWarnRequest.js';
