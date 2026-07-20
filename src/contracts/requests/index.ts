@@ -3,6 +3,7 @@ export * from './ActBlueRequest.js';
 export * from './AuthRequest.js';
 export * from './CreateDiscordEventAttendeeRequest.js';
 export * from './CreateDiscordEventRequest.js';
+export * from './CreateDiscordSkillTeamRoleRequest.js'
 export * from './CreateDiscordUserRequest.js';
 export * from './CreateDiscordWarnRequest.js';
 export * from './CreateEndorsementRequest.js';
