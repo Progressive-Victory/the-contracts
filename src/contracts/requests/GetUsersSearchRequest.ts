@@ -3,8 +3,8 @@ import z from 'zod';
 import { zBoolQuery, zIntArrayQuery } from '../../util/index.js';
 
 export const zGetUsersSearchRequest = zSearchRequest.extend({
+	isDonor: zBoolQuery,
 	roleIds: zIntArrayQuery,
-	withDiscordUsers: zBoolQuery,
 });
 
 export type GetUsersSearchRequest = z.infer<typeof zGetUsersSearchRequest>;
