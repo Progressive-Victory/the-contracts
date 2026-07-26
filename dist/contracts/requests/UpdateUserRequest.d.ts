@@ -34,6 +34,7 @@ export declare const zUpdateUserRequest: z.ZodObject<{
     membershipFulfillmentStatus: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../data/User.js").MembershipFulfillmentStatus>>>;
     nameConfirmed: z.ZodOptional<z.ZodBoolean>;
     addressConfirmed: z.ZodOptional<z.ZodBoolean>;
+    membershipBenefitEligible: z.ZodOptional<z.ZodBoolean>;
     aliases: z.ZodOptional<z.ZodArray<z.ZodString>>;
     roles: z.ZodOptional<z.ZodArray<z.ZodNumber>>;
 }, z.core.$strict>;
