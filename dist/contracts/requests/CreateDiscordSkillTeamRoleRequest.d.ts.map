@@ -1,0 +1,1 @@
+{"version":3,"file":"CreateDiscordSkillTeamRoleRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/CreateDiscordSkillTeamRoleRequest.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,kCAAkC;;;;;iBAK7C,CAAC;AAEH,MAAM,MAAM,kCAAkC,GAAG,CAAC,CAAC,KAAK,CACvD,OAAO,kCAAkC,CACzC,CAAC"}
