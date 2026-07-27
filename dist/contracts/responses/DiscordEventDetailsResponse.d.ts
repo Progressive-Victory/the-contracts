@@ -22,6 +22,13 @@ export declare const zDiscordEventDetailsResponse: z.ZodObject<{
             eventId: z.ZodNumber;
             dateAttendedUtc: z.ZodCoercedDate<unknown>;
             isJoin: z.ZodBoolean;
+            discordUser: z.ZodOptional<z.ZodObject<{
+                id: z.ZodString;
+                username: z.ZodString;
+                image: z.ZodString;
+                userId: z.ZodNullable<z.ZodNumber>;
+                email: z.ZodNullable<z.ZodString>;
+            }, z.core.$strip>>;
         }, z.core.$strip>>>;
     }, z.core.$strip>;
     createdBy: z.ZodObject<{
