@@ -66,6 +66,7 @@ export declare const zUser: z.ZodObject<{
     membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof MembershipFulfillmentStatus>>;
     nameConfirmed: z.ZodBoolean;
     addressConfirmed: z.ZodBoolean;
+    membershipBenefitEligible: z.ZodBoolean;
     aliases: z.ZodOptional<z.ZodArray<z.ZodString>>;
     roles: z.ZodOptional<z.ZodArray<z.ZodObject<{
         id: z.ZodInt;
@@ -204,6 +205,7 @@ export declare const zUser: z.ZodObject<{
         membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof MembershipFulfillmentStatus>>;
         nameConfirmed: z.ZodBoolean;
         addressConfirmed: z.ZodBoolean;
+        membershipBenefitEligible: z.ZodBoolean;
         aliases: z.ZodOptional<z.ZodArray<z.ZodString>>;
         roles: z.ZodOptional<z.ZodArray<z.ZodObject<{
             id: z.ZodInt;

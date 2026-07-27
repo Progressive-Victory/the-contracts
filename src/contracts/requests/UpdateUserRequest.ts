@@ -37,6 +37,7 @@ export const zUpdateUserRequest = zMutationRequest
 		membershipFulfillmentStatus: zMembershipFulfillmentStatus.nullish(),
 		nameConfirmed: z.boolean().optional(),
 		addressConfirmed: z.boolean().optional(),
+		membershipBenefitEligible: z.boolean().optional(),
 
 		aliases: z.array(z.string().max(100).nonempty()).optional(),
 		roles: z.array(z.number()).optional(),
