@@ -1,0 +1,1 @@
+{"version":3,"file":"DiscordEventDetailsResponse.js","sourceRoot":"","sources":["../../../src/contracts/responses/DiscordEventDetailsResponse.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AACpB,OAAO,EAAE,aAAa,EAAE,YAAY,EAAE,MAAM,kBAAkB,CAAC;AAE/D,MAAM,CAAC,MAAM,4BAA4B,GAAG,CAAC,CAAC,MAAM,CAAC;IACpD,KAAK,EAAE,aAAa;IACpB,SAAS,EAAE,YAAY;CACvB,CAAC,CAAC"}
