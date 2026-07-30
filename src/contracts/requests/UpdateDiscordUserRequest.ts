@@ -1,6 +1,5 @@
-import z from "zod";
-import { zCreateDiscordUserRequest } from "./index.js";
-
+import { zCreateDiscordUserRequest } from './index.js';
+import z from 'zod';
 
 export const zUpdateDiscordUserRequest = zCreateDiscordUserRequest
 	.omit({ discordId: true })
