@@ -1,7 +1,7 @@
 import z from 'zod';
-import { $ZodShape } from 'zod/v4/core'; // eslint-disable-line import/extensions, import/named
+import * as core from 'zod/v4/core';
 
-export function zPaginatedResponse<Shape extends $ZodShape>(
+export function zPaginatedResponse<Shape extends core.$ZodShape>(
 	zData: z.ZodObject<Shape>
 ) {
 	return z.object({

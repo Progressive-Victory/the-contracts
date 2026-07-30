@@ -1,9 +1,9 @@
-import js from '@eslint/js'
-import { defineConfig } from 'eslint/config'
-import globals from 'globals'
-import tseslint from 'typescript-eslint'
-import eslintPluginIndexFile from '@progressive-victory/eslint-plugin-index-file'
-import eslintPluginImport from 'eslint-plugin-import'
+import js from '@eslint/js';
+import eslintPluginIndexFile from '@progressive-victory/eslint-plugin-index-file';
+import eslintPluginImport from 'eslint-plugin-import';
+import { defineConfig } from 'eslint/config';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 export default defineConfig([
 	{
@@ -13,7 +13,7 @@ export default defineConfig([
 		files: ['**/*.ts,mts,cts,jsx,tsx,'],
 		plugins: { js, eslintPluginIndexFile },
 		extends: ['js/recommended', 'eslintPluginIndexFile/recommended'],
-		languageOptions: { 
+		languageOptions: {
 			globals: { ...globals.browser, ...globals.node },
 		},
 	},
@@ -21,11 +21,11 @@ export default defineConfig([
 	tseslint.configs.stylisticTypeChecked,
 	eslintPluginIndexFile.configs.recommended,
 	eslintPluginImport.flatConfigs.recommended,
-    {
+	{
 		languageOptions: {
 			parserOptions: {
 				projectService: {
-					allowDefaultProject: ['*.js']
+					allowDefaultProject: ['*.js'],
 				},
 				tsconfigRootDir: import.meta.dirname,
 			},
@@ -39,9 +39,9 @@ export default defineConfig([
 			'@typescript-eslint/no-unsafe-call': 'warn',
 			'@typescript-eslint/no-unsafe-return': 'warn',
 			'eslint-plugin-index-file/enforce-import-from-index': 'off',
-			'import/extensions': ["error", "always", {"js": "always"}],
+			'import/extensions': ['error', 'ignorePackages', { js: 'always' }],
 			'import/no-unresolved': 'off',
-			'import/no-named-as-default': 'off'
+			'import/no-named-as-default': 'off',
 		},
 	},
-])
+]);
