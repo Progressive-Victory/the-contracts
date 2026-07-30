@@ -1,4 +1,4 @@
-import { zCreateDiscordUserRequest } from "./index.js";
+import { zCreateDiscordUserRequest } from './index.js';
 export const zUpdateDiscordUserRequest = zCreateDiscordUserRequest
     .omit({ discordId: true })
     .partial()

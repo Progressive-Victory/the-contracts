@@ -1,4 +1,4 @@
-import z from "zod";
+import z from 'zod';
 export declare const zUpdateDiscordUserRequest: z.ZodObject<{
     email: z.ZodOptional<z.ZodString>;
     userId: z.ZodOptional<z.ZodCoercedNumber<unknown>>;
