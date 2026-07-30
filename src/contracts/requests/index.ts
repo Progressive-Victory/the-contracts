@@ -24,6 +24,7 @@ export * from './SolidarityPostUserRequest.js';
 export * from './UpdateDiscordEventRequest.js';
 export * from './UpdateDiscordSkillTeamRoleRequest.js';
 export * from './UpdateDiscordStateRoleRequest.js';
+export * from './UpdateDiscordUserRequest.js';
 export * from './UpdateDiscordUserImageRequest.js';
 export * from './UpdateDiscordWarnRequest.js';
 export * from './UpdateEndorsementRequest.js';
