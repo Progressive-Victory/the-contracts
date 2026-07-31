@@ -1,7 +1,7 @@
+import { zOnboardingStage, zUserStatus, zShirtSize, zMembershipDeliverableStatus, zMembershipFulfillmentStatus, } from '../data/index.js';
 import { zMutationRequest } from './MutationRequest.js';
 import { zUpdateUserAddressRequest } from './UpdateUserAddressRequest.js';
 import z from 'zod';
-import { zOnboardingStage, zUserStatus, zShirtSize, zMembershipDeliverableStatus, zMembershipFulfillmentStatus, } from '../data/index.js';
 export const zUpdateUserRequest = zMutationRequest
     .extend({
     email: z.string().max(100).nonempty().nullish(),

@@ -17,7 +17,7 @@ export * from './GetDiscordUsersByUsersRequest.js';
 export * from './GetDiscordWarnsRequest.js';
 export * from './GetRolesSearchRequest.js';
 export * from './GetUsersSearchRequest.js';
-export * from './MembershipEvalBackfillRequest.js'
+export * from './MembershipEvalBackfillRequest.js';
 export * from './MutationRequest.js';
 export * from './SearchRequest.js';
 export * from './SolidarityPostUserRequest.js';

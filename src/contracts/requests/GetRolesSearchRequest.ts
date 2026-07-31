@@ -1,6 +1,6 @@
+import { zIntArrayQuery } from '../../util/index.js';
 import { zSearchRequest } from './SearchRequest.js';
 import z from 'zod';
-import { zIntArrayQuery } from '../../util/index.js';
 
 export const zGetRolesSearchRequest = zSearchRequest.extend({
 	permissionIds: zIntArrayQuery,

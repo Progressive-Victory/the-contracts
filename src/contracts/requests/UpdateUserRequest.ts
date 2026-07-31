@@ -1,6 +1,3 @@
-import { zMutationRequest } from './MutationRequest.js';
-import { zUpdateUserAddressRequest } from './UpdateUserAddressRequest.js';
-import z from 'zod';
 import {
 	zOnboardingStage,
 	zUserStatus,
@@ -8,6 +5,9 @@ import {
 	zMembershipDeliverableStatus,
 	zMembershipFulfillmentStatus,
 } from '../data/index.js';
+import { zMutationRequest } from './MutationRequest.js';
+import { zUpdateUserAddressRequest } from './UpdateUserAddressRequest.js';
+import z from 'zod';
 
 export const zUpdateUserRequest = zMutationRequest
 	.extend({

@@ -1,5 +1,5 @@
-import z from 'zod';
 import { zDiscordUser } from './DiscordUser.js';
+import z from 'zod';
 
 export const zDiscordEventAttendee = z.object({
 	id: z.number(),
