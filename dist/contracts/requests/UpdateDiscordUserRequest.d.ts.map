@@ -1,0 +1,1 @@
+{"version":3,"file":"UpdateDiscordUserRequest.d.ts","sourceRoot":"","sources":["../../../src/contracts/requests/UpdateDiscordUserRequest.ts"],"names":[],"mappings":"AACA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,yBAAyB;;;;;;;;;kBAG5B,CAAC;AACX,MAAM,MAAM,wBAAwB,GAAG,CAAC,CAAC,KAAK,CAC7C,OAAO,yBAAyB,CAChC,CAAC"}
