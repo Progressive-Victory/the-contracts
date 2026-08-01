@@ -16,9 +16,9 @@ Used primarily by:
 
 ## Style
 
-`pnpm run lint-ci`
+`pnpm lint-ci`
 
-`pnpm run prettier`
+`pnpm prettier`
 
 ## Tests
 
