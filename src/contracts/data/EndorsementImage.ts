@@ -5,7 +5,7 @@ const MAX_FILE_SIZE = 50 * 1024 * 1024;
 const zAcceptedImageType = z.enum(['image/jpeg', 'image/png']);
 export type AcceptedImageType = z.infer<typeof zAcceptedImageType>;
 
-const zEndorsementImage = z
+export const zEndorsementImage = z
 	.instanceof(File, { error: 'You must upload an image' })
 	.refine((f) => f.size > 0, 'Image is empty')
 	.refine(

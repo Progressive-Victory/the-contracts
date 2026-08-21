@@ -3,7 +3,8 @@ import {
 	ElectionStatus,
 	EndorsementType,
 	InitiativeType,
-} from '../data/index.js';
+	zEndorsementImage,
+} from '../data';
 import z from 'zod';
 
 export const zCreateEndorsementRequest = z.object({
@@ -16,7 +17,7 @@ export const zCreateEndorsementRequest = z.object({
 	isNationalInitiative: z.boolean(),
 	isPvMember: z.boolean(),
 	tookPvPledge: z.boolean(),
-	imgUrl: z.string().max(200),
+	imgUrl: zEndorsementImage,
 	primaryElection: z.coerce.date().nullable(),
 	generalElection: z.coerce.date().nullable(),
 	initiativeLevel: z.enum(InitiativeType),
