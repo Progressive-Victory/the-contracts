@@ -1,4 +1,4 @@
-import { BackgroundColor, ElectionStatus, EndorsementType, InitiativeType, } from '../data/index.js';
+import { BackgroundColor, ElectionStatus, EndorsementType, InitiativeType, zEndorsementImage, } from '../data/index.js';
 import z from 'zod';
 export const zCreateEndorsementRequest = z.object({
     name: z.string().nonempty().max(100),
@@ -10,7 +10,7 @@ export const zCreateEndorsementRequest = z.object({
     isNationalInitiative: z.boolean(),
     isPvMember: z.boolean(),
     tookPvPledge: z.boolean(),
-    imgUrl: z.string().max(200),
+    imgUrl: zEndorsementImage,
     primaryElection: z.coerce.date().nullable(),
     generalElection: z.coerce.date().nullable(),
     initiativeLevel: z.enum(InitiativeType),

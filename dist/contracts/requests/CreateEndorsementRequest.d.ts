@@ -10,7 +10,7 @@ export declare const zCreateEndorsementRequest: z.ZodObject<{
     isNationalInitiative: z.ZodBoolean;
     isPvMember: z.ZodBoolean;
     tookPvPledge: z.ZodBoolean;
-    imgUrl: z.ZodString;
+    imgUrl: z.ZodCustom<File, File>;
     primaryElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     generalElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     initiativeLevel: z.ZodEnum<typeof InitiativeType>;

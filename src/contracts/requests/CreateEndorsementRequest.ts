@@ -4,7 +4,7 @@ import {
 	EndorsementType,
 	InitiativeType,
 	zEndorsementImage,
-} from '../data';
+} from '../data/index.js';
 import z from 'zod';
 
 export const zCreateEndorsementRequest = z.object({
