@@ -10,7 +10,14 @@ export declare const zCreateEndorsementRequest: z.ZodObject<{
     isNationalInitiative: z.ZodBoolean;
     isPvMember: z.ZodBoolean;
     tookPvPledge: z.ZodBoolean;
-    imgUrl: z.ZodCustom<File, File>;
+    imgUrl: z.ZodObject<{
+        file: z.ZodCustom<import("node:stream").Readable, import("node:stream").Readable>;
+        filename: z.ZodString;
+        mimetype: z.ZodEnum<{
+            "image/jpeg": "image/jpeg";
+            "image/png": "image/png";
+        }>;
+    }, z.core.$strip>;
     primaryElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     generalElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     initiativeLevel: z.ZodEnum<typeof InitiativeType>;
