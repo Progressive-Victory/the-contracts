@@ -14,7 +14,7 @@ export const zDonor = z.object({
 	shippingStatus: zShippingStatus,
 
 	donations: z.array(zDonation).nullable(),
-	MembershipData: zMembership.nullable()
+	MembershipData: zMembership.nullable(),
 });
 
 export type Donor = z.infer<typeof zDonor>;
