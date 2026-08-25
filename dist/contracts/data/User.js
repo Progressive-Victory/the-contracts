@@ -5,39 +5,13 @@ import { zOnboardingStage } from './OnboardingStage.js';
 import { zRole } from './Role.js';
 import { zUpdateHistory } from './UpdateHistory.js';
 import { zUserAddress } from './UserAddress.js';
+import { zMembershipDeliverableStatus, zMembershipFulfillmentStatus, zShirtSize } from './Membership.js';
 import z from 'zod';
 export var UserStatus;
 (function (UserStatus) {
     UserStatus[UserStatus["Deleted"] = 0] = "Deleted";
     UserStatus[UserStatus["Active"] = 1] = "Active";
 })(UserStatus || (UserStatus = {}));
-export var MembershipDeliverableStatus;
-(function (MembershipDeliverableStatus) {
-    MembershipDeliverableStatus[MembershipDeliverableStatus["NotStarted"] = 0] = "NotStarted";
-    MembershipDeliverableStatus[MembershipDeliverableStatus["Cancelled"] = 1] = "Cancelled";
-    MembershipDeliverableStatus[MembershipDeliverableStatus["Printed"] = 2] = "Printed";
-    MembershipDeliverableStatus[MembershipDeliverableStatus["Shipped"] = 3] = "Shipped";
-    MembershipDeliverableStatus[MembershipDeliverableStatus["Received"] = 4] = "Received";
-    MembershipDeliverableStatus[MembershipDeliverableStatus["Returned"] = 5] = "Returned";
-})(MembershipDeliverableStatus || (MembershipDeliverableStatus = {}));
-export var MembershipFulfillmentStatus;
-(function (MembershipFulfillmentStatus) {
-    MembershipFulfillmentStatus[MembershipFulfillmentStatus["NotEligible"] = 0] = "NotEligible";
-    MembershipFulfillmentStatus[MembershipFulfillmentStatus["NotFulfilled"] = 1] = "NotFulfilled";
-    MembershipFulfillmentStatus[MembershipFulfillmentStatus["Fulfilled"] = 2] = "Fulfilled";
-})(MembershipFulfillmentStatus || (MembershipFulfillmentStatus = {}));
-export var ShirtSize;
-(function (ShirtSize) {
-    ShirtSize["ExtraSmall"] = "XS";
-    ShirtSize["Small"] = "S";
-    ShirtSize["Medium"] = "M";
-    ShirtSize["Large"] = "L";
-    ShirtSize["ExtraLarge"] = "XL";
-    ShirtSize["DoubleExtraLarge"] = "2XL";
-})(ShirtSize || (ShirtSize = {}));
-export const zShirtSize = z.enum(ShirtSize);
-export const zMembershipFulfillmentStatus = z.enum(MembershipFulfillmentStatus);
-export const zMembershipDeliverableStatus = z.enum(MembershipDeliverableStatus);
 export const zUserStatus = z.enum(UserStatus);
 const zBaseUser = z.object({
     id: z.int(),
@@ -58,13 +32,34 @@ const zBaseUser = z.object({
     createdAtUtc: z.coerce.date().nullable(),
     joinedAtUtc: z.coerce.date().nullable(),
     completedIntakeUtc: z.coerce.date().nullable(),
+    /**
+    * @deprecated
+    */
     membershipCardStatus: zMembershipDeliverableStatus.default(0),
+    /**
+    * @deprecated
+    */
     membershipMerchStatus: zMembershipDeliverableStatus.default(0),
+    /**
+    * @deprecated
+    */
     shirtSize: zShirtSize.nullable(),
     duesPayingMember: z.boolean(),
+    /**
+    * @deprecated
+    */
     membershipFulfillmentStatus: zMembershipFulfillmentStatus.nullable(),
+    /**
+    * @deprecated
+    */
     nameConfirmed: z.boolean(),
+    /**
+    * @deprecated
+    */
     addressConfirmed: z.boolean(),
+    /**
+    * @deprecated
+    */
     membershipBenefitEligible: z.boolean(),
     aliases: z.array(z.string()).optional(),
     roles: z.array(zRole).optional(),
