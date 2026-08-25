@@ -13,11 +13,11 @@ export var UserStatus;
 })(UserStatus || (UserStatus = {}));
 export var MembershipDeliverableStatus;
 (function (MembershipDeliverableStatus) {
-    MembershipDeliverableStatus[MembershipDeliverableStatus["NotEligible"] = 0] = "NotEligible";
-    MembershipDeliverableStatus[MembershipDeliverableStatus["NotStarted"] = 1] = "NotStarted";
+    MembershipDeliverableStatus[MembershipDeliverableStatus["NotStarted"] = 0] = "NotStarted";
+    MembershipDeliverableStatus[MembershipDeliverableStatus["Cancelled"] = 1] = "Cancelled";
     MembershipDeliverableStatus[MembershipDeliverableStatus["Printed"] = 2] = "Printed";
-    MembershipDeliverableStatus[MembershipDeliverableStatus["InTransit"] = 3] = "InTransit";
-    MembershipDeliverableStatus[MembershipDeliverableStatus["Recieved"] = 4] = "Recieved";
+    MembershipDeliverableStatus[MembershipDeliverableStatus["Shipped"] = 3] = "Shipped";
+    MembershipDeliverableStatus[MembershipDeliverableStatus["Received"] = 4] = "Received";
     MembershipDeliverableStatus[MembershipDeliverableStatus["Returned"] = 5] = "Returned";
 })(MembershipDeliverableStatus || (MembershipDeliverableStatus = {}));
 export var MembershipFulfillmentStatus;

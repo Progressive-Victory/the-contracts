@@ -1,3 +1,4 @@
+import { zDiscordUser } from './DiscordUser.js';
 import z from 'zod';
 export const zDiscordEventAttendee = z.object({
     id: z.number(),
@@ -5,5 +6,6 @@ export const zDiscordEventAttendee = z.object({
     eventId: z.number(),
     dateAttendedUtc: z.coerce.date(),
     isJoin: z.boolean(),
+    discordUser: zDiscordUser.optional(),
 });
 //# sourceMappingURL=DiscordEventAttendee.js.map

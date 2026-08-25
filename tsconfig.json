@@ -8,7 +8,7 @@
 		"moduleResolution": "bundler",
 		"module": "esnext",
 		"target": "esnext",
-    	"types": ["node"],
+		"types": ["node"],
 		"resolvePackageJsonExports": true,
 
 		// Other Outputs

@@ -1,6 +1,6 @@
 import z from 'zod';
-import { $ZodShape } from 'zod/v4/core';
-export declare function zPaginatedResponse<Shape extends $ZodShape>(zData: z.ZodObject<Shape>): z.ZodObject<{
+import * as core from 'zod/v4/core';
+export declare function zPaginatedResponse<Shape extends core.$ZodShape>(zData: z.ZodObject<Shape>): z.ZodObject<{
     page: z.ZodNumber;
     limit: z.ZodNumber;
     count: z.ZodNumber;

@@ -1,5 +1,6 @@
 export * from './ActBlueFundraisingStatsResponse.js';
 export * from './AuthResponse.js';
+export * from './DiscordEventDetailsResponse.js';
 export * from './DiscordLoginResponse.js';
 export * from './DiscordUserHistoryResponse.js';
 export * from './DiscordUserIsInServerResponse.js';

@@ -1,5 +1,5 @@
 import z from 'zod';
-import { $ZodShape } from 'zod/v4/core';
+import * as core from 'zod/v4/core';
 export declare enum UpdateHistoryType {
     Inserted = "I",
     Updated = "U",
@@ -14,7 +14,7 @@ declare const zUpdateHistoryBase: z.ZodObject<{
     historyWhoUpdatedId: z.ZodNullable<z.ZodInt>;
     historyWhenUpdatedUtc: z.ZodCoercedDate<unknown>;
 }, z.core.$strip>;
-export declare const zUpdateHistory: <Shape extends $ZodShape>(zData: z.ZodObject<Shape>) => z.ZodObject<(("historyType" | "historyId" | "historyDataSource" | "historyWhoUpdatedId" | "historyWhenUpdatedUtc") & keyof Shape extends never ? {
+export declare const zUpdateHistory: <Shape extends core.$ZodShape>(zData: z.ZodObject<Shape>) => z.ZodObject<(("historyType" | "historyId" | "historyDataSource" | "historyWhoUpdatedId" | "historyWhenUpdatedUtc") & keyof Shape extends never ? {
     historyId: z.ZodInt;
     historyType: z.ZodEnum<typeof UpdateHistoryType>;
     historyDataSource: z.ZodNullable<z.ZodString>;

@@ -1,5 +1,5 @@
 import z from 'zod';
-import { $ZodShape } from 'zod/v4/core'; // eslint-disable-line import/extensions, import/named
+import * as core from 'zod/v4/core';
 
 export enum UpdateHistoryType {
 	Inserted = 'I',
@@ -18,7 +18,7 @@ const zUpdateHistoryBase = z.object({
 	historyWhenUpdatedUtc: z.coerce.date(),
 });
 
-export const zUpdateHistory = <Shape extends $ZodShape>(
+export const zUpdateHistory = <Shape extends core.$ZodShape>(
 	zData: z.ZodObject<Shape>
 ) => zUpdateHistoryBase.extend(zData.shape);
 
