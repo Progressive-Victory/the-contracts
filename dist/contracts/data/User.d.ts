@@ -3,30 +3,6 @@ export declare enum UserStatus {
     Deleted = 0,
     Active = 1
 }
-export declare enum MembershipDeliverableStatus {
-    NotStarted = 0,
-    Cancelled = 1,
-    Printed = 2,
-    Shipped = 3,
-    Received = 4,
-    Returned = 5
-}
-export declare enum MembershipFulfillmentStatus {
-    NotEligible = 0,
-    NotFulfilled = 1,
-    Fulfilled = 2
-}
-export declare enum ShirtSize {
-    ExtraSmall = "XS",
-    Small = "S",
-    Medium = "M",
-    Large = "L",
-    ExtraLarge = "XL",
-    DoubleExtraLarge = "2XL"
-}
-export declare const zShirtSize: z.ZodEnum<typeof ShirtSize>;
-export declare const zMembershipFulfillmentStatus: z.ZodEnum<typeof MembershipFulfillmentStatus>;
-export declare const zMembershipDeliverableStatus: z.ZodEnum<typeof MembershipDeliverableStatus>;
 export declare const zUserStatus: z.ZodEnum<typeof UserStatus>;
 export declare const zUser: z.ZodObject<{
     id: z.ZodInt;
@@ -59,11 +35,11 @@ export declare const zUser: z.ZodObject<{
     createdAtUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     joinedAtUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     completedIntakeUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
-    membershipCardStatus: z.ZodDefault<z.ZodEnum<typeof MembershipDeliverableStatus>>;
-    membershipMerchStatus: z.ZodDefault<z.ZodEnum<typeof MembershipDeliverableStatus>>;
-    shirtSize: z.ZodNullable<z.ZodEnum<typeof ShirtSize>>;
+    membershipCardStatus: z.ZodDefault<z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>>;
+    membershipMerchStatus: z.ZodDefault<z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>>;
+    shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;
     duesPayingMember: z.ZodBoolean;
-    membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof MembershipFulfillmentStatus>>;
+    membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").MembershipFulfillmentStatus>>;
     nameConfirmed: z.ZodBoolean;
     addressConfirmed: z.ZodBoolean;
     membershipBenefitEligible: z.ZodBoolean;
@@ -198,11 +174,11 @@ export declare const zUser: z.ZodObject<{
         createdAtUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
         joinedAtUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
         completedIntakeUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
-        membershipCardStatus: z.ZodDefault<z.ZodEnum<typeof MembershipDeliverableStatus>>;
-        membershipMerchStatus: z.ZodDefault<z.ZodEnum<typeof MembershipDeliverableStatus>>;
-        shirtSize: z.ZodNullable<z.ZodEnum<typeof ShirtSize>>;
+        membershipCardStatus: z.ZodDefault<z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>>;
+        membershipMerchStatus: z.ZodDefault<z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>>;
+        shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;
         duesPayingMember: z.ZodBoolean;
-        membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof MembershipFulfillmentStatus>>;
+        membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").MembershipFulfillmentStatus>>;
         nameConfirmed: z.ZodBoolean;
         addressConfirmed: z.ZodBoolean;
         membershipBenefitEligible: z.ZodBoolean;
