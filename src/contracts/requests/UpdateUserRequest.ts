@@ -30,13 +30,37 @@ export const zUpdateUserRequest = zMutationRequest
 		joinedAtUtc: z.coerce.date().nullish(),
 		completedIntakeUtc: z.coerce.date().nullish(),
 
+		/**
+		 * @deprecated
+		 */
 		membershipCardStatus: zMembershipDeliverableStatus.optional(),
+		/**
+		 * @deprecated
+		 */
 		membershipMerchStatus: zMembershipDeliverableStatus.optional(),
+		/**
+		 * @deprecated
+		 */
 		shirtSize: zShirtSize.nullish(),
+		/**
+		 * @deprecated
+		 */
 		duesPayingMember: z.boolean().optional(),
+		/**
+		 * @deprecated
+		 */
 		membershipFulfillmentStatus: zMembershipFulfillmentStatus.nullish(),
+		/**
+		 * @deprecated
+		 */
 		nameConfirmed: z.boolean().optional(),
+		/**
+		 * @deprecated
+		 */
 		addressConfirmed: z.boolean().optional(),
+		/**
+		 * @deprecated
+		 */
 		membershipBenefitEligible: z.boolean().optional(),
 
 		aliases: z.array(z.string().max(100).nonempty()).optional(),

@@ -16,6 +16,7 @@ export * from './DonationTotals.js';
 export * from './Donor.js';
 export * from './Endorsement.js';
 export * from './Location.js';
+export * from './Membership.js'
 export * from './MetaData.js';
 export * from './NdaForm.js';
 export * from './OnboardingStage.js';
