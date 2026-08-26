@@ -34,5 +34,6 @@ export * from './UpdateRoleRequest.js';
 export * from './UpdateSettingRequest.js';
 export * from './UpdateUserAddressRequest.js';
 export * from './UpdateUserRequest.js';
+export * from './UploadImageRequest.js';
 export * from './UserOnboardingCollectInfoRequest.js';
 export * from './UserOnboardingVerifyRequest.js';
