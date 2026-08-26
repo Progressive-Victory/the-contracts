@@ -5,14 +5,15 @@ declare const zAcceptedImageType: z.ZodEnum<{
     "image/png": "image/png";
 }>;
 export type AcceptedImageType = z.infer<typeof zAcceptedImageType>;
-export declare const zEndorsementImage: z.ZodObject<{
+export declare const zImage: z.ZodObject<{
     file: z.ZodCustom<Readable, Readable>;
     filename: z.ZodString;
     mimetype: z.ZodEnum<{
         "image/jpeg": "image/jpeg";
         "image/png": "image/png";
     }>;
+    size: z.ZodNumber;
 }, z.core.$strip>;
-export type EndorsementImage = z.infer<typeof zEndorsementImage>;
+export type EndorsementImage = z.infer<typeof zImage>;
 export {};
 //# sourceMappingURL=EndorsementImage.d.ts.map
