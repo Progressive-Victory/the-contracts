@@ -1,5 +1,5 @@
+import { zMembershipDeliverableStatus, zShirtSize, zMembershipFulfillmentStatus, } from '../data/index.js';
 import z from 'zod';
-import { zMembershipDeliverableStatus, zShirtSize, zMembershipFulfillmentStatus } from '../data/index.js';
 export const zUpdateMembershipRequest = z.object({
     membershipMerchStatus: zMembershipDeliverableStatus.optional(),
     shirtSize: zShirtSize.nullish(),

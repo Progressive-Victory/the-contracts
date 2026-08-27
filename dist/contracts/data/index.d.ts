@@ -14,7 +14,6 @@ export * from './DiscordWarn.js';
 export * from './DiscordWarn.js';
 export * from './Donation.js';
 export * from './DonationTotals.js';
-export * from './Donor.js';
 export * from './Endorsement.js';
 export * from './Location.js';
 export * from './Membership.js';
