@@ -137,6 +137,16 @@ export declare const zUser: z.ZodObject<{
                 amountLessAbFees: z.ZodNumber;
             }, z.core.$strict>>>;
         }, z.core.$strict>>>;
+        MembershipData: z.ZodOptional<z.ZodObject<{
+            membershipCardStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
+            membershipMerchStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
+            shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;
+            duesPayingMember: z.ZodBoolean;
+            membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").MembershipFulfillmentStatus>>;
+            nameConfirmed: z.ZodBoolean;
+            addressConfirmed: z.ZodBoolean;
+            membershipBenefitEligible: z.ZodBoolean;
+        }, z.core.$strip>>;
     }, z.core.$strip>>>;
     history: z.ZodOptional<z.ZodArray<z.ZodObject<{
         historyId: z.ZodInt;
@@ -276,6 +286,16 @@ export declare const zUser: z.ZodObject<{
                     amountLessAbFees: z.ZodNumber;
                 }, z.core.$strict>>>;
             }, z.core.$strict>>>;
+            MembershipData: z.ZodOptional<z.ZodObject<{
+                membershipCardStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
+                membershipMerchStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
+                shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;
+                duesPayingMember: z.ZodBoolean;
+                membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").MembershipFulfillmentStatus>>;
+                nameConfirmed: z.ZodBoolean;
+                addressConfirmed: z.ZodBoolean;
+                membershipBenefitEligible: z.ZodBoolean;
+            }, z.core.$strip>>;
         }, z.core.$strip>>>;
     }, z.core.$strip>>>;
     donorHistory: z.ZodOptional<z.ZodArray<z.ZodObject<{
@@ -361,6 +381,16 @@ export declare const zUser: z.ZodObject<{
                 amountLessAbFees: z.ZodNumber;
             }, z.core.$strict>>>;
         }, z.core.$strict>>>;
+        MembershipData: z.ZodOptional<z.ZodObject<{
+            membershipCardStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
+            membershipMerchStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
+            shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;
+            duesPayingMember: z.ZodBoolean;
+            membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").MembershipFulfillmentStatus>>;
+            nameConfirmed: z.ZodBoolean;
+            addressConfirmed: z.ZodBoolean;
+            membershipBenefitEligible: z.ZodBoolean;
+        }, z.core.$strip>>;
     }, z.core.$strip>>>;
 }, z.core.$strip>;
 export type User = z.infer<typeof zUser>;
