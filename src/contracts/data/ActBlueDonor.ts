@@ -27,7 +27,7 @@ export const zActBlueDonor = z.object({
 	userId: z.number().optional(),
 	contributions: z.array(zActBlueContribution).optional(),
 	
-	MembershipData: zMembership.optional(),
+	membershipData: zMembership.optional(),
 });
 
 export type ActBlueDonor = z.infer<typeof zActBlueDonor>;

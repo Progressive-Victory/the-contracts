@@ -77,7 +77,7 @@ export declare const zActBlueDonor: z.ZodObject<{
             amountLessAbFees: z.ZodNumber;
         }, z.core.$strict>>>;
     }, z.core.$strict>>>;
-    MembershipData: z.ZodOptional<z.ZodObject<{
+    membershipData: z.ZodOptional<z.ZodObject<{
         membershipCardStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
         membershipMerchStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
         shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;
