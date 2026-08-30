@@ -485,4 +485,5 @@ export declare const zMembershipListResponse: z.ZodObject<{
         }, z.core.$strip>>;
     }, z.core.$strip>>;
 }, z.core.$strip>;
+export type MembershipListResponse = z.infer<typeof zMembershipListResponse>;
 //# sourceMappingURL=MembershipListResponse.d.ts.map

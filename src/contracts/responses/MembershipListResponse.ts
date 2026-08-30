@@ -13,3 +13,5 @@ export const zMembershipListResponse = z.object({
 		})
 	),
 });
+
+export type MembershipListResponse = z.infer<typeof zMembershipListResponse>
