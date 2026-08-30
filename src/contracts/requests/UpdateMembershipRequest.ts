@@ -4,8 +4,9 @@ import {
 	zMembershipFulfillmentStatus,
 } from '../data/index.js';
 import z from 'zod';
+import { zMutationRequest } from './MutationRequest.js';
 
-export const zUpdateMembershipRequest = z.object({
+export const zUpdateMembershipRequest = zMutationRequest.extend({
     membershipCardStatus: zMembershipDeliverableStatus.optional(),
 	membershipMerchStatus: zMembershipDeliverableStatus.optional(),
 	shirtSize: zShirtSize.nullish(),
