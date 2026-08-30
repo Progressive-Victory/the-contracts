@@ -5,7 +5,7 @@ export declare const zUpdateDiscordEventRequest: z.ZodObject<{
     description: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordEventStatus.js").DiscordEventStatus>>>;
     userCount: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
-    thumbnailUrl: z.ZodOptional<z.ZodString>;
+    thumbnailUrl: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     scheduledStartUtc: z.ZodOptional<z.ZodCoercedDate<unknown>>;
     startedAtUtc: z.ZodOptional<z.ZodNullable<z.ZodCoercedDate<unknown>>>;
     scheduledEndUtc: z.ZodOptional<z.ZodNullable<z.ZodCoercedDate<unknown>>>;

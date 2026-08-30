@@ -8,7 +8,7 @@ export declare const zDiscordEvent: z.ZodObject<{
     status: z.ZodNullable<z.ZodEnum<typeof import("./DiscordEventStatus.js").DiscordEventStatus>>;
     recurrent: z.ZodBoolean;
     userCount: z.ZodNullable<z.ZodNumber>;
-    thumbnailUrl: z.ZodString;
+    thumbnailUrl: z.ZodNullable<z.ZodString>;
     createdAtUtc: z.ZodCoercedDate<unknown>;
     creatorDiscordId: z.ZodString;
     scheduledStartUtc: z.ZodCoercedDate<unknown>;

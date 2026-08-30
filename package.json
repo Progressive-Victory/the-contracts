@@ -1,10 +1,10 @@
 {
 	"name": "@progressive-victory/the-contracts",
-	"version": "2.5.3",
+	"version": "3.0.0",
 	"description": "CRUD contracts for communicating with our API",
 	"homepage": "https://github.com/Progressive-Victory/the-contracts#readme",
 	"bugs": {
-		"url": "https://github.comz/Progressive-Victory/the-contracts/issues"
+		"url": "https://github.com/Progressive-Victory/the-contracts/issues"
 	},
 	"repository": {
 		"type": "git",
