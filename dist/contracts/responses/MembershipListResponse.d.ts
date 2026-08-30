@@ -90,6 +90,10 @@ export declare const zMembershipListResponse: z.ZodObject<{
                 membershipBenefitEligible: z.ZodBoolean;
             }, z.core.$strip>>;
         }, z.core.$strip>;
+        customField: z.ZodNullable<z.ZodObject<{
+            label: z.ZodString;
+            answer: z.ZodString;
+        }, z.core.$strip>>;
         user: z.ZodNullable<z.ZodObject<{
             id: z.ZodInt;
             email: z.ZodNullable<z.ZodString>;
