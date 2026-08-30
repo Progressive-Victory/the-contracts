@@ -1,5 +1,9 @@
 import z from 'zod';
 export declare const zUpdateMembershipRequest: z.ZodObject<{
+    metaData: z.ZodOptional<z.ZodObject<{
+        userWhoUpdatedId: z.ZodOptional<z.ZodNumber>;
+        dataSource: z.ZodOptional<z.ZodString>;
+    }, z.core.$strip>>;
     membershipCardStatus: z.ZodOptional<z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>>;
     membershipMerchStatus: z.ZodOptional<z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>>;
     shirtSize: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>>;
