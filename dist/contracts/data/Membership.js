@@ -32,7 +32,7 @@ export const zMembership = z.object({
     membershipMerchStatus: zMembershipDeliverableStatus,
     shirtSize: zShirtSize.nullable(),
     duesPayingMember: z.boolean(),
-    membershipFulfillmentStatus: zMembershipFulfillmentStatus.nullable(),
+    membershipFulfillmentStatus: zMembershipFulfillmentStatus,
     nameConfirmed: z.boolean(),
     addressConfirmed: z.boolean(),
     membershipBenefitEligible: z.boolean(),

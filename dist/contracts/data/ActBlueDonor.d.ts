@@ -83,7 +83,7 @@ export declare const zActBlueDonor: z.ZodObject<{
         membershipMerchStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
         shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;
         duesPayingMember: z.ZodBoolean;
-        membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").MembershipFulfillmentStatus>>;
+        membershipFulfillmentStatus: z.ZodEnum<typeof import("./Membership.js").MembershipFulfillmentStatus>;
         nameConfirmed: z.ZodBoolean;
         addressConfirmed: z.ZodBoolean;
         membershipBenefitEligible: z.ZodBoolean;

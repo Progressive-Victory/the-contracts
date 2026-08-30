@@ -29,7 +29,7 @@ export declare const zMembership: z.ZodObject<{
     membershipMerchStatus: z.ZodEnum<typeof MembershipDeliverableStatus>;
     shirtSize: z.ZodNullable<z.ZodEnum<typeof ShirtSize>>;
     duesPayingMember: z.ZodBoolean;
-    membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof MembershipFulfillmentStatus>>;
+    membershipFulfillmentStatus: z.ZodEnum<typeof MembershipFulfillmentStatus>;
     nameConfirmed: z.ZodBoolean;
     addressConfirmed: z.ZodBoolean;
     membershipBenefitEligible: z.ZodBoolean;

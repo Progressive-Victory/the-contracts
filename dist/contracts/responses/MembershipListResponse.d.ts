@@ -84,7 +84,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
             membershipMerchStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
             shirtSize: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>;
             duesPayingMember: z.ZodBoolean;
-            membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").MembershipFulfillmentStatus>>;
+            membershipFulfillmentStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipFulfillmentStatus>;
             nameConfirmed: z.ZodBoolean;
             addressConfirmed: z.ZodBoolean;
             membershipBenefitEligible: z.ZodBoolean;
@@ -233,7 +233,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                 membershipMerchStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
                 shirtSize: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>;
                 duesPayingMember: z.ZodBoolean;
-                membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").MembershipFulfillmentStatus>>;
+                membershipFulfillmentStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipFulfillmentStatus>;
                 nameConfirmed: z.ZodBoolean;
                 addressConfirmed: z.ZodBoolean;
                 membershipBenefitEligible: z.ZodBoolean;
@@ -383,7 +383,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                     membershipMerchStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
                     shirtSize: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>;
                     duesPayingMember: z.ZodBoolean;
-                    membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").MembershipFulfillmentStatus>>;
+                    membershipFulfillmentStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipFulfillmentStatus>;
                     nameConfirmed: z.ZodBoolean;
                     addressConfirmed: z.ZodBoolean;
                     membershipBenefitEligible: z.ZodBoolean;
@@ -479,7 +479,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                 membershipMerchStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
                 shirtSize: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>;
                 duesPayingMember: z.ZodBoolean;
-                membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").MembershipFulfillmentStatus>>;
+                membershipFulfillmentStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipFulfillmentStatus>;
                 nameConfirmed: z.ZodBoolean;
                 addressConfirmed: z.ZodBoolean;
                 membershipBenefitEligible: z.ZodBoolean;

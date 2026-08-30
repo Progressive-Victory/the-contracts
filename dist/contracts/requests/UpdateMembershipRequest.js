@@ -6,7 +6,7 @@ export const zUpdateMembershipRequest = zMutationRequest.extend({
     membershipMerchStatus: zMembershipDeliverableStatus.optional(),
     shirtSize: zShirtSize.nullish(),
     duesPayingMember: z.boolean().optional(),
-    membershipFulfillmentStatus: zMembershipFulfillmentStatus.nullish(),
+    membershipFulfillmentStatus: zMembershipFulfillmentStatus.optional(),
     nameConfirmed: z.boolean().optional(),
     addressConfirmed: z.boolean().optional(),
     membershipBenefitEligible: z.boolean().optional(),

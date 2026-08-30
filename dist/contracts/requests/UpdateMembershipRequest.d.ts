@@ -8,7 +8,7 @@ export declare const zUpdateMembershipRequest: z.ZodObject<{
     membershipMerchStatus: z.ZodOptional<z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>>;
     shirtSize: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>>;
     duesPayingMember: z.ZodOptional<z.ZodBoolean>;
-    membershipFulfillmentStatus: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").MembershipFulfillmentStatus>>>;
+    membershipFulfillmentStatus: z.ZodOptional<z.ZodEnum<typeof import("../data/Membership.js").MembershipFulfillmentStatus>>;
     nameConfirmed: z.ZodOptional<z.ZodBoolean>;
     addressConfirmed: z.ZodOptional<z.ZodBoolean>;
     membershipBenefitEligible: z.ZodOptional<z.ZodBoolean>;
