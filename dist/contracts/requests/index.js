@@ -28,6 +28,7 @@ export * from './UpdateDiscordUserRequest.js';
 export * from './UpdateDiscordUserImageRequest.js';
 export * from './UpdateDiscordWarnRequest.js';
 export * from './UpdateEndorsementRequest.js';
+export * from './UpdateMembershipRequest.js';
 export * from './UpdatePermissionRequest.js';
 export * from './UpdatePositionRequest.js';
 export * from './UpdateRoleRequest.js';

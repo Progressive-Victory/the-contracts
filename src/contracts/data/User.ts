@@ -1,6 +1,11 @@
 import { zActBlueDonor } from './ActBlueDonor.js';
 import { zDiscordUser } from './DiscordUser.js';
 import { zLocation } from './Location.js';
+import {
+	zMembershipDeliverableStatus,
+	zMembershipFulfillmentStatus,
+	zShirtSize,
+} from './Membership.js';
 import { zOnboardingStage } from './OnboardingStage.js';
 import { zRole } from './Role.js';
 import { zUpdateHistory } from './UpdateHistory.js';
@@ -11,36 +16,6 @@ export enum UserStatus {
 	Deleted = 0,
 	Active = 1,
 }
-
-export enum MembershipDeliverableStatus {
-	NotStarted = 0,
-	Cancelled = 1,
-	Printed = 2,
-	Shipped = 3,
-	Received = 4,
-	Returned = 5,
-}
-
-export enum MembershipFulfillmentStatus {
-	NotEligible = 0,
-	NotFulfilled = 1,
-	Fulfilled = 2,
-}
-
-export enum ShirtSize {
-	ExtraSmall = 'XS',
-	Small = 'S',
-	Medium = 'M',
-	Large = 'L',
-	ExtraLarge = 'XL',
-	DoubleExtraLarge = '2XL',
-}
-
-export const zShirtSize = z.enum(ShirtSize);
-
-export const zMembershipFulfillmentStatus = z.enum(MembershipFulfillmentStatus);
-
-export const zMembershipDeliverableStatus = z.enum(MembershipDeliverableStatus);
 
 export const zUserStatus = z.enum(UserStatus);
 
@@ -66,13 +41,34 @@ const zBaseUser = z.object({
 	joinedAtUtc: z.coerce.date().nullable(),
 	completedIntakeUtc: z.coerce.date().nullable(),
 
+	/**
+	 * @deprecated
+	 */
 	membershipCardStatus: zMembershipDeliverableStatus.default(0),
+	/**
+	 * @deprecated
+	 */
 	membershipMerchStatus: zMembershipDeliverableStatus.default(0),
+	/**
+	 * @deprecated
+	 */
 	shirtSize: zShirtSize.nullable(),
 	duesPayingMember: z.boolean(),
+	/**
+	 * @deprecated
+	 */
 	membershipFulfillmentStatus: zMembershipFulfillmentStatus.nullable(),
+	/**
+	 * @deprecated
+	 */
 	nameConfirmed: z.boolean(),
+	/**
+	 * @deprecated
+	 */
 	addressConfirmed: z.boolean(),
+	/**
+	 * @deprecated
+	 */
 	membershipBenefitEligible: z.boolean(),
 
 	aliases: z.array(z.string()).optional(),

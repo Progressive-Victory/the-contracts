@@ -1,4 +1,5 @@
 import { zActBlueContribution } from './ActBlueContribution.js';
+import { zMembership } from './Membership.js';
 import z from 'zod';
 export const zActBlueDonor = z.object({
     firstname: z.string(),
@@ -24,5 +25,6 @@ export const zActBlueDonor = z.object({
     phone: z.string().nullable(),
     userId: z.number().optional(),
     contributions: z.array(zActBlueContribution).optional(),
+    membershipData: zMembership.optional(),
 });
 //# sourceMappingURL=ActBlueDonor.js.map

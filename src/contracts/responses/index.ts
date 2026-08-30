@@ -7,6 +7,7 @@ export * from './DiscordUserIsInServerResponse.js';
 export * from './ErrorResponse.js';
 export * from './UploadImageResponse.js';
 export * from './MapMemberCountsResponse.js';
+export * from './MembershipListResponse.js';
 export * from './NdaFormsResponse.js';
 export * from './NoContentResponse.js';
 export * from './PaginatedResponse.js';

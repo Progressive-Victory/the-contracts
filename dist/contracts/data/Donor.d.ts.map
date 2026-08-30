@@ -1,1 +1,1 @@
-{"version":3,"file":"Donor.d.ts","sourceRoot":"","sources":["../../../src/contracts/data/Donor.ts"],"names":[],"mappings":"AAEA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,MAAM;;;;;;;;;;;;;;;;;;;;;;iBAWjB,CAAC;AAEH,MAAM,MAAM,KAAK,GAAG,CAAC,CAAC,KAAK,CAAC,OAAO,MAAM,CAAC,CAAC"}
+{"version":3,"file":"Donor.d.ts","sourceRoot":"","sources":["../../../src/contracts/data/Donor.ts"],"names":[],"mappings":"AAGA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,eAAO,MAAM,MAAM;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;iBAYjB,CAAC;AAEH,MAAM,MAAM,KAAK,GAAG,CAAC,CAAC,KAAK,CAAC,OAAO,MAAM,CAAC,CAAC"}

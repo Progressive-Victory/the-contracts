@@ -77,6 +77,16 @@ export declare const zActBlueDonor: z.ZodObject<{
             amountLessAbFees: z.ZodNumber;
         }, z.core.$strict>>>;
     }, z.core.$strict>>>;
+    membershipData: z.ZodOptional<z.ZodObject<{
+        membershipCardStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
+        membershipMerchStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
+        shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;
+        duesPayingMember: z.ZodBoolean;
+        membershipFulfillmentStatus: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").MembershipFulfillmentStatus>>;
+        nameConfirmed: z.ZodBoolean;
+        addressConfirmed: z.ZodBoolean;
+        membershipBenefitEligible: z.ZodBoolean;
+    }, z.core.$strip>>;
 }, z.core.$strip>;
 export type ActBlueDonor = z.infer<typeof zActBlueDonor>;
 //# sourceMappingURL=ActBlueDonor.d.ts.map
