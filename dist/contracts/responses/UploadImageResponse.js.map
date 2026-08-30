@@ -1,0 +1,1 @@
+{"version":3,"file":"UploadImageResponse.js","sourceRoot":"","sources":["../../../src/contracts/responses/UploadImageResponse.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,MAAM,CAAC,MAAM,oBAAoB,GAAG,CAAC,CAAC,MAAM,CAAC;IAC5C,GAAG,EAAE,CAAC,CAAC,GAAG,EAAE,CAAC,GAAG,CAAC,GAAG,CAAC;CACrB,CAAC,CAAC"}
