@@ -6,7 +6,7 @@ export const zUpdateDiscordEventRequest = z.object({
     description: z.string().nullable().optional(),
     status: zDiscordEventStatus.nullable().optional(),
     userCount: z.number().nullable().optional(),
-    thumbnailUrl: z.string().nonempty().optional(),
+    thumbnailUrl: z.string().nonempty().nullable().optional(),
     scheduledStartUtc: z.coerce.date().optional(),
     startedAtUtc: z.coerce.date().nullable().optional(),
     scheduledEndUtc: z.coerce.date().nullable().optional(),
