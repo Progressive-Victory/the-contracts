@@ -1,5 +1,6 @@
 import z from 'zod';
 export declare const zUpdateMembershipRequest: z.ZodObject<{
+    membershipCardStatus: z.ZodOptional<z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>>;
     membershipMerchStatus: z.ZodOptional<z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>>;
     shirtSize: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>>;
     duesPayingMember: z.ZodOptional<z.ZodBoolean>;

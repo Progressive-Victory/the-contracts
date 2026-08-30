@@ -1,6 +1,7 @@
 import { zMembershipDeliverableStatus, zShirtSize, zMembershipFulfillmentStatus, } from '../data/index.js';
 import z from 'zod';
 export const zUpdateMembershipRequest = z.object({
+    membershipCardStatus: zMembershipDeliverableStatus.optional(),
     membershipMerchStatus: zMembershipDeliverableStatus.optional(),
     shirtSize: zShirtSize.nullish(),
     duesPayingMember: z.boolean().optional(),
