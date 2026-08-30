@@ -24,6 +24,7 @@ export declare const zShirtSize: z.ZodEnum<typeof ShirtSize>;
 export declare const zMembershipFulfillmentStatus: z.ZodEnum<typeof MembershipFulfillmentStatus>;
 export declare const zMembershipDeliverableStatus: z.ZodEnum<typeof MembershipDeliverableStatus>;
 export declare const zMembership: z.ZodObject<{
+    donorEmail: z.ZodString;
     membershipCardStatus: z.ZodEnum<typeof MembershipDeliverableStatus>;
     membershipMerchStatus: z.ZodEnum<typeof MembershipDeliverableStatus>;
     shirtSize: z.ZodNullable<z.ZodEnum<typeof ShirtSize>>;

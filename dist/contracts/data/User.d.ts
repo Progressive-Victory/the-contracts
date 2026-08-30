@@ -138,6 +138,7 @@ export declare const zUser: z.ZodObject<{
             }, z.core.$strict>>>;
         }, z.core.$strict>>>;
         membershipData: z.ZodOptional<z.ZodObject<{
+            donorEmail: z.ZodString;
             membershipCardStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
             membershipMerchStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
             shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;
@@ -287,6 +288,7 @@ export declare const zUser: z.ZodObject<{
                 }, z.core.$strict>>>;
             }, z.core.$strict>>>;
             membershipData: z.ZodOptional<z.ZodObject<{
+                donorEmail: z.ZodString;
                 membershipCardStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
                 membershipMerchStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
                 shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;
@@ -382,6 +384,7 @@ export declare const zUser: z.ZodObject<{
             }, z.core.$strict>>>;
         }, z.core.$strict>>>;
         membershipData: z.ZodOptional<z.ZodObject<{
+            donorEmail: z.ZodString;
             membershipCardStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
             membershipMerchStatus: z.ZodEnum<typeof import("./Membership.js").MembershipDeliverableStatus>;
             shirtSize: z.ZodNullable<z.ZodEnum<typeof import("./Membership.js").ShirtSize>>;

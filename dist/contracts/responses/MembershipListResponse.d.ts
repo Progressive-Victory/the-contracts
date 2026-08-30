@@ -79,6 +79,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
             }, z.core.$strict>>>;
         }, z.core.$strict>>>;
         membershipData: z.ZodOptional<z.ZodObject<{
+            donorEmail: z.ZodString;
             membershipCardStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
             membershipMerchStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
             shirtSize: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>;
@@ -227,6 +228,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                 }, z.core.$strict>>>;
             }, z.core.$strict>>>;
             membershipData: z.ZodOptional<z.ZodObject<{
+                donorEmail: z.ZodString;
                 membershipCardStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
                 membershipMerchStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
                 shirtSize: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>;
@@ -376,6 +378,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                     }, z.core.$strict>>>;
                 }, z.core.$strict>>>;
                 membershipData: z.ZodOptional<z.ZodObject<{
+                    donorEmail: z.ZodString;
                     membershipCardStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
                     membershipMerchStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
                     shirtSize: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>;
@@ -471,6 +474,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                 }, z.core.$strict>>>;
             }, z.core.$strict>>>;
             membershipData: z.ZodOptional<z.ZodObject<{
+                donorEmail: z.ZodString;
                 membershipCardStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
                 membershipMerchStatus: z.ZodEnum<typeof import("../data/Membership.js").MembershipDeliverableStatus>;
                 shirtSize: z.ZodNullable<z.ZodEnum<typeof import("../data/Membership.js").ShirtSize>>;

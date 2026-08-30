@@ -27,6 +27,7 @@ export const zShirtSize = z.enum(ShirtSize);
 export const zMembershipFulfillmentStatus = z.enum(MembershipFulfillmentStatus);
 export const zMembershipDeliverableStatus = z.enum(MembershipDeliverableStatus);
 export const zMembership = z.object({
+    donorEmail: z.string(),
     membershipCardStatus: zMembershipDeliverableStatus,
     membershipMerchStatus: zMembershipDeliverableStatus,
     shirtSize: zShirtSize.nullable(),
