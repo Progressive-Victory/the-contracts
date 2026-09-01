@@ -1,28 +1,28 @@
 import z from 'zod';
 
 export enum InitiativeType {
-    State,
-    National,
+    State = 0,
+    National = 1,
 }
 export enum EndorsementType {
-    PVPledge,
-    Endorsement,
-    Recommendation,
-    Unendorsed
+    PVPledge = 0,
+    Endorsement = 1,
+    Recommendation = 2,
+    Unendorsed = 3
 }
 export enum BackgroundColor {
-    Blue,
-    Yellow,
-    Red
+    Blue = "blue",
+    Yellow = "yellow",
+    Red = "red"
 }
 export enum ElectionStatus {
-    NoElection,
-    UpcomingPrimary,
-    WonPrimary,
-    Elected,
-    LostPrimary,
-    LostGeneral,
-    DroppedOut,
+    NoElection = 0,
+    UpcomingPrimary = 1,
+    WonPrimary = 2,
+    Elected = 3,
+    LostPrimary = 4,
+    LostGeneral = 5,
+    DroppedOut = 6,
 }
 
 export const zEndorsement = z.object({
