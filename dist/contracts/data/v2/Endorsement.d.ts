@@ -10,9 +10,9 @@ export declare enum EndorsementType {
     Unendorsed = 3
 }
 export declare enum BackgroundColor {
-    Blue = 0,
-    Yellow = 1,
-    Red = 2
+    Blue = "blue",
+    Yellow = "yellow",
+    Red = "red"
 }
 export declare enum ElectionStatus {
     NoElection = 0,

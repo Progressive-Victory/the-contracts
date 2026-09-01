@@ -13,9 +13,9 @@ export var EndorsementType;
 })(EndorsementType || (EndorsementType = {}));
 export var BackgroundColor;
 (function (BackgroundColor) {
-    BackgroundColor[BackgroundColor["Blue"] = 0] = "Blue";
-    BackgroundColor[BackgroundColor["Yellow"] = 1] = "Yellow";
-    BackgroundColor[BackgroundColor["Red"] = 2] = "Red";
+    BackgroundColor["Blue"] = "blue";
+    BackgroundColor["Yellow"] = "yellow";
+    BackgroundColor["Red"] = "red";
 })(BackgroundColor || (BackgroundColor = {}));
 export var ElectionStatus;
 (function (ElectionStatus) {
