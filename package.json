@@ -46,6 +46,7 @@
 		"lint-fix": "eslint --fix"
 	},
 	"dependencies": {
+		"@fastify/multipart": "^10.1.1",
 		"zod": "^4.4.3"
 	},
 	"devDependencies": {
