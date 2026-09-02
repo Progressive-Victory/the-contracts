@@ -18,7 +18,9 @@
 	"private": true,
 	"exports": {
 		"./data": "./contracts/data/index.js",
+		"./data/v2": "./contracts/data/v2/index.js",
 		"./requests": "./contracts/requests/index.js",
+		"./requests/v2": "./contracts/requests/v2/index.js",
 		"./responses": "./contracts/responses/index.js",
 		"./util": "./util/index.js"
 	},
