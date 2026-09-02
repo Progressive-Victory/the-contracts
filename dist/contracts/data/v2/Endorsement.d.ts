@@ -35,8 +35,6 @@ export declare const zEndorsement: z.ZodObject<{
     bodyText: z.ZodString;
     websiteHref: z.ZodString;
     donateHref: z.ZodNullable<z.ZodString>;
-    isStateInitiative: z.ZodBoolean;
-    isNationalInitiative: z.ZodBoolean;
     isPvMember: z.ZodBoolean;
     imgUrl: z.ZodString;
     primaryElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;

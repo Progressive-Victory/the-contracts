@@ -12,8 +12,6 @@ export declare const zUpdateEndorsementRequest: z.ZodObject<{
     websiteHref: z.ZodOptional<z.ZodString>;
     donateHref: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     imgUrl: z.ZodOptional<z.ZodString>;
-    isStateInitiative: z.ZodOptional<z.ZodBoolean>;
-    isNationalInitiative: z.ZodOptional<z.ZodBoolean>;
     isPvMember: z.ZodOptional<z.ZodBoolean>;
     primaryElection: z.ZodOptional<z.ZodNullable<z.ZodCoercedDate<unknown>>>;
     generalElection: z.ZodOptional<z.ZodNullable<z.ZodCoercedDate<unknown>>>;
