@@ -29,4 +29,6 @@ export * from './UpdateHistory.js';
 export * from './User.js';
 export * from './UserAddress.js';
 export * from './UserProfile.js';
+import * as v2 from './v2/index.js';
+export { v2 };
 //# sourceMappingURL=index.d.ts.map
