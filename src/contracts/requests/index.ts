@@ -38,3 +38,8 @@ export * from './UpdateUserRequest.js';
 export * from './UploadImageRequest.js';
 export * from './UserOnboardingCollectInfoRequest.js';
 export * from './UserOnboardingVerifyRequest.js';
+
+import * as v2 from './v2/index.js'
+
+// eslint-disable-next-line eslint-plugin-index-file/enforce-index-usage
+export {v2}
