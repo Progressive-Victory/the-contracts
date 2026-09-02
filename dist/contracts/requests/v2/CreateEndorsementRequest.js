@@ -6,6 +6,7 @@ export const zCreateEndorsementRequest = z.object({
     jurisiction: z.string().nullable(),
     endorsementDate: z.coerce.date().nullable(),
     endorsementReason: z.string().nullable(),
+    incumbent: z.boolean().nullable(),
     handleHref: z.string().max(200).nullable(),
     handle: z.string().max(50),
     bodyText: z.string().nonempty().max(300),

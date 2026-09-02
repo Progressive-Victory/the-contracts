@@ -6,6 +6,7 @@ export declare const zCreateEndorsementRequest: z.ZodObject<{
     jurisiction: z.ZodNullable<z.ZodString>;
     endorsementDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     endorsementReason: z.ZodNullable<z.ZodString>;
+    incumbent: z.ZodNullable<z.ZodBoolean>;
     handleHref: z.ZodNullable<z.ZodString>;
     handle: z.ZodString;
     bodyText: z.ZodString;

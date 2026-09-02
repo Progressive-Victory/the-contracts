@@ -8,6 +8,7 @@ export const zUpdateEndorsementRequest = z.object({
     jurisiction: z.string().nullish(),
     endorsementDate: z.coerce.date().nullish(),
     endorsementReason: z.string().nullish(),
+    incumbent: z.boolean().nullish(),
     handleHref: z.string().max(200).nullish(),
     handle: z.string().max(50).optional(),
     bodyText: z.string().nonempty().max(300).optional(),
