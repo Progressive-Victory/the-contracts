@@ -32,6 +32,7 @@ export const zEndorsement = z.object({
     jurisiction: z.string().nullable(),
     endorsementDate: z.coerce.date().nullable(),
     endorsementReason: z.string().nullable(),
+    incumbent: z.boolean().nullable(),
     handleHref: z.string().nullable(),
     handle: z.string(),
     bodyText: z.string(),
