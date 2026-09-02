@@ -38,6 +38,4 @@ export * from './UpdateUserRequest.js';
 export * from './UploadImageRequest.js';
 export * from './UserOnboardingCollectInfoRequest.js';
 export * from './UserOnboardingVerifyRequest.js';
-import * as v2 from './v2/index.js';
-export { v2 };
 //# sourceMappingURL=index.d.ts.map

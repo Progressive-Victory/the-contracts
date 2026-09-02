@@ -1,6 +1,6 @@
 {
 	"name": "@progressive-victory/the-contracts",
-	"version": "4.2.2",
+	"version": "4.2.3",
 	"description": "CRUD contracts for communicating with our API",
 	"homepage": "https://github.com/Progressive-Victory/the-contracts#readme",
 	"bugs": {
@@ -18,7 +18,9 @@
 	"private": true,
 	"exports": {
 		"./data": "./contracts/data/index.js",
+		"./data/v2": "./contracts/data/v2/index.js",
 		"./requests": "./contracts/requests/index.js",
+		"./requests/v2": "./contracts/requests/v2/index.js",
 		"./responses": "./contracts/responses/index.js",
 		"./util": "./util/index.js"
 	},
