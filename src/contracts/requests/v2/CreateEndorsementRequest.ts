@@ -18,8 +18,6 @@ export const zCreateEndorsementRequest = z.object({
     websiteHref: z.string(),
     donateHref: z.string().nullable(),
     imgUrl: z.string().max(200),
-    isStateInitiative: z.boolean(),
-    isNationalInitiative: z.boolean(),
     isPvMember: z.boolean(),
     primaryElection: z.coerce.date().nullable(),
     generalElection: z.coerce.date().nullable(),

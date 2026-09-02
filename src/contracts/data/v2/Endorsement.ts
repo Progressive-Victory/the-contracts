@@ -37,8 +37,6 @@ export const zEndorsement = z.object({
     bodyText: z.string(),
     websiteHref: z.string(),
     donateHref: z.string().nullable(),
-    isStateInitiative: z.boolean(),
-    isNationalInitiative: z.boolean(),
     isPvMember: z.boolean(),
     imgUrl: z.string(),
     primaryElection: z.coerce.date().nullable(),
