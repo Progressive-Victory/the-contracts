@@ -1,8 +1,7 @@
 import z from 'zod';
-import * as core from 'zod/v4/core';
 
-export function zPaginatedResponse<Shape extends core.$ZodShape>(
-	zData: z.ZodObject<Shape>
+export function zPaginatedResponse<S extends z.ZodObject>(
+	zData: S
 ) {
 	return z.object({
 		page: z.number(),
