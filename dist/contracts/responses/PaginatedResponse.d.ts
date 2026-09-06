@@ -1,9 +1,9 @@
 import z from 'zod';
-export declare function zPaginatedResponse<Shape extends z.ZodObject>(zData: Shape): z.ZodObject<{
+export declare function zPaginatedResponse<S extends z.ZodObject>(zData: S): z.ZodObject<{
     page: z.ZodNumber;
     limit: z.ZodNumber;
     count: z.ZodNumber;
-    data: z.ZodArray<Shape>;
+    data: z.ZodArray<S>;
 }, z.core.$strip>;
 export interface PaginatedResponse<T> {
     page: number;
