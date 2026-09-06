@@ -148,7 +148,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
             image: z.ZodString;
             userId: z.ZodNullable<z.ZodNumber>;
             email: z.ZodNullable<z.ZodString>;
-            status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordServerStatus>>;
+            status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordUserStatus>>;
         }, z.core.$strip>>>;
         donors: z.ZodOptional<z.ZodArray<z.ZodObject<{
             firstname: z.ZodString;
@@ -299,7 +299,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                 image: z.ZodString;
                 userId: z.ZodNullable<z.ZodNumber>;
                 email: z.ZodNullable<z.ZodString>;
-                status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordServerStatus>>;
+                status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordUserStatus>>;
             }, z.core.$strip>>>;
             donors: z.ZodOptional<z.ZodArray<z.ZodObject<{
                 firstname: z.ZodString;
