@@ -28,6 +28,7 @@ export declare const zDiscordEventDetailsResponse: z.ZodObject<{
                 image: z.ZodString;
                 userId: z.ZodNullable<z.ZodNumber>;
                 email: z.ZodNullable<z.ZodString>;
+                status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordUserStatus>>;
             }, z.core.$strip>>;
         }, z.core.$strip>>>;
     }, z.core.$strip>;
@@ -37,6 +38,7 @@ export declare const zDiscordEventDetailsResponse: z.ZodObject<{
         image: z.ZodString;
         userId: z.ZodNullable<z.ZodNumber>;
         email: z.ZodNullable<z.ZodString>;
+        status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordUserStatus>>;
     }, z.core.$strip>;
 }, z.core.$strip>;
 export type DiscordEventDetailsResponse = z.infer<typeof zDiscordEventDetailsResponse>;

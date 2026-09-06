@@ -11,6 +11,7 @@ export declare const zDiscordUserHistoryResponse: z.ZodObject<{
         image: z.ZodString;
         userId: z.ZodNullable<z.ZodNumber>;
         email: z.ZodNullable<z.ZodString>;
+        status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordUserStatus>>;
     }, z.core.$strip>>;
 }, z.core.$strip>;
 export type DiscordUserHistoryResponse = z.infer<typeof zDiscordUserHistoryResponse>;
