@@ -27,6 +27,7 @@ export declare const zDiscordEvent: z.ZodObject<{
             image: z.ZodString;
             userId: z.ZodNullable<z.ZodNumber>;
             email: z.ZodNullable<z.ZodString>;
+            status: z.ZodNullable<z.ZodEnum<typeof import("./DiscordUser.js").DiscordServerStatus>>;
         }, z.core.$strip>>;
     }, z.core.$strip>>>;
 }, z.core.$strip>;

@@ -58,6 +58,7 @@ export declare const zUser: z.ZodObject<{
         image: z.ZodString;
         userId: z.ZodNullable<z.ZodNumber>;
         email: z.ZodNullable<z.ZodString>;
+        status: z.ZodNullable<z.ZodEnum<typeof import("./DiscordUser.js").DiscordServerStatus>>;
     }, z.core.$strip>>>;
     donors: z.ZodOptional<z.ZodArray<z.ZodObject<{
         firstname: z.ZodString;
@@ -208,6 +209,7 @@ export declare const zUser: z.ZodObject<{
             image: z.ZodString;
             userId: z.ZodNullable<z.ZodNumber>;
             email: z.ZodNullable<z.ZodString>;
+            status: z.ZodNullable<z.ZodEnum<typeof import("./DiscordUser.js").DiscordServerStatus>>;
         }, z.core.$strip>>>;
         donors: z.ZodOptional<z.ZodArray<z.ZodObject<{
             firstname: z.ZodString;
