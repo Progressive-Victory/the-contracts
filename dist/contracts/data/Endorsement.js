@@ -9,11 +9,13 @@ export var EndorsementType;
     EndorsementType[EndorsementType["PVPledge"] = 0] = "PVPledge";
     EndorsementType[EndorsementType["Endorsement"] = 1] = "Endorsement";
     EndorsementType[EndorsementType["Recommendation"] = 2] = "Recommendation";
+    EndorsementType[EndorsementType["Unendorsed"] = 3] = "Unendorsed";
 })(EndorsementType || (EndorsementType = {}));
 export var BackgroundColor;
 (function (BackgroundColor) {
-    BackgroundColor[BackgroundColor["Blue"] = 0] = "Blue";
-    BackgroundColor[BackgroundColor["Yellow"] = 1] = "Yellow";
+    BackgroundColor["Blue"] = "blue";
+    BackgroundColor["Yellow"] = "yellow";
+    BackgroundColor["Red"] = "red";
 })(BackgroundColor || (BackgroundColor = {}));
 export var ElectionStatus;
 (function (ElectionStatus) {
@@ -29,13 +31,16 @@ export const zEndorsement = z.object({
     id: z.int(),
     name: z.string(),
     state: z.string(),
-    candidateLink: z.string(),
-    linkLabel: z.string(),
-    description: z.string(),
-    isStateInitiative: z.coerce.boolean(),
-    isNationalInitiative: z.coerce.boolean(),
-    isPvMember: z.coerce.boolean(),
-    tookPvPledge: z.coerce.boolean(),
+    jurisiction: z.string().nullable(),
+    endorsementDate: z.coerce.date().nullable(),
+    endorsementReason: z.string().nullable(),
+    incumbent: z.boolean().nullable(),
+    handleHref: z.string().nullable(),
+    handle: z.string(),
+    quote: z.string(),
+    websiteHref: z.string(),
+    donateHref: z.string().nullable(),
+    isPvMember: z.boolean(),
     imgUrl: z.string(),
     primaryElection: z.coerce.date().nullable(),
     generalElection: z.coerce.date().nullable(),
