@@ -15,8 +15,8 @@ export declare const zCreateEndorsementRequest: z.ZodObject<{
     donateHref: z.ZodNullable<z.ZodString>;
     imgUrl: z.ZodString;
     isPvMember: z.ZodBoolean;
-    primaryElectionUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
-    generalElectionUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    primaryElectionDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    generalElectionDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     initiativeLevel: z.ZodEnum<typeof InitiativeType>;
     endorsementLevel: z.ZodEnum<typeof EndorsementType>;
     avatarBgColor: z.ZodEnum<typeof BackgroundColor>;
