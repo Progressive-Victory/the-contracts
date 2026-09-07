@@ -11,7 +11,7 @@ import z from 'zod';
 export const zUpdateEndorsementRequest = z.object({
     name: z.string().nonempty().max(100).optional(),
     state: z.string().nonempty().max(36).optional(),
-    jurisiction: z.string().nullish(),
+    jurisdiction: z.string().nullish(),
     endorsementDate: z.coerce.date().nullish(),
     endorsementReason: z.string().nullish(),
 	endorsementPublished: z.boolean().optional(),
