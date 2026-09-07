@@ -3,12 +3,14 @@ import z from 'zod';
 export enum InitiativeType {
     State = 0,
     National = 1,
+    None = 2,
 }
 export enum EndorsementType {
     PVPledge = 0,
     Endorsement = 1,
     Recommendation = 2,
-    Unendorsed = 3
+    Unendorsed = 3,
+    None = 4,
 }
 export enum BackgroundColor {
     Blue = 0,
@@ -32,6 +34,7 @@ export const zEndorsement = z.object({
     jurisiction: z.string().nullable(),
     endorsementDate: z.coerce.date().nullable(),
     endorsementReason: z.string().nullable(),
+    endorsementPublished: z.boolean(),
 	publishEndorsement: z.boolean(),
     incumbent: z.boolean(),
     handleHref: z.string().nullable(),
