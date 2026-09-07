@@ -3,7 +3,7 @@ import z from 'zod';
 export declare const zCreateEndorsementRequest: z.ZodObject<{
     name: z.ZodString;
     state: z.ZodString;
-    jurisiction: z.ZodNullable<z.ZodString>;
+    jurisdiction: z.ZodNullable<z.ZodString>;
     endorsementDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     endorsementReason: z.ZodNullable<z.ZodString>;
     endorsementPublished: z.ZodBoolean;

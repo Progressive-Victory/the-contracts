@@ -3,7 +3,7 @@ import z from 'zod';
 export const zCreateEndorsementRequest = z.object({
     name: z.string().nonempty().max(100),
     state: z.string().nonempty().max(36),
-    jurisiction: z.string().nullable(),
+    jurisdiction: z.string().nullable(),
     endorsementDate: z.coerce.date().nullable(),
     endorsementReason: z.string().nullable(),
     endorsementPublished: z.boolean(),
