@@ -11,9 +11,9 @@ export enum EndorsementType {
     Unendorsed = 3
 }
 export enum BackgroundColor {
-    Blue = "blue",
-    Yellow = "yellow",
-    Red = "red"
+    Blue = 0,
+    Yellow = 1,
+    Red = 2
 }
 export enum ElectionStatus {
     NoElection = 0,
