@@ -29,11 +29,10 @@ export declare const zEndorsement: z.ZodObject<{
     id: z.ZodInt;
     name: z.ZodString;
     state: z.ZodString;
-    jurisiction: z.ZodNullable<z.ZodString>;
+    jurisdiction: z.ZodNullable<z.ZodString>;
     endorsementDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     endorsementReason: z.ZodNullable<z.ZodString>;
     endorsementPublished: z.ZodBoolean;
-    publishEndorsement: z.ZodBoolean;
     incumbent: z.ZodBoolean;
     handleHref: z.ZodNullable<z.ZodString>;
     handle: z.ZodString;
