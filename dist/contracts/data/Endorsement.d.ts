@@ -1,13 +1,15 @@
 import z from 'zod';
 export declare enum InitiativeType {
     State = 0,
-    National = 1
+    National = 1,
+    None = 2
 }
 export declare enum EndorsementType {
     PVPledge = 0,
     Endorsement = 1,
     Recommendation = 2,
-    Unendorsed = 3
+    Unendorsed = 3,
+    None = 4
 }
 export declare enum BackgroundColor {
     Blue = 0,
@@ -30,6 +32,7 @@ export declare const zEndorsement: z.ZodObject<{
     jurisiction: z.ZodNullable<z.ZodString>;
     endorsementDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     endorsementReason: z.ZodNullable<z.ZodString>;
+    endorsementPublished: z.ZodBoolean;
     publishEndorsement: z.ZodBoolean;
     incumbent: z.ZodBoolean;
     handleHref: z.ZodNullable<z.ZodString>;

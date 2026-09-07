@@ -3,6 +3,7 @@ export var InitiativeType;
 (function (InitiativeType) {
     InitiativeType[InitiativeType["State"] = 0] = "State";
     InitiativeType[InitiativeType["National"] = 1] = "National";
+    InitiativeType[InitiativeType["None"] = 2] = "None";
 })(InitiativeType || (InitiativeType = {}));
 export var EndorsementType;
 (function (EndorsementType) {
@@ -10,6 +11,7 @@ export var EndorsementType;
     EndorsementType[EndorsementType["Endorsement"] = 1] = "Endorsement";
     EndorsementType[EndorsementType["Recommendation"] = 2] = "Recommendation";
     EndorsementType[EndorsementType["Unendorsed"] = 3] = "Unendorsed";
+    EndorsementType[EndorsementType["None"] = 4] = "None";
 })(EndorsementType || (EndorsementType = {}));
 export var BackgroundColor;
 (function (BackgroundColor) {
@@ -34,6 +36,7 @@ export const zEndorsement = z.object({
     jurisiction: z.string().nullable(),
     endorsementDate: z.coerce.date().nullable(),
     endorsementReason: z.string().nullable(),
+    endorsementPublished: z.boolean(),
     publishEndorsement: z.boolean(),
     incumbent: z.boolean(),
     handleHref: z.string().nullable(),
