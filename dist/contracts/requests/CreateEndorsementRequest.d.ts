@@ -9,11 +9,11 @@ export declare const zCreateEndorsementRequest: z.ZodObject<{
     endorsementPublished: z.ZodBoolean;
     incumbent: z.ZodBoolean;
     handleHref: z.ZodNullable<z.ZodString>;
-    handle: z.ZodString;
-    quote: z.ZodString;
-    websiteHref: z.ZodString;
+    handle: z.ZodNullable<z.ZodString>;
+    quote: z.ZodNullable<z.ZodString>;
+    websiteHref: z.ZodNullable<z.ZodString>;
     donateHref: z.ZodNullable<z.ZodString>;
-    imgUrl: z.ZodString;
+    imgHref: z.ZodNullable<z.ZodString>;
     isPvMember: z.ZodBoolean;
     primaryElectionDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     generalElectionDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
