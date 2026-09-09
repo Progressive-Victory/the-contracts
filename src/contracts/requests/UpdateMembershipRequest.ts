@@ -3,11 +3,11 @@ import {
 	zShirtSize,
 	zMembershipFulfillmentStatus,
 } from '../data/index.js';
-import z from 'zod';
 import { zMutationRequest } from './MutationRequest.js';
+import z from 'zod';
 
 export const zUpdateMembershipRequest = zMutationRequest.extend({
-    membershipCardStatus: zMembershipDeliverableStatus.optional(),
+	membershipCardStatus: zMembershipDeliverableStatus.optional(),
 	membershipMerchStatus: zMembershipDeliverableStatus.optional(),
 	shirtSize: zShirtSize.nullish(),
 	duesPayingMember: z.boolean().optional(),
@@ -15,6 +15,11 @@ export const zUpdateMembershipRequest = zMutationRequest.extend({
 	nameConfirmed: z.boolean().optional(),
 	addressConfirmed: z.boolean().optional(),
 	membershipBenefitEligible: z.boolean().optional(),
+	discordConfirmed: z.boolean().optional(),
+	cardPrinted: z.boolean().optional(),
+	labelPrinted: z.boolean().optional(),
+	itemsPackaged: z.boolean().optional(),
+	benefitsShipped: z.boolean().optional(),
 });
 
 export type UpdateMembershipRequest = z.infer<typeof zUpdateMembershipRequest>;

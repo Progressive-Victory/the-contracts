@@ -1,8 +1,6 @@
 import z from 'zod';
 
-export function zPaginatedResponse<S extends z.ZodObject>(
-	zData: S
-) {
+export function zPaginatedResponse<S extends z.ZodObject>(zData: S) {
 	return z.object({
 		page: z.number(),
 		limit: z.number(),

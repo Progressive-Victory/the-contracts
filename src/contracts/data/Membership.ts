@@ -31,7 +31,7 @@ export const zMembershipFulfillmentStatus = z.enum(MembershipFulfillmentStatus);
 export const zMembershipDeliverableStatus = z.enum(MembershipDeliverableStatus);
 
 export const zMembership = z.object({
-    donorEmail: z.string(),
+	donorEmail: z.string(),
 	membershipCardStatus: zMembershipDeliverableStatus,
 	membershipMerchStatus: zMembershipDeliverableStatus,
 	shirtSize: zShirtSize.nullable(),
@@ -40,6 +40,11 @@ export const zMembership = z.object({
 	nameConfirmed: z.boolean(),
 	addressConfirmed: z.boolean(),
 	membershipBenefitEligible: z.boolean(),
+	discordConfirmed: z.boolean(),
+	cardPrinted: z.boolean(),
+	labelPrinted: z.boolean(),
+	itemsPackaged: z.boolean(),
+	benefitsShipped: z.boolean(),
 });
 
 export type Membership = z.infer<typeof zMembership>;
