@@ -147,6 +147,11 @@ export declare const zUser: z.ZodObject<{
             nameConfirmed: z.ZodBoolean;
             addressConfirmed: z.ZodBoolean;
             membershipBenefitEligible: z.ZodBoolean;
+            discordConfirmed: z.ZodBoolean;
+            cardPrinted: z.ZodBoolean;
+            labelPrinted: z.ZodBoolean;
+            itemsPackaged: z.ZodBoolean;
+            benefitsShipped: z.ZodBoolean;
         }, z.core.$strip>>;
     }, z.core.$strip>>>;
     history: z.ZodOptional<z.ZodArray<z.ZodObject<{
@@ -297,6 +302,11 @@ export declare const zUser: z.ZodObject<{
                 nameConfirmed: z.ZodBoolean;
                 addressConfirmed: z.ZodBoolean;
                 membershipBenefitEligible: z.ZodBoolean;
+                discordConfirmed: z.ZodBoolean;
+                cardPrinted: z.ZodBoolean;
+                labelPrinted: z.ZodBoolean;
+                itemsPackaged: z.ZodBoolean;
+                benefitsShipped: z.ZodBoolean;
             }, z.core.$strip>>;
         }, z.core.$strip>>>;
     }, z.core.$strip>>>;
@@ -393,6 +403,11 @@ export declare const zUser: z.ZodObject<{
             nameConfirmed: z.ZodBoolean;
             addressConfirmed: z.ZodBoolean;
             membershipBenefitEligible: z.ZodBoolean;
+            discordConfirmed: z.ZodBoolean;
+            cardPrinted: z.ZodBoolean;
+            labelPrinted: z.ZodBoolean;
+            itemsPackaged: z.ZodBoolean;
+            benefitsShipped: z.ZodBoolean;
         }, z.core.$strip>>;
     }, z.core.$strip>>>;
 }, z.core.$strip>;

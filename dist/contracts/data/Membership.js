@@ -36,5 +36,10 @@ export const zMembership = z.object({
     nameConfirmed: z.boolean(),
     addressConfirmed: z.boolean(),
     membershipBenefitEligible: z.boolean(),
+    discordConfirmed: z.boolean(),
+    cardPrinted: z.boolean(),
+    labelPrinted: z.boolean(),
+    itemsPackaged: z.boolean(),
+    benefitsShipped: z.boolean(),
 });
 //# sourceMappingURL=Membership.js.map

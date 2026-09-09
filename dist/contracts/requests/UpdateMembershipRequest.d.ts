@@ -12,6 +12,11 @@ export declare const zUpdateMembershipRequest: z.ZodObject<{
     nameConfirmed: z.ZodOptional<z.ZodBoolean>;
     addressConfirmed: z.ZodOptional<z.ZodBoolean>;
     membershipBenefitEligible: z.ZodOptional<z.ZodBoolean>;
+    discordConfirmed: z.ZodOptional<z.ZodBoolean>;
+    cardPrinted: z.ZodOptional<z.ZodBoolean>;
+    labelPrinted: z.ZodOptional<z.ZodBoolean>;
+    itemsPackaged: z.ZodOptional<z.ZodBoolean>;
+    benefitsShipped: z.ZodOptional<z.ZodBoolean>;
 }, z.core.$strip>;
 export type UpdateMembershipRequest = z.infer<typeof zUpdateMembershipRequest>;
 //# sourceMappingURL=UpdateMembershipRequest.d.ts.map

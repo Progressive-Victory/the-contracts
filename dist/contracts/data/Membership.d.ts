@@ -33,6 +33,11 @@ export declare const zMembership: z.ZodObject<{
     nameConfirmed: z.ZodBoolean;
     addressConfirmed: z.ZodBoolean;
     membershipBenefitEligible: z.ZodBoolean;
+    discordConfirmed: z.ZodBoolean;
+    cardPrinted: z.ZodBoolean;
+    labelPrinted: z.ZodBoolean;
+    itemsPackaged: z.ZodBoolean;
+    benefitsShipped: z.ZodBoolean;
 }, z.core.$strip>;
 export type Membership = z.infer<typeof zMembership>;
 //# sourceMappingURL=Membership.d.ts.map
