@@ -26,7 +26,7 @@ export const zActBlueDonor = z.object({
 	phone: z.string().nullable(),
 	userId: z.number().optional(),
 	contributions: z.array(zActBlueContribution).optional(),
-	
+
 	membershipData: zMembership.optional(),
 });
 

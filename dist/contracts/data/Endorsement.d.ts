@@ -1,16 +1,20 @@
 import z from 'zod';
 export declare enum InitiativeType {
     State = 0,
-    National = 1
+    National = 1,
+    None = 2
 }
 export declare enum EndorsementType {
     PVPledge = 0,
     Endorsement = 1,
-    Recommendation = 2
+    Recommendation = 2,
+    Unendorsed = 3,
+    None = 4
 }
 export declare enum BackgroundColor {
     Blue = 0,
-    Yellow = 1
+    Yellow = 1,
+    Red = 2
 }
 export declare enum ElectionStatus {
     NoElection = 0,
@@ -25,16 +29,20 @@ export declare const zEndorsement: z.ZodObject<{
     id: z.ZodInt;
     name: z.ZodString;
     state: z.ZodString;
-    candidateLink: z.ZodString;
-    linkLabel: z.ZodString;
-    description: z.ZodString;
-    isStateInitiative: z.ZodCoercedBoolean<unknown>;
-    isNationalInitiative: z.ZodCoercedBoolean<unknown>;
-    isPvMember: z.ZodCoercedBoolean<unknown>;
-    tookPvPledge: z.ZodCoercedBoolean<unknown>;
-    imgUrl: z.ZodString;
-    primaryElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
-    generalElection: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    jurisdiction: z.ZodNullable<z.ZodString>;
+    endorsementDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    endorsementReason: z.ZodNullable<z.ZodString>;
+    endorsementPublished: z.ZodBoolean;
+    incumbent: z.ZodBoolean;
+    handleHref: z.ZodNullable<z.ZodString>;
+    handle: z.ZodNullable<z.ZodString>;
+    quote: z.ZodNullable<z.ZodString>;
+    websiteHref: z.ZodNullable<z.ZodString>;
+    donateHref: z.ZodNullable<z.ZodString>;
+    isPvMember: z.ZodBoolean;
+    imgHref: z.ZodNullable<z.ZodString>;
+    primaryElectionDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
+    generalElectionDate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     initiativeLevel: z.ZodEnum<typeof InitiativeType>;
     endorsementLevel: z.ZodEnum<typeof EndorsementType>;
     avatarBgColor: z.ZodEnum<typeof BackgroundColor>;

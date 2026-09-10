@@ -87,6 +87,11 @@ export declare const zActBlueDonor: z.ZodObject<{
         nameConfirmed: z.ZodBoolean;
         addressConfirmed: z.ZodBoolean;
         membershipBenefitEligible: z.ZodBoolean;
+        discordConfirmed: z.ZodBoolean;
+        cardPrinted: z.ZodBoolean;
+        labelPrinted: z.ZodBoolean;
+        itemsPackaged: z.ZodBoolean;
+        benefitsShipped: z.ZodBoolean;
     }, z.core.$strip>>;
 }, z.core.$strip>;
 export type ActBlueDonor = z.infer<typeof zActBlueDonor>;

@@ -5,7 +5,7 @@ import z from 'zod';
  * status initially. A NULL status should be treated as unknown and the discord
  * API should be queried and the result saved on this record.
  */
-export declare enum DiscordServerStatus {
+export declare enum DiscordUserStatus {
     NotJoined = 0,
     Joined = 1,
     Left = 2,
@@ -17,7 +17,7 @@ export declare const zDiscordUser: z.ZodObject<{
     image: z.ZodString;
     userId: z.ZodNullable<z.ZodNumber>;
     email: z.ZodNullable<z.ZodString>;
-    status: z.ZodNullable<z.ZodEnum<typeof DiscordServerStatus>>;
+    status: z.ZodNullable<z.ZodEnum<typeof DiscordUserStatus>>;
 }, z.core.$strip>;
 export type DiscordUser = z.infer<typeof zDiscordUser>;
 //# sourceMappingURL=DiscordUser.d.ts.map

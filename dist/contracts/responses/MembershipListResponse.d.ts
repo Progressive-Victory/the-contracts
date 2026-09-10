@@ -88,6 +88,11 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
             nameConfirmed: z.ZodBoolean;
             addressConfirmed: z.ZodBoolean;
             membershipBenefitEligible: z.ZodBoolean;
+            discordConfirmed: z.ZodBoolean;
+            cardPrinted: z.ZodBoolean;
+            labelPrinted: z.ZodBoolean;
+            itemsPackaged: z.ZodBoolean;
+            benefitsShipped: z.ZodBoolean;
         }, z.core.$strip>>;
     }, z.core.$strip>;
     customField: z.ZodNullable<z.ZodObject<{
@@ -148,7 +153,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
             image: z.ZodString;
             userId: z.ZodNullable<z.ZodNumber>;
             email: z.ZodNullable<z.ZodString>;
-            status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordServerStatus>>;
+            status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordUserStatus>>;
         }, z.core.$strip>>>;
         donors: z.ZodOptional<z.ZodArray<z.ZodObject<{
             firstname: z.ZodString;
@@ -238,6 +243,11 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                 nameConfirmed: z.ZodBoolean;
                 addressConfirmed: z.ZodBoolean;
                 membershipBenefitEligible: z.ZodBoolean;
+                discordConfirmed: z.ZodBoolean;
+                cardPrinted: z.ZodBoolean;
+                labelPrinted: z.ZodBoolean;
+                itemsPackaged: z.ZodBoolean;
+                benefitsShipped: z.ZodBoolean;
             }, z.core.$strip>>;
         }, z.core.$strip>>>;
         history: z.ZodOptional<z.ZodArray<z.ZodObject<{
@@ -299,7 +309,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                 image: z.ZodString;
                 userId: z.ZodNullable<z.ZodNumber>;
                 email: z.ZodNullable<z.ZodString>;
-                status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordServerStatus>>;
+                status: z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordUserStatus>>;
             }, z.core.$strip>>>;
             donors: z.ZodOptional<z.ZodArray<z.ZodObject<{
                 firstname: z.ZodString;
@@ -389,6 +399,11 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                     nameConfirmed: z.ZodBoolean;
                     addressConfirmed: z.ZodBoolean;
                     membershipBenefitEligible: z.ZodBoolean;
+                    discordConfirmed: z.ZodBoolean;
+                    cardPrinted: z.ZodBoolean;
+                    labelPrinted: z.ZodBoolean;
+                    itemsPackaged: z.ZodBoolean;
+                    benefitsShipped: z.ZodBoolean;
                 }, z.core.$strip>>;
             }, z.core.$strip>>>;
         }, z.core.$strip>>>;
@@ -485,6 +500,11 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                 nameConfirmed: z.ZodBoolean;
                 addressConfirmed: z.ZodBoolean;
                 membershipBenefitEligible: z.ZodBoolean;
+                discordConfirmed: z.ZodBoolean;
+                cardPrinted: z.ZodBoolean;
+                labelPrinted: z.ZodBoolean;
+                itemsPackaged: z.ZodBoolean;
+                benefitsShipped: z.ZodBoolean;
             }, z.core.$strip>>;
         }, z.core.$strip>>>;
     }, z.core.$strip>>;
