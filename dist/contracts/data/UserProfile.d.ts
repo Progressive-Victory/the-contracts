@@ -12,6 +12,7 @@ export declare const zUserProfile: z.ZodObject<{
         image: z.ZodString;
         userId: z.ZodNullable<z.ZodNumber>;
         email: z.ZodNullable<z.ZodString>;
+        status: z.ZodNullable<z.ZodEnum<typeof import("./DiscordUser.js").DiscordUserStatus>>;
     }, z.core.$strip>>;
 }, z.core.$strip>;
 export type UserProfile = z.infer<typeof zUserProfile>;

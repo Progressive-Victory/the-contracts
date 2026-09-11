@@ -11,6 +11,7 @@ export declare const zDiscordEventAttendee: z.ZodObject<{
         image: z.ZodString;
         userId: z.ZodNullable<z.ZodNumber>;
         email: z.ZodNullable<z.ZodString>;
+        status: z.ZodNullable<z.ZodEnum<typeof import("./DiscordUser.js").DiscordUserStatus>>;
     }, z.core.$strip>>;
 }, z.core.$strip>;
 export type DiscordEventAttendee = z.infer<typeof zDiscordEventAttendee>;
