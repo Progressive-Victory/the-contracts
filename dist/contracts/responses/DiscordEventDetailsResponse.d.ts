@@ -27,7 +27,7 @@ export declare const zDiscordEventOccurrence: z.ZodObject<{
         }, z.core.$strip>>;
     }, z.core.$strip>>>;
 }, z.core.$strip>;
-export type DiscordEventOccurence = z.infer<typeof zDiscordEventOccurrence>;
+export type DiscordEventOccurrence = z.infer<typeof zDiscordEventOccurrence>;
 export declare const zDiscordEventWithOccurrences: z.ZodObject<{
     id: z.ZodNumber;
     discordId: z.ZodString;
