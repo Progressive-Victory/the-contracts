@@ -20,7 +20,7 @@ export const zDiscordEventOccurrence = z.object({
 	attendees: z.array(zDiscordEventAttendee).optional(),
 });
 
-export type DiscordEventOccurence = z.infer<typeof zDiscordEventOccurrence>;
+export type DiscordEventOccurrence = z.infer<typeof zDiscordEventOccurrence>;
 
 export const zDiscordEventWithOccurrences = z.object({
 	id: z.number(),
