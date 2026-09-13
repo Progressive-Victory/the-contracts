@@ -1,5 +1,4 @@
 import {
-	zDiscordEvent,
 	zDiscordEventAttendee,
 	zDiscordEventStatus,
 	zDiscordUser,
@@ -32,7 +31,9 @@ export const zDiscordEventWithOccurrences = z.object({
 	occurrences: z.array(zDiscordEventOccurrence),
 });
 
-export type DiscordEventWithOccurrences = z.infer<typeof zDiscordEvent>;
+export type DiscordEventWithOccurrences = z.infer<
+	typeof zDiscordEventWithOccurrences
+>;
 
 export const zDiscordEventDetailsResponse = z.object({
 	event: zDiscordEventWithOccurrences,
