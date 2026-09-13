@@ -1,4 +1,3 @@
-import { zDiscordEvent } from '../data/index.js';
 import z from 'zod';
 export declare const zDiscordEventOccurrence: z.ZodObject<{
     id: z.ZodNumber;
@@ -63,7 +62,7 @@ export declare const zDiscordEventWithOccurrences: z.ZodObject<{
         }, z.core.$strip>>>;
     }, z.core.$strip>>;
 }, z.core.$strip>;
-export type DiscordEventWithOccurrences = z.infer<typeof zDiscordEvent>;
+export type DiscordEventWithOccurrences = z.infer<typeof zDiscordEventWithOccurrences>;
 export declare const zDiscordEventDetailsResponse: z.ZodObject<{
     event: z.ZodObject<{
         id: z.ZodNumber;
