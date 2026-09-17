@@ -1,4 +1,5 @@
 import {
+	zDiscordEvent,
 	zDiscordEventAttendee,
 	zDiscordEventStatus,
 	zDiscordUser,
@@ -36,7 +37,7 @@ export type DiscordEventWithOccurrences = z.infer<
 >;
 
 export const zDiscordEventDetailsResponse = z.object({
-	event: zDiscordEventWithOccurrences,
+	event: z.xor([zDiscordEvent, zDiscordEventWithOccurrences]),
 	createdBy: zDiscordUser,
 });
 export type DiscordEventDetailsResponse = z.infer<
