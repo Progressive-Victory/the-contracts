@@ -1,4 +1,4 @@
-import { zDiscordEventAttendee, zDiscordEventStatus, zDiscordUser, } from '../data/index.js';
+import { zDiscordEvent, zDiscordEventAttendee, zDiscordEventStatus, zDiscordUser, } from '../data/index.js';
 import z from 'zod';
 export const zDiscordEventOccurrence = z.object({
     id: z.number(),
@@ -23,7 +23,7 @@ export const zDiscordEventWithOccurrences = z.object({
     occurrences: z.array(zDiscordEventOccurrence),
 });
 export const zDiscordEventDetailsResponse = z.object({
-    event: zDiscordEventWithOccurrences,
+    event: z.xor([zDiscordEvent, zDiscordEventWithOccurrences]),
     createdBy: zDiscordUser,
 });
 //# sourceMappingURL=DiscordEventDetailsResponse.js.map
