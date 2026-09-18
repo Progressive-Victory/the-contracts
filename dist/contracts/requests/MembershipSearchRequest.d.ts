@@ -6,8 +6,14 @@ export declare const zMembershipSearchRequest: z.ZodObject<{
     sortField: z.ZodOptional<z.ZodString>;
     query: z.ZodOptional<z.ZodString>;
     sort: z.ZodOptional<z.ZodEnum<typeof import("./SearchRequest.js").SortDirection>>;
-    isBenefitEligible: z.ZodNullable<z.ZodBoolean>;
-    isMember: z.ZodNullable<z.ZodBoolean>;
+    isBenefitEligible: z.ZodOptional<z.ZodPipe<z.ZodEnum<{
+        true: "true";
+        false: "false";
+    }>, z.ZodTransform<boolean, "true" | "false">>>;
+    isMember: z.ZodOptional<z.ZodPipe<z.ZodEnum<{
+        true: "true";
+        false: "false";
+    }>, z.ZodTransform<boolean, "true" | "false">>>;
 }, z.core.$strip>;
 export type MembershipSearchRequest = z.infer<typeof zMembershipSearchRequest>;
 //# sourceMappingURL=MembershipSearchRequest.d.ts.map
