@@ -9,7 +9,7 @@ export var RelationshipTypes;
     RelationshipTypes[RelationshipTypes["OWNER"] = 0] = "OWNER";
 })(RelationshipTypes || (RelationshipTypes = {}));
 export const zPositionTypes = z.enum(PositionTypes);
-export const zRelationalTypes = z.enum(RelationshipTypes);
+export const zRelationshipTypes = z.enum(RelationshipTypes);
 export const zPosition = z.object({
     id: z.int(),
     name: z.string(),

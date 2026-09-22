@@ -7,7 +7,7 @@ export declare enum RelationshipTypes {
     OWNER = 0
 }
 export declare const zPositionTypes: z.ZodEnum<typeof PositionTypes>;
-export declare const zRelationalTypes: z.ZodEnum<typeof RelationshipTypes>;
+export declare const zRelationshipTypes: z.ZodEnum<typeof RelationshipTypes>;
 export declare const zPosition: z.ZodObject<{
     id: z.ZodInt;
     name: z.ZodString;
