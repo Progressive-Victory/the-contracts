@@ -8,10 +8,17 @@ export declare enum RelationshipTypes {
 }
 export declare const zPositionTypes: z.ZodEnum<typeof PositionTypes>;
 export declare const zRelationshipTypes: z.ZodEnum<typeof RelationshipTypes>;
+export declare const zRelationship: z.ZodObject<{
+    id: z.ZodInt;
+    relationshipType: z.ZodEnum<typeof RelationshipTypes>;
+}, z.core.$strip>;
 export declare const zPosition: z.ZodObject<{
     id: z.ZodInt;
     name: z.ZodString;
-    childIds: z.ZodArray<z.ZodInt>;
+    childIds: z.ZodArray<z.ZodObject<{
+        id: z.ZodInt;
+        relationshipType: z.ZodEnum<typeof RelationshipTypes>;
+    }, z.core.$strip>>;
     userIds: z.ZodArray<z.ZodInt>;
     type: z.ZodEnum<typeof PositionTypes>;
     seats: z.ZodInt;
