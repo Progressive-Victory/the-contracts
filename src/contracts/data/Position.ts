@@ -21,7 +21,7 @@ export const zRelationship = z.object({
 export const zPosition = z.object({
 	id: z.int(),
 	name: z.string(),
-	childIds: z.array(zRelationship),
+	childRelationships: z.array(zRelationship),
 	userIds: z.array(z.int()),
 	type: zPositionTypes,
 	seats: z.int()
