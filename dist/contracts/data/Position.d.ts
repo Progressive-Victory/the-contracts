@@ -12,6 +12,7 @@ export declare const zRelationship: z.ZodObject<{
     id: z.ZodInt;
     relationshipType: z.ZodEnum<typeof RelationshipTypes>;
 }, z.core.$strip>;
+export type Relationship = z.infer<typeof zRelationship>;
 export declare const zPosition: z.ZodObject<{
     id: z.ZodInt;
     name: z.ZodString;

@@ -12,7 +12,7 @@ export const zPositionTypes = z.enum(PositionTypes);
 export const zRelationshipTypes = z.enum(RelationshipTypes);
 export const zRelationship = z.object({
     id: z.int(),
-    relationshipType: zRelationshipTypes
+    relationshipType: zRelationshipTypes,
 });
 export const zPosition = z.object({
     id: z.int(),
@@ -20,6 +20,6 @@ export const zPosition = z.object({
     childRelationships: z.array(zRelationship),
     userIds: z.array(z.int()),
     type: zPositionTypes,
-    seats: z.int()
+    seats: z.int(),
 });
 //# sourceMappingURL=Position.js.map

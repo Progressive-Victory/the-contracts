@@ -1,22 +1,24 @@
 import z from 'zod';
 
-export enum PositionTypes{
+export enum PositionTypes {
 	POSITION = 0,
-	GROUP = 1
+	GROUP = 1,
 }
 
 export enum RelationshipTypes {
-	OWNER = 0
+	OWNER = 0,
 }
 
-export const zPositionTypes = z.enum(PositionTypes)
+export const zPositionTypes = z.enum(PositionTypes);
 
-export const zRelationshipTypes = z.enum(RelationshipTypes)
+export const zRelationshipTypes = z.enum(RelationshipTypes);
 
 export const zRelationship = z.object({
 	id: z.int(),
-	relationshipType: zRelationshipTypes
-})
+	relationshipType: zRelationshipTypes,
+});
+
+export type Relationship = z.infer<typeof zRelationship>;
 
 export const zPosition = z.object({
 	id: z.int(),
@@ -24,7 +26,7 @@ export const zPosition = z.object({
 	childRelationships: z.array(zRelationship),
 	userIds: z.array(z.int()),
 	type: zPositionTypes,
-	seats: z.int()
+	seats: z.int(),
 });
 
 export type Position = z.infer<typeof zPosition>;

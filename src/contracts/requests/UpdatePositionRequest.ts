@@ -1,5 +1,5 @@
-import z from 'zod';
 import { zPositionTypes, zRelationship } from '../data/index.js';
+import z from 'zod';
 
 export const zUpdatePositionRequest = z.object({
 	name: z.string().max(100).optional(),
