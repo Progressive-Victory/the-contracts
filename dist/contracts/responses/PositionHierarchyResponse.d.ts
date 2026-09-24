@@ -3,7 +3,7 @@ export declare const zPositionHierarchyResponse: z.ZodObject<{
     positions: z.ZodArray<z.ZodObject<{
         id: z.ZodInt;
         name: z.ZodString;
-        childIds: z.ZodArray<z.ZodObject<{
+        childRelationships: z.ZodArray<z.ZodObject<{
             id: z.ZodInt;
             relationshipType: z.ZodEnum<typeof import("../data/Position.js").RelationshipTypes>;
         }, z.core.$strip>>;

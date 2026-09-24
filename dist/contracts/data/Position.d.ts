@@ -15,7 +15,7 @@ export declare const zRelationship: z.ZodObject<{
 export declare const zPosition: z.ZodObject<{
     id: z.ZodInt;
     name: z.ZodString;
-    childIds: z.ZodArray<z.ZodObject<{
+    childRelationships: z.ZodArray<z.ZodObject<{
         id: z.ZodInt;
         relationshipType: z.ZodEnum<typeof RelationshipTypes>;
     }, z.core.$strip>>;
