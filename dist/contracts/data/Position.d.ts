@@ -10,7 +10,7 @@ export declare const zPositionTypes: z.ZodEnum<typeof PositionTypes>;
 export declare const zRelationshipTypes: z.ZodEnum<typeof RelationshipTypes>;
 export declare const zRelationship: z.ZodObject<{
     id: z.ZodInt;
-    relationshipType: z.ZodEnum<typeof RelationshipTypes>;
+    type: z.ZodEnum<typeof RelationshipTypes>;
 }, z.core.$strip>;
 export type Relationship = z.infer<typeof zRelationship>;
 export declare const zPosition: z.ZodObject<{
@@ -18,7 +18,7 @@ export declare const zPosition: z.ZodObject<{
     name: z.ZodString;
     childRelationships: z.ZodArray<z.ZodObject<{
         id: z.ZodInt;
-        relationshipType: z.ZodEnum<typeof RelationshipTypes>;
+        type: z.ZodEnum<typeof RelationshipTypes>;
     }, z.core.$strip>>;
     userIds: z.ZodArray<z.ZodInt>;
     type: z.ZodEnum<typeof PositionTypes>;
