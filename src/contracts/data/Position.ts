@@ -15,7 +15,7 @@ export const zRelationshipTypes = z.enum(RelationshipTypes);
 
 export const zRelationship = z.object({
 	id: z.int(),
-	relationshipType: zRelationshipTypes,
+	type: zRelationshipTypes,
 });
 
 export type Relationship = z.infer<typeof zRelationship>;
