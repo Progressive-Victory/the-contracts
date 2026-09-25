@@ -1,4 +1,5 @@
 import z from 'zod';
+import { zPermission } from './Permission.js';
 
 export enum PositionTypes {
 	POSITION = 0,
@@ -27,6 +28,7 @@ export const zPosition = z.object({
 	userIds: z.array(z.int()),
 	type: zPositionTypes,
 	seats: z.int(),
+	permissions: z.array(zPermission)
 });
 
 export type Position = z.infer<typeof zPosition>;

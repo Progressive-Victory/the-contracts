@@ -1,4 +1,4 @@
-import { zPositionTypes, zRelationship } from '../data/index.js';
+import { zPermission, zPositionTypes, zRelationship } from '../data/index.js';
 import z from 'zod';
 
 export const zCreatePositionRequest = z.object({
@@ -6,6 +6,7 @@ export const zCreatePositionRequest = z.object({
 	parentRelationships: z.array(zRelationship),
 	positionType: zPositionTypes,
 	seats: z.int(),
+	permission: z.array(zPermission)
 });
 
 export type CreatePositionRequest = z.infer<typeof zCreatePositionRequest>;

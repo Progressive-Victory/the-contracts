@@ -1,4 +1,4 @@
-import { zPositionTypes, zRelationship } from '../data/index.js';
+import { zPermission, zPositionTypes, zRelationship } from '../data/index.js';
 import z from 'zod';
 
 export const zUpdatePositionRequest = z.object({
@@ -7,6 +7,7 @@ export const zUpdatePositionRequest = z.object({
 	userIds: z.array(z.int()).optional(),
 	positionType: zPositionTypes,
 	seats: z.int(),
+	permissions: z.array(zPermission)
 });
 
 export type UpdatePositionRequest = z.infer<typeof zUpdatePositionRequest>;
