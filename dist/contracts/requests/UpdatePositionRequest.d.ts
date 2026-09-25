@@ -6,12 +6,12 @@ export declare const zUpdatePositionRequest: z.ZodObject<{
         type: z.ZodEnum<typeof import("../data/Position.js").RelationshipTypes>;
     }, z.core.$strip>>>;
     userIds: z.ZodOptional<z.ZodArray<z.ZodInt>>;
-    positionType: z.ZodEnum<typeof import("../data/Position.js").PositionTypes>;
-    seats: z.ZodInt;
-    permissions: z.ZodArray<z.ZodObject<{
+    positionType: z.ZodOptional<z.ZodEnum<typeof import("../data/Position.js").PositionTypes>>;
+    seats: z.ZodOptional<z.ZodInt>;
+    permissions: z.ZodOptional<z.ZodArray<z.ZodObject<{
         id: z.ZodInt;
         name: z.ZodString;
-    }, z.core.$strip>>;
+    }, z.core.$strip>>>;
 }, z.core.$strip>;
 export type UpdatePositionRequest = z.infer<typeof zUpdatePositionRequest>;
 //# sourceMappingURL=UpdatePositionRequest.d.ts.map

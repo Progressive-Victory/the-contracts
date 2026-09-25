@@ -4,8 +4,8 @@ export const zUpdatePositionRequest = z.object({
     name: z.string().max(100).optional(),
     childRelationships: z.array(zRelationship).optional(),
     userIds: z.array(z.int()).optional(),
-    positionType: zPositionTypes,
-    seats: z.int(),
-    permissions: z.array(zPermission)
+    positionType: zPositionTypes.optional(),
+    seats: z.int().optional(),
+    permissions: z.array(zPermission).optional()
 });
 //# sourceMappingURL=UpdatePositionRequest.js.map
