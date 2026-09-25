@@ -7,6 +7,10 @@ export declare const zCreatePositionRequest: z.ZodObject<{
     }, z.core.$strip>>;
     positionType: z.ZodEnum<typeof import("../data/Position.js").PositionTypes>;
     seats: z.ZodInt;
+    permission: z.ZodArray<z.ZodObject<{
+        id: z.ZodInt;
+        name: z.ZodString;
+    }, z.core.$strip>>;
 }, z.core.$strip>;
 export type CreatePositionRequest = z.infer<typeof zCreatePositionRequest>;
 //# sourceMappingURL=CreatePositionRequest.d.ts.map

@@ -1,4 +1,4 @@
-import { zPositionTypes, zRelationship } from '../data/index.js';
+import { zPermission, zPositionTypes, zRelationship } from '../data/index.js';
 import z from 'zod';
 export const zUpdatePositionRequest = z.object({
     name: z.string().max(100).optional(),
@@ -6,5 +6,6 @@ export const zUpdatePositionRequest = z.object({
     userIds: z.array(z.int()).optional(),
     positionType: zPositionTypes,
     seats: z.int(),
+    permissions: z.array(zPermission)
 });
 //# sourceMappingURL=UpdatePositionRequest.js.map

@@ -1,4 +1,5 @@
 import z from 'zod';
+import { zPermission } from './Permission.js';
 export var PositionTypes;
 (function (PositionTypes) {
     PositionTypes[PositionTypes["POSITION"] = 0] = "POSITION";
@@ -21,5 +22,6 @@ export const zPosition = z.object({
     userIds: z.array(z.int()),
     type: zPositionTypes,
     seats: z.int(),
+    permissions: z.array(zPermission)
 });
 //# sourceMappingURL=Position.js.map

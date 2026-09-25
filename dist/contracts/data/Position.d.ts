@@ -23,6 +23,10 @@ export declare const zPosition: z.ZodObject<{
     userIds: z.ZodArray<z.ZodInt>;
     type: z.ZodEnum<typeof PositionTypes>;
     seats: z.ZodInt;
+    permissions: z.ZodArray<z.ZodObject<{
+        id: z.ZodInt;
+        name: z.ZodString;
+    }, z.core.$strip>>;
 }, z.core.$strip>;
 export type Position = z.infer<typeof zPosition>;
 //# sourceMappingURL=Position.d.ts.map

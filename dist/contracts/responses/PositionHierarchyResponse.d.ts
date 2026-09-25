@@ -10,6 +10,10 @@ export declare const zPositionHierarchyResponse: z.ZodObject<{
         userIds: z.ZodArray<z.ZodInt>;
         type: z.ZodEnum<typeof import("../data/Position.js").PositionTypes>;
         seats: z.ZodInt;
+        permissions: z.ZodArray<z.ZodObject<{
+            id: z.ZodInt;
+            name: z.ZodString;
+        }, z.core.$strip>>;
     }, z.core.$strip>>;
     users: z.ZodArray<z.ZodObject<{
         id: z.ZodNumber;

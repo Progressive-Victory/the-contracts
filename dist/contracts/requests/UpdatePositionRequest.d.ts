@@ -8,6 +8,10 @@ export declare const zUpdatePositionRequest: z.ZodObject<{
     userIds: z.ZodOptional<z.ZodArray<z.ZodInt>>;
     positionType: z.ZodEnum<typeof import("../data/Position.js").PositionTypes>;
     seats: z.ZodInt;
+    permissions: z.ZodArray<z.ZodObject<{
+        id: z.ZodInt;
+        name: z.ZodString;
+    }, z.core.$strip>>;
 }, z.core.$strip>;
 export type UpdatePositionRequest = z.infer<typeof zUpdatePositionRequest>;
 //# sourceMappingURL=UpdatePositionRequest.d.ts.map
