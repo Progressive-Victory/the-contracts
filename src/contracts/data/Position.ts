@@ -8,6 +8,11 @@ export enum PositionTypes {
 
 export enum RelationshipTypes {
 	OWNER = 0,
+	MANAGER = 1,
+	SUPERVISOR = 2,
+	TEAM = 3,
+	ROLE = 4,
+	GROUP = 5
 }
 
 export const zPositionTypes = z.enum(PositionTypes);
