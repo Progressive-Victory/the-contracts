@@ -4,7 +4,12 @@ export declare enum PositionTypes {
     GROUP = 1
 }
 export declare enum RelationshipTypes {
-    OWNER = 0
+    OWNER = 0,
+    MANAGER = 1,
+    SUPERVISOR = 2,
+    TEAM = 3,
+    ROLE = 4,
+    GROUP = 5
 }
 export declare const zPositionTypes: z.ZodEnum<typeof PositionTypes>;
 export declare const zRelationshipTypes: z.ZodEnum<typeof RelationshipTypes>;

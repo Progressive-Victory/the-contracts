@@ -8,6 +8,11 @@ export var PositionTypes;
 export var RelationshipTypes;
 (function (RelationshipTypes) {
     RelationshipTypes[RelationshipTypes["OWNER"] = 0] = "OWNER";
+    RelationshipTypes[RelationshipTypes["MANAGER"] = 1] = "MANAGER";
+    RelationshipTypes[RelationshipTypes["SUPERVISOR"] = 2] = "SUPERVISOR";
+    RelationshipTypes[RelationshipTypes["TEAM"] = 3] = "TEAM";
+    RelationshipTypes[RelationshipTypes["ROLE"] = 4] = "ROLE";
+    RelationshipTypes[RelationshipTypes["GROUP"] = 5] = "GROUP";
 })(RelationshipTypes || (RelationshipTypes = {}));
 export const zPositionTypes = z.enum(PositionTypes);
 export const zRelationshipTypes = z.enum(RelationshipTypes);
