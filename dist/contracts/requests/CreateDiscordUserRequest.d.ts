@@ -10,7 +10,7 @@ export declare const zCreateDiscordUserRequest: z.ZodObject<{
     discordImage: z.ZodString;
     userId: z.ZodCoercedNumber<unknown>;
     email: z.ZodString;
-    status: z.ZodNullable<z.ZodEnum<typeof DiscordUserStatus>>;
+    status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof DiscordUserStatus>>>;
 }, z.core.$strip>;
 export type CreateDiscordUserRequest = z.infer<typeof zCreateDiscordUserRequest>;
 //# sourceMappingURL=CreateDiscordUserRequest.d.ts.map
