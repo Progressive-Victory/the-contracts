@@ -1,3 +1,4 @@
+import { DiscordUserStatus } from '../data/DiscordUser.js';
 import z from 'zod';
 export declare const zCreateDiscordUserRequest: z.ZodObject<{
     metaData: z.ZodOptional<z.ZodObject<{
@@ -9,6 +10,7 @@ export declare const zCreateDiscordUserRequest: z.ZodObject<{
     discordImage: z.ZodString;
     userId: z.ZodCoercedNumber<unknown>;
     email: z.ZodString;
+    status: z.ZodNullable<z.ZodEnum<typeof DiscordUserStatus>>;
 }, z.core.$strip>;
 export type CreateDiscordUserRequest = z.infer<typeof zCreateDiscordUserRequest>;
 //# sourceMappingURL=CreateDiscordUserRequest.d.ts.map

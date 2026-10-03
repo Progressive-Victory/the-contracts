@@ -1,5 +1,6 @@
 import z from 'zod';
 export declare const zUpdateDiscordUserRequest: z.ZodObject<{
+    status: z.ZodOptional<z.ZodNullable<z.ZodEnum<typeof import("../data/DiscordUser.js").DiscordUserStatus>>>;
     email: z.ZodOptional<z.ZodString>;
     userId: z.ZodOptional<z.ZodCoercedNumber<unknown>>;
     metaData: z.ZodOptional<z.ZodOptional<z.ZodObject<{
