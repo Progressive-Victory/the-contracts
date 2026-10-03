@@ -7,7 +7,7 @@ export const zCreateDiscordUserRequest = zMutationRequest.extend({
 	discordUsername: z.string().nonempty(),
 	discordImage: z.string().nonempty(),
 	userId: z.coerce.number(),
-  email: z.string().nonempty(),
+	email: z.string().nonempty(),
 	status: z.enum(DiscordUserStatus).nullable(),
 });
 
