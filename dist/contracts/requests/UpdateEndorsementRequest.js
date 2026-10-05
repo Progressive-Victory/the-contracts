@@ -23,5 +23,11 @@ export const zUpdateEndorsementRequest = z.object({
     endorsementLevel: z.enum(EndorsementType).optional(),
     avatarBgColor: z.enum(BackgroundColor).optional(),
     electionStatus: z.enum(ElectionStatus).optional(),
+    office: z.string().nullish(),
+    onePagerHref: z.string().nullish(),
+    twitterPostHref: z.string().nullish(),
+    bluskyPostHref: z.string().nullish(),
+    instagramPostHref: z.string().nullish(),
+    pfpCoordinates: z.object({ x: z.number(), y: z.number() }).nullish()
 });
 //# sourceMappingURL=UpdateEndorsementRequest.js.map

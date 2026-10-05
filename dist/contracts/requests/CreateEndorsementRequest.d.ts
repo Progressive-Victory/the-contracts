@@ -21,6 +21,15 @@ export declare const zCreateEndorsementRequest: z.ZodObject<{
     endorsementLevel: z.ZodEnum<typeof EndorsementType>;
     avatarBgColor: z.ZodEnum<typeof BackgroundColor>;
     electionStatus: z.ZodEnum<typeof ElectionStatus>;
+    office: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    onePagerHref: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    twitterPostHref: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    bluskyPostHref: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    instagramPostHref: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    pfpCoordinates: z.ZodOptional<z.ZodNullable<z.ZodObject<{
+        x: z.ZodNumber;
+        y: z.ZodNumber;
+    }, z.core.$strip>>>;
 }, z.core.$strip>;
 export type CreateEndorsementRequest = z.infer<typeof zCreateEndorsementRequest>;
 //# sourceMappingURL=CreateEndorsementRequest.d.ts.map
