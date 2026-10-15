@@ -4,6 +4,7 @@ import z from 'zod';
 
 export const zGetUsersSearchRequest = zSearchRequest.extend({
 	isDonor: zBoolQuery,
+	isServerMember: zBoolQuery,
 	roleIds: zIntArrayQuery,
 });
 

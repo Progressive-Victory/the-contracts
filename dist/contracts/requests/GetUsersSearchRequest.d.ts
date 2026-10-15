@@ -10,6 +10,10 @@ export declare const zGetUsersSearchRequest: z.ZodObject<{
         true: "true";
         false: "false";
     }>, z.ZodTransform<boolean, "true" | "false">>>;
+    isServerMember: z.ZodOptional<z.ZodPipe<z.ZodEnum<{
+        true: "true";
+        false: "false";
+    }>, z.ZodTransform<boolean, "true" | "false">>>;
     roleIds: z.ZodOptional<z.ZodPipe<z.ZodString, z.ZodTransform<number[], string>>>;
 }, z.core.$strip>;
 export type GetUsersSearchRequest = z.infer<typeof zGetUsersSearchRequest>;
