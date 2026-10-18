@@ -27,7 +27,7 @@ export declare const zPosition: z.ZodObject<{
     }, z.core.$strip>>;
     userIds: z.ZodArray<z.ZodInt>;
     type: z.ZodEnum<typeof PositionTypes>;
-    seats: z.ZodInt;
+    seats: z.ZodNullable<z.ZodInt>;
     permissions: z.ZodArray<z.ZodObject<{
         id: z.ZodInt;
         name: z.ZodString;
