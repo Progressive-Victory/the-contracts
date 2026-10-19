@@ -26,6 +26,7 @@ const zBaseUser = z.object({
 	preferredName: z.string().nullable(),
 	firstName: z.string().nullable(),
 	lastName: z.string().nullable(),
+	preferredPronouns: z.string().nullable(),
 	birthdate: z.coerce.date().nullable(),
 	location: zLocation.nullable(),
 	address: zUserAddress,
