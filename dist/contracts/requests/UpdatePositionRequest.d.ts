@@ -7,7 +7,7 @@ export declare const zUpdatePositionRequest: z.ZodObject<{
     }, z.core.$strip>>>;
     userIds: z.ZodOptional<z.ZodArray<z.ZodInt>>;
     positionType: z.ZodOptional<z.ZodEnum<typeof import("../data/Position.js").PositionTypes>>;
-    seats: z.ZodOptional<z.ZodInt>;
+    seats: z.ZodOptional<z.ZodNullable<z.ZodInt>>;
     permissions: z.ZodOptional<z.ZodArray<z.ZodObject<{
         id: z.ZodInt;
         name: z.ZodString;

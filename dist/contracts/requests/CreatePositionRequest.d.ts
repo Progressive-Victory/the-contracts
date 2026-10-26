@@ -6,7 +6,7 @@ export declare const zCreatePositionRequest: z.ZodObject<{
         type: z.ZodEnum<typeof import("../data/Position.js").RelationshipTypes>;
     }, z.core.$strip>>;
     positionType: z.ZodEnum<typeof import("../data/Position.js").PositionTypes>;
-    seats: z.ZodInt;
+    seats: z.ZodNullable<z.ZodInt>;
     permission: z.ZodArray<z.ZodObject<{
         id: z.ZodInt;
         name: z.ZodString;

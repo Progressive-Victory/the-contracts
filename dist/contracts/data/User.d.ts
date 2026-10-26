@@ -155,6 +155,21 @@ export declare const zUser: z.ZodObject<{
             benefitsShipped: z.ZodBoolean;
         }, z.core.$strip>>;
     }, z.core.$strip>>>;
+    positions: z.ZodOptional<z.ZodArray<z.ZodObject<{
+        id: z.ZodInt;
+        name: z.ZodString;
+        childRelationships: z.ZodArray<z.ZodObject<{
+            id: z.ZodInt;
+            type: z.ZodEnum<typeof import("./Position.js").RelationshipTypes>;
+        }, z.core.$strip>>;
+        userIds: z.ZodArray<z.ZodInt>;
+        type: z.ZodEnum<typeof import("./Position.js").PositionTypes>;
+        seats: z.ZodNullable<z.ZodInt>;
+        permissions: z.ZodArray<z.ZodObject<{
+            id: z.ZodInt;
+            name: z.ZodString;
+        }, z.core.$strip>>;
+    }, z.core.$strip>>>;
     history: z.ZodOptional<z.ZodArray<z.ZodObject<{
         historyId: z.ZodInt;
         historyType: z.ZodEnum<typeof import("./UpdateHistory.js").UpdateHistoryType>;
@@ -309,6 +324,21 @@ export declare const zUser: z.ZodObject<{
                 labelPrinted: z.ZodBoolean;
                 itemsPackaged: z.ZodBoolean;
                 benefitsShipped: z.ZodBoolean;
+            }, z.core.$strip>>;
+        }, z.core.$strip>>>;
+        positions: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            id: z.ZodInt;
+            name: z.ZodString;
+            childRelationships: z.ZodArray<z.ZodObject<{
+                id: z.ZodInt;
+                type: z.ZodEnum<typeof import("./Position.js").RelationshipTypes>;
+            }, z.core.$strip>>;
+            userIds: z.ZodArray<z.ZodInt>;
+            type: z.ZodEnum<typeof import("./Position.js").PositionTypes>;
+            seats: z.ZodNullable<z.ZodInt>;
+            permissions: z.ZodArray<z.ZodObject<{
+                id: z.ZodInt;
+                name: z.ZodString;
             }, z.core.$strip>>;
         }, z.core.$strip>>>;
     }, z.core.$strip>>>;

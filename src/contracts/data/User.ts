@@ -7,6 +7,7 @@ import {
 	zShirtSize,
 } from './Membership.js';
 import { zOnboardingStage } from './OnboardingStage.js';
+import { zPosition } from './Position.js';
 import { zRole } from './Role.js';
 import { zUpdateHistory } from './UpdateHistory.js';
 import { zUserAddress } from './UserAddress.js';
@@ -76,6 +77,7 @@ const zBaseUser = z.object({
 	roles: z.array(zRole).optional(),
 	discordUsers: z.array(zDiscordUser).optional(),
 	donors: z.array(zActBlueDonor).optional(),
+	positions: z.array(zPosition).optional()
 });
 
 export const zUser = zBaseUser.extend({

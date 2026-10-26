@@ -6,7 +6,7 @@ export const zUpdatePositionRequest = z.object({
 	childRelationships: z.array(zRelationship).optional(),
 	userIds: z.array(z.int()).optional(),
 	positionType: zPositionTypes.optional(),
-	seats: z.int().optional(),
+	seats: z.int().nullish(),
 	permissions: z.array(zPermission).optional()
 });
 

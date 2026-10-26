@@ -250,6 +250,21 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                 benefitsShipped: z.ZodBoolean;
             }, z.core.$strip>>;
         }, z.core.$strip>>>;
+        positions: z.ZodOptional<z.ZodArray<z.ZodObject<{
+            id: z.ZodInt;
+            name: z.ZodString;
+            childRelationships: z.ZodArray<z.ZodObject<{
+                id: z.ZodInt;
+                type: z.ZodEnum<typeof import("../data/Position.js").RelationshipTypes>;
+            }, z.core.$strip>>;
+            userIds: z.ZodArray<z.ZodInt>;
+            type: z.ZodEnum<typeof import("../data/Position.js").PositionTypes>;
+            seats: z.ZodNullable<z.ZodInt>;
+            permissions: z.ZodArray<z.ZodObject<{
+                id: z.ZodInt;
+                name: z.ZodString;
+            }, z.core.$strip>>;
+        }, z.core.$strip>>>;
         history: z.ZodOptional<z.ZodArray<z.ZodObject<{
             historyId: z.ZodInt;
             historyType: z.ZodEnum<typeof import("../data/UpdateHistory.js").UpdateHistoryType>;
@@ -404,6 +419,21 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
                     labelPrinted: z.ZodBoolean;
                     itemsPackaged: z.ZodBoolean;
                     benefitsShipped: z.ZodBoolean;
+                }, z.core.$strip>>;
+            }, z.core.$strip>>>;
+            positions: z.ZodOptional<z.ZodArray<z.ZodObject<{
+                id: z.ZodInt;
+                name: z.ZodString;
+                childRelationships: z.ZodArray<z.ZodObject<{
+                    id: z.ZodInt;
+                    type: z.ZodEnum<typeof import("../data/Position.js").RelationshipTypes>;
+                }, z.core.$strip>>;
+                userIds: z.ZodArray<z.ZodInt>;
+                type: z.ZodEnum<typeof import("../data/Position.js").PositionTypes>;
+                seats: z.ZodNullable<z.ZodInt>;
+                permissions: z.ZodArray<z.ZodObject<{
+                    id: z.ZodInt;
+                    name: z.ZodString;
                 }, z.core.$strip>>;
             }, z.core.$strip>>>;
         }, z.core.$strip>>>;
