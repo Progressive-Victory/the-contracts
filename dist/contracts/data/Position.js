@@ -26,7 +26,7 @@ export const zPosition = z.object({
     childRelationships: z.array(zRelationship),
     userIds: z.array(z.int()),
     type: zPositionTypes,
-    seats: z.int(),
+    seats: z.int().nullable(),
     permissions: z.array(zPermission)
 });
 //# sourceMappingURL=Position.js.map

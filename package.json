@@ -1,6 +1,6 @@
 {
 	"name": "@progressive-victory/the-contracts",
-	"version": "9.5.0",
+	"version": "10.2.0",
 	"description": "CRUD contracts for communicating with our API",
 	"homepage": "https://github.com/Progressive-Victory/the-contracts#readme",
 	"bugs": {
@@ -66,6 +66,6 @@
 		"prettier": "^3.8.3",
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.60.0",
-		"vitest": "^4.1.8"
+		"vitest": "^4.1.11"
 	}
 }
