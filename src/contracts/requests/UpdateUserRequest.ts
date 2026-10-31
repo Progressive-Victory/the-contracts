@@ -16,6 +16,7 @@ export const zUpdateUserRequest = zMutationRequest
 		preferredName: z.string().max(100).nonempty().nullish(),
 		firstName: z.string().max(100).nonempty().nullish(),
 		lastName: z.string().max(100).nonempty().nullish(),
+		preferredPronouns: z.string().max(100).nonempty().nullish(),
 		birthdate: z.coerce.date().nullish(),
 		zipCode: z.number().nullish(),
 		address: zUpdateUserAddressRequest.optional(),
