@@ -1,5 +1,5 @@
-import z from 'zod';
 import { zPermission } from './Permission.js';
+import z from 'zod';
 
 export enum PositionTypes {
 	POSITION = 0,
@@ -12,7 +12,7 @@ export enum RelationshipTypes {
 	SUPERVISOR = 2,
 	TEAM = 3,
 	ROLE = 4,
-	GROUP = 5
+	GROUP = 5,
 }
 
 export const zPositionTypes = z.enum(PositionTypes);
@@ -33,7 +33,7 @@ export const zPosition = z.object({
 	userIds: z.array(z.int()),
 	type: zPositionTypes,
 	seats: z.int().nullable(),
-	permissions: z.array(zPermission)
+	permissions: z.array(zPermission),
 });
 
 export type Position = z.infer<typeof zPosition>;
