@@ -1,0 +1,1 @@
+{"version":3,"file":"OrgChartVersion.js","sourceRoot":"","sources":["../../../src/contracts/data/OrgChartVersion.ts"],"names":[],"mappings":"AAAA,OAAO,CAAC,MAAM,KAAK,CAAC;AAEpB,MAAM,CAAC,MAAM,gBAAgB,GAAG,CAAC,CAAC,MAAM,CAAC;IACxC,aAAa,EAAE,CAAC,CAAC,MAAM,EAAE,CAAC,GAAG,EAAE,CAAC,QAAQ,EAAE;IAC1C,QAAQ,EAAE,CAAC,CAAC,MAAM,EAAE;CACpB,CAAC,CAAC"}
