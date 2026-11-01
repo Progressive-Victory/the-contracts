@@ -11,11 +11,10 @@ export declare const zHandleSide: z.ZodEnum<{
     left: "left";
 }>;
 export type HandleSide = z.infer<typeof zHandleSide>;
-export declare const zPositionType: z.ZodEnum<{
-    POSITION: "POSITION";
-    GROUP: "GROUP";
-}>;
-export type PositionType = z.infer<typeof zPositionType>;
+export declare enum PositionType {
+    POSITION = 0,
+    GROUP = 1
+}
 export declare const zOrgChartPosition: z.ZodObject<{
     id: z.ZodNumber;
     name: z.ZodString;
@@ -23,10 +22,7 @@ export declare const zOrgChartPosition: z.ZodObject<{
         x: z.ZodNumber;
         y: z.ZodNumber;
     }, z.core.$strict>>;
-    type: z.ZodEnum<{
-        POSITION: "POSITION";
-        GROUP: "GROUP";
-    }>;
+    type: z.ZodEnum<typeof PositionType>;
     seats: z.ZodNullable<z.ZodNumber>;
     userIds: z.ZodArray<z.ZodNumber>;
     permissions: z.ZodDefault<z.ZodArray<z.ZodObject<{
@@ -112,10 +108,7 @@ export declare const zChartDocument: z.ZodObject<{
             x: z.ZodNumber;
             y: z.ZodNumber;
         }, z.core.$strict>>;
-        type: z.ZodEnum<{
-            POSITION: "POSITION";
-            GROUP: "GROUP";
-        }>;
+        type: z.ZodEnum<typeof PositionType>;
         seats: z.ZodNullable<z.ZodNumber>;
         userIds: z.ZodArray<z.ZodNumber>;
         permissions: z.ZodDefault<z.ZodArray<z.ZodObject<{

@@ -5,14 +5,18 @@ export const zOrgChartVersion = z.object({
     fileHref: z.string(),
 });
 export const zHandleSide = z.enum(['top', 'right', 'bottom', 'left']);
-export const zPositionType = z.enum(['POSITION', 'GROUP']);
+export var PositionType;
+(function (PositionType) {
+    PositionType[PositionType["POSITION"] = 0] = "POSITION";
+    PositionType[PositionType["GROUP"] = 1] = "GROUP";
+})(PositionType || (PositionType = {}));
 export const zOrgChartPosition = z.strictObject({
     id: z.number().int().positive(),
     name: z.string(),
     coordinates: z
         .strictObject({ x: z.number(), y: z.number() })
         .optional(),
-    type: zPositionType,
+    type: z.enum(PositionType),
     seats: z.number().int().nonnegative().nullable(),
     userIds: z.array(z.number().int()),
     permissions: z.array(zPermission).default([]),
@@ -293,7 +297,7 @@ export const zChartDocument = z
                 path: ['positions', index, 'parentGroupId'],
                 message: `Unknown parent group ${position.parentGroupId}`,
             });
-        else if (parent.type !== zPositionType.enum.GROUP)
+        else if (parent.type !== PositionType.GROUP)
             context.addIssue({
                 code: 'custom',
                 path: ['positions', index, 'parentGroupId'],
