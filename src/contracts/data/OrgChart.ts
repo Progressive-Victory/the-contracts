@@ -216,7 +216,7 @@ const resolveLineSource = (
 
 export const zChartDocument = z
     .strictObject({
-        version: z.literal(5),
+        version: z.int().positive(),
         positions: z.array(zOrgChartPosition),
         lines: z.array(zLine),
         branchPoints: z.array(zBranchPoint),
