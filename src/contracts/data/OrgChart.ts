@@ -411,3 +411,4 @@ export const zChartDocument = z
                 })
         }
     })
+export type ChartDocument = z.infer<typeof zChartDocument>
