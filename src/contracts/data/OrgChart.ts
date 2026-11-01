@@ -13,7 +13,7 @@ export type HandleSide = z.infer<typeof zHandleSide>
 export const zPositionType = z.enum(['POSITION', 'GROUP'])
 export type PositionType = z.infer<typeof zPositionType>
 
-export const zPosition = z.strictObject({
+export const zOrgChartPosition = z.strictObject({
     id: z.number().int().positive(),
     name: z.string(),
     coordinates: z
@@ -33,7 +33,7 @@ export const zPosition = z.strictObject({
         })
         .optional(),
 })
-export type Position = z.infer<typeof zPosition>
+export type OrgChartPosition = z.infer<typeof zOrgChartPosition>
 
 export const zAnchorPoint = z.strictObject({
     id: z.string(),
@@ -217,7 +217,7 @@ const resolveLineSource = (
 export const zChartDocument = z
     .strictObject({
         version: z.literal(5),
-        positions: z.array(zPosition),
+        positions: z.array(zOrgChartPosition),
         lines: z.array(zLine),
         branchPoints: z.array(zBranchPoint),
     })
