@@ -162,5 +162,6 @@ export declare const zChartDocument: z.ZodObject<{
         }, z.core.$strict>;
     }, z.core.$strict>>;
 }, z.core.$strict>;
+export type ChartDocument = z.infer<typeof zChartDocument>;
 export {};
 //# sourceMappingURL=OrgChart.d.ts.map
