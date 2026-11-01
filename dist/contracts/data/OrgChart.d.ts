@@ -104,7 +104,7 @@ export declare const zLine: z.ZodObject<{
 }, z.core.$strict>;
 export type Line = z.infer<typeof zLine>;
 export declare const zChartDocument: z.ZodObject<{
-    version: z.ZodLiteral<5>;
+    version: z.ZodInt;
     positions: z.ZodArray<z.ZodObject<{
         id: z.ZodNumber;
         name: z.ZodString;
