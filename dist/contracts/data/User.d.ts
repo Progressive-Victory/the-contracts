@@ -9,6 +9,7 @@ export declare const zUser: z.ZodObject<{
     email: z.ZodNullable<z.ZodString>;
     phone: z.ZodNullable<z.ZodString>;
     preferredName: z.ZodNullable<z.ZodString>;
+    preferredPronouns: z.ZodNullable<z.ZodString>;
     firstName: z.ZodNullable<z.ZodString>;
     lastName: z.ZodNullable<z.ZodString>;
     birthdate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
