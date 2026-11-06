@@ -6,7 +6,7 @@ export const zCreatePositionRequest = z.object({
 	parentRelationships: z.array(zRelationship),
 	positionType: zPositionTypes,
 	seats: z.int().nullable(),
-	permission: z.array(zPermission)
+	permission: z.array(zPermission),
 });
 
 export type CreatePositionRequest = z.infer<typeof zCreatePositionRequest>;

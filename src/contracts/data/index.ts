@@ -20,6 +20,7 @@ export * from './Membership.js';
 export * from './MetaData.js';
 export * from './NdaForm.js';
 export * from './OnboardingStage.js';
+export * from './OrgChart.js';
 export * from './Permission.js';
 export * from './Position.js';
 export * from './Role.js';
