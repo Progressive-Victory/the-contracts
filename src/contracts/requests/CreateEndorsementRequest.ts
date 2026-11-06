@@ -27,6 +27,12 @@ export const zCreateEndorsementRequest = z.object({
 	endorsementLevel: z.enum(EndorsementType),
 	avatarBgColor: z.enum(BackgroundColor),
 	electionStatus: z.enum(ElectionStatus),
+	office: z.string().nullish(),
+	onePagerHref: z.string().nullish(),
+	twitterPostHref: z.string().nullish(),
+	bluskyPostHref: z.string().nullish(),
+	instagramPostHref: z.string().nullish(),
+	pfpCoordinates: z.object({ x: z.number(), y: z.number() }).nullish()
 });
 
 export type CreateEndorsementRequest = z.infer<
