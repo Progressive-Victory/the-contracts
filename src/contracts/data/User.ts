@@ -32,6 +32,7 @@ const zBaseUser = z.object({
 	address: zUserAddress,
 
 	acceptedAlerts: z.boolean(),
+	signedNda: z.boolean(),
 	verified: z.boolean(),
 	onboardingStage: zOnboardingStage,
 	lastSmsCode: z.number().nullable(),
