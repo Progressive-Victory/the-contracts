@@ -14,6 +14,7 @@ export const zUpdateUserRequest = zMutationRequest
     address: zUpdateUserAddressRequest.optional(),
     acceptedAlerts: z.boolean().optional(),
     verified: z.boolean().optional(),
+    signedNda: z.boolean().optional(),
     onboardingStage: zOnboardingStage.optional(),
     lastSmsCode: z.number().nullish(),
     lastSmsCodeSendTimeUtc: z.coerce.date().nullish(),

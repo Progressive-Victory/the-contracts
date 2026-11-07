@@ -33,6 +33,7 @@ const zBaseUser = z.object({
 
 	acceptedAlerts: z.boolean(),
 	verified: z.boolean(),
+	signedNda: z.boolean(),
 	onboardingStage: zOnboardingStage,
 	lastSmsCode: z.number().nullable(),
 	lastSmsCodeSendTimeUtc: z.coerce.date().nullable(),
@@ -76,7 +77,7 @@ const zBaseUser = z.object({
 	roles: z.array(zRole).optional(),
 	discordUsers: z.array(zDiscordUser).optional(),
 	donors: z.array(zActBlueDonor).optional(),
-	positions: z.array(zPosition).optional()
+	positions: z.array(zPosition).optional(),
 });
 
 export const zUser = zBaseUser.extend({

@@ -21,6 +21,7 @@ export declare const zUpdateUserRequest: z.ZodObject<{
     }, z.core.$strict>>;
     acceptedAlerts: z.ZodOptional<z.ZodBoolean>;
     verified: z.ZodOptional<z.ZodBoolean>;
+    signedNda: z.ZodOptional<z.ZodBoolean>;
     onboardingStage: z.ZodOptional<z.ZodEnum<typeof import("../data/OnboardingStage.js").OnboardingStage>>;
     lastSmsCode: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     lastSmsCodeSendTimeUtc: z.ZodOptional<z.ZodNullable<z.ZodCoercedDate<unknown>>>;

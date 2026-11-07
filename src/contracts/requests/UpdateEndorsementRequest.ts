@@ -34,7 +34,7 @@ export const zUpdateEndorsementRequest = z.object({
 	twitterPostHref: z.string().nullish(),
 	bluskyPostHref: z.string().nullish(),
 	instagramPostHref: z.string().nullish(),
-	pfpCoordinates: z.object({ x: z.number(), y: z.number() }).nullish()
+	pfpCoordinates: z.object({ x: z.number(), y: z.number() }).nullish(),
 });
 
 export type UpdateEndorsementRequest = z.infer<

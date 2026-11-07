@@ -123,6 +123,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
         }, z.core.$strip>;
         acceptedAlerts: z.ZodBoolean;
         verified: z.ZodBoolean;
+        signedNda: z.ZodBoolean;
         onboardingStage: z.ZodEnum<typeof import("../data/OnboardingStage.js").OnboardingStage>;
         lastSmsCode: z.ZodNullable<z.ZodNumber>;
         lastSmsCodeSendTimeUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
@@ -294,6 +295,7 @@ export declare const zMembershipsResponsePacket: z.ZodObject<{
             }, z.core.$strip>;
             acceptedAlerts: z.ZodBoolean;
             verified: z.ZodBoolean;
+            signedNda: z.ZodBoolean;
             onboardingStage: z.ZodEnum<typeof import("../data/OnboardingStage.js").OnboardingStage>;
             lastSmsCode: z.ZodNullable<z.ZodNumber>;
             lastSmsCodeSendTimeUtc: z.ZodNullable<z.ZodCoercedDate<unknown>>;
