@@ -56,6 +56,6 @@ export const zEndorsement = z.object({
     twitterPostHref: z.string().nullish(),
     bluskyPostHref: z.string().nullish(),
     instagramPostHref: z.string().nullish(),
-    pfpCoordinates: z.object({ x: z.number(), y: z.number() }).nullish()
+    pfpCoordinates: z.object({ x: z.number(), y: z.number() }).nullish(),
 });
 //# sourceMappingURL=Endorsement.js.map

@@ -5,6 +5,6 @@ export const zCreatePositionRequest = z.object({
     parentRelationships: z.array(zRelationship),
     positionType: zPositionTypes,
     seats: z.int().nullable(),
-    permission: z.array(zPermission)
+    permission: z.array(zPermission),
 });
 //# sourceMappingURL=CreatePositionRequest.js.map
