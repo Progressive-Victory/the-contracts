@@ -33,6 +33,7 @@ const zBaseUser = z.object({
 
 	acceptedAlerts: z.boolean(),
 	verified: z.boolean(),
+	signedNda: z.boolean(),
 	onboardingStage: zOnboardingStage,
 	lastSmsCode: z.number().nullable(),
 	lastSmsCodeSendTimeUtc: z.coerce.date().nullable(),
