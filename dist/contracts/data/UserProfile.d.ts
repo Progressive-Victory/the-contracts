@@ -3,6 +3,7 @@ export declare const zUserProfile: z.ZodObject<{
     id: z.ZodNumber;
     email: z.ZodNullable<z.ZodString>;
     preferredName: z.ZodNullable<z.ZodString>;
+    preferredPronouns: z.ZodNullable<z.ZodString>;
     firstName: z.ZodNullable<z.ZodString>;
     lastName: z.ZodNullable<z.ZodString>;
     aliases: z.ZodArray<z.ZodString>;
