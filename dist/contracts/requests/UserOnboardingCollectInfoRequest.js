@@ -5,6 +5,7 @@ export const zUserOnboardingCollectInfoRequest = zMutationRequest.extend({
     lastName: z.string(),
     phone: z.string(),
     zipCode: z.number(),
+    preferredPronouns: z.string(),
     birthdate: z.coerce.date(),
     acceptedAlerts: z.boolean(),
     usCitizen: z.boolean(),

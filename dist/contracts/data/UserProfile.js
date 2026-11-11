@@ -7,6 +7,7 @@ export const zUserProfile = z.object({
     firstName: z.string().nullable(),
     lastName: z.string().nullable(),
     aliases: z.array(z.string()),
+    preferredPronouns: z.string().nullable(),
     discordUsers: z.array(zDiscordUser),
 });
 //# sourceMappingURL=UserProfile.js.map

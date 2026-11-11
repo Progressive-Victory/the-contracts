@@ -8,6 +8,7 @@ export declare const zUserOnboardingCollectInfoRequest: z.ZodObject<{
     lastName: z.ZodString;
     phone: z.ZodString;
     zipCode: z.ZodNumber;
+    preferredPronouns: z.ZodString;
     birthdate: z.ZodCoercedDate<unknown>;
     acceptedAlerts: z.ZodBoolean;
     usCitizen: z.ZodBoolean;

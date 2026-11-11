@@ -6,6 +6,7 @@ export declare const zUserProfile: z.ZodObject<{
     firstName: z.ZodNullable<z.ZodString>;
     lastName: z.ZodNullable<z.ZodString>;
     aliases: z.ZodArray<z.ZodString>;
+    preferredPronouns: z.ZodNullable<z.ZodString>;
     discordUsers: z.ZodArray<z.ZodObject<{
         id: z.ZodString;
         username: z.ZodString;
