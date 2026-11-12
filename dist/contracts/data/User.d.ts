@@ -11,6 +11,7 @@ export declare const zUser: z.ZodObject<{
     preferredName: z.ZodNullable<z.ZodString>;
     firstName: z.ZodNullable<z.ZodString>;
     lastName: z.ZodNullable<z.ZodString>;
+    preferredPronouns: z.ZodNullable<z.ZodString>;
     birthdate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
     location: z.ZodNullable<z.ZodObject<{
         zip: z.ZodInt;
@@ -182,6 +183,7 @@ export declare const zUser: z.ZodObject<{
         preferredName: z.ZodNullable<z.ZodString>;
         firstName: z.ZodNullable<z.ZodString>;
         lastName: z.ZodNullable<z.ZodString>;
+        preferredPronouns: z.ZodNullable<z.ZodString>;
         birthdate: z.ZodNullable<z.ZodCoercedDate<unknown>>;
         location: z.ZodNullable<z.ZodObject<{
             zip: z.ZodInt;

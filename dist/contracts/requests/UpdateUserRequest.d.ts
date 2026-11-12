@@ -9,6 +9,7 @@ export declare const zUpdateUserRequest: z.ZodObject<{
     preferredName: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     firstName: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     lastName: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    preferredPronouns: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     birthdate: z.ZodOptional<z.ZodNullable<z.ZodCoercedDate<unknown>>>;
     zipCode: z.ZodOptional<z.ZodNullable<z.ZodNumber>>;
     address: z.ZodOptional<z.ZodObject<{
