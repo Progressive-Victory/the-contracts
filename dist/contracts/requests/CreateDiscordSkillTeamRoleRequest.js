@@ -1,8 +1,10 @@
 import z from 'zod';
 export const zCreateDiscordSkillTeamRoleRequest = z.object({
-    teamRoleId: z.string().nonempty(),
+    memberRoleId: z.string().nonempty(),
     teamName: z.string().nonempty(),
-    leadRoleId: z.string().nonempty(),
-    teamChannelId: z.string().nonempty(),
+    memberChannelId: z.string().nonempty(),
+    teamRoleId: z.string().nonempty().nullable().optional(),
+    teamChannelId: z.string().nonempty().nullable().optional(),
+    authorizedRoleId: z.string().nonempty(),
 });
 //# sourceMappingURL=CreateDiscordSkillTeamRoleRequest.js.map
